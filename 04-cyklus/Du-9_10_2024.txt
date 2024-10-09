@@ -1,0 +1,2 @@
+naštudovať 2. kapitolu = for Cyklus
+https://python.input.sk/z/02.html#for-cyklus
