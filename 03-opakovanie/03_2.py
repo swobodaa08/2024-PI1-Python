@@ -1,5 +1,5 @@
 strana = float(input("Zadaj veľkosť strany kocky: "))
-telesova = strana * 1.73205080757
-stenova = strana * 1.41421356237
-print(round, 2(f"Stenová uhlopriečka je {stenova}"))
-print(round, 2(f"Telesová uhlopriečka je {telesova}"))
+stenova = strana * 2 ** (1/2)
+telesova = strana * 3 ** (1/2)
+print("Stenová uhlopriečka je: ", round(stenova, 2))
+print("Telesová uhlopriečka je: ", round(telesova, 2))
