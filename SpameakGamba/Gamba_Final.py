@@ -1,4 +1,4 @@
-# SpameakGamba v2.2 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] 
+# SpameakGamba Beta v2.3 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] 
 
 
 # Import
@@ -87,13 +87,13 @@ for i in range(počet_kôl):
             print("                                                       ")
             print("-------------------------------------------------------------------------")
             print("                                                       ")
-            print(f"Vyhral si !!!!")
+            print(f"Vyhral/-a si !!!!")
             print(f"Výherné číslo bolo {b}, perfektne")
-            print(f"Počet ostávajúcich pokusov: {počet_kôl}")
+            print(f"Počet zostávajúcich pokusov: {počet_kôl}")
             if konto > 0:
                 print(f"Tvoj profit je zatiaľ {konto}€, ak budeš takto pokračovať zachvíľu z teba bude milionár :)")
             else:
-                print(f"Avšak stále si už prehral {konto * -1}€, ak chceš stále hrať, pokračuj")
+                print(f"Avšak stále si už prehral/-a {konto * -1}€, ak chceš stále hrať, pokračuj")
             print("                                                       ")
             print("-------------------------------------------------------------------------")
     else:
@@ -107,13 +107,13 @@ for i in range(počet_kôl):
             print("                                                       ")
             print("-------------------------------------------------------------------------")
             print("                                                       ")
-            print(f"Prehral si.....")
+            print(f"Prehral/-a si.....")
             print(f"Výherné číslo bolo {b}")
-            print(f"Počet ostávajúcich pokusov: {počet_kôl}")
+            print(f"Počet zostávajúcich pokusov: {počet_kôl}")
             if konto > 0:
                 print(f"Avšak nezúfaj, zatial si stále v profite {konto}€")
             else:
-                print(f"Zatiaľ si prehral {konto * -1}€, ak chceš skončiť, vypni tento program.")
+                print(f"Zatiaľ si prehral/-a {konto * -1}€, ak chceš skončiť, vypni tento program.")
             print("                                                       ")
             print("-------------------------------------------------------------------------")
 
