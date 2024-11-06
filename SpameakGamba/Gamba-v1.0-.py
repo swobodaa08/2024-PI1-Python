@@ -2,7 +2,7 @@
 
 
 # Definícia
-počet_kôl = int(input("Zadaj počet kôl koľko chceš hrať: "))
+počet_kôl = int(input("Zadaj počet kôl koľko chceš hrať?(Maximálne 20): "))
 konto = 0
 
 # Ignor

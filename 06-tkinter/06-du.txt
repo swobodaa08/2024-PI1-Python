@@ -1,0 +1,2 @@
+Vytvoriť program, ktorý vypíše moje inicialy (SS), dlzka strany jedneho stvorca bude 10px
+vykreslené pomocou štvorčekov zo súboru pixel_letters.jpg
