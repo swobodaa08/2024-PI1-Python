@@ -1,4 +1,4 @@
-# SpameakGamba v1.1 (Copyright by @AlexSlivka7 s.r.o. 2024)(Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024)
+# SpameakGamba v1.1 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024]
 
 
 # Definícia
@@ -28,4 +28,7 @@ for i in range(počet_kôl):
           print(f"Počet ostávajúcich pokusov: {počet_kôl}")
 
 # Konecne konto
-print(f"Celkovo si vyhral {konto}€ gratulujem") 
+if konto < 0:
+     print(f"Celkovo si prehral {konto}€ nabudúce skús Poker alebo Respin Joker")
+else:
+     print(f"Celkovo si vyhral {konto}€ gratulujem") 
