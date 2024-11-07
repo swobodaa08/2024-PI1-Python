@@ -5,11 +5,13 @@ Gamba
         - v1.1 = druha...
 
 
-    Gamba 2 (Canvas)
+    Gamba 2 (Canvas + Terminal)
         - Text + vysledna vyhra/prehra v obraze
 
-    Gamba Final
-        - Hotová verzia aplikácie
+    Gamba 3 (Canvas only)
+        - .exe pre kazdeho
+
+    Gamba 4 (podla priezviska v canvas peniaze)
 
 
 
