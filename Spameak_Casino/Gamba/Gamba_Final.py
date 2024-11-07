@@ -46,7 +46,7 @@ for i in range(počet_kôl):
     while True:
         try:
             suma = float(input("Zadaj koľko € chceš vsadiť: "))
-            if 10000 > suma >= 0.50:
+            if 10000 >= suma >= 0.50:
                 break
             else:
                 print("--------------------------------------")
