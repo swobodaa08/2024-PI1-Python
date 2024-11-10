@@ -1,0 +1,13 @@
+Real Madrid,980
+Barcelona,980
+Manchester City,950
+Liverpool,920
+Juventus,890
+Horky,112
+Radostka,110
+Zilina,420
+Bratislava,490
+Kosice,380
+Trnava,390
+Divina,60
+Poprad,300
