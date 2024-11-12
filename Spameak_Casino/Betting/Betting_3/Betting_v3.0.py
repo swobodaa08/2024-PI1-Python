@@ -55,6 +55,7 @@ while True:
         print("                                                       ")
 
 konto = vklad
+round(konto, 2)
 
 # Funkcia na načítanie tímov zo súboru
 def nacitaj_timy(subor):
@@ -167,13 +168,16 @@ def hlavny_program():
     print(f"Aktuálny zostatok na konte: {konto}€")
     print("----------------------------------------------------")
 
-# Hra prebehne počet_kôl krát
+    # Hra prebehne počet_kôl krát
 for i in range(počet_kôl):
     print(f"\nKolo {i + 1} z {počet_kôl}:")
     hlavny_program()
 
- # Skontroluj, či je konto prázdne
-    if konto <= 0:
-        print("----------------------------------------------------")
-        print("Tvoj zostatok na konte je 0€. Nemáš možnosť tipovať, pre reset, reštartuj program")
-        print("----------------------------------------------------")
+# Skontroluj, či je konto prázdne
+if konto <= 0:
+    print("----------------------------------------------------")
+    print("Tvoj zostatok na konte je 0€. Nemáš možnosť tipovať, pre reset, reštartuj program")
+    print("----------------------------------------------------")
+
+while True:
+    odpoved = input("Natipoval si všetky kolá, pre vypnutie zavri aplikáciu.").strip().lower()
