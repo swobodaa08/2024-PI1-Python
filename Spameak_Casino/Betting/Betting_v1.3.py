@@ -1,4 +1,4 @@
-# SpameakBet v1.1 - [Copyright by SpameakBetting a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024]
+# SpameakBet v1.3 - [Copyright by SpameakBetting a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024]
 
 
 import random
@@ -14,16 +14,26 @@ def nacitaj_timy(subor):
 
 # Funkcia na výpočet kurzov na základe hodnotenia
 def vypocitaj_kurzy(hodnotenie1, hodnotenie2):
-    rozdiel = abs(hodnotenie1 - hodnotenie2)
-    if hodnotenie1 > hodnotenie2:
-        kurz_1 = max(1.5, 2.0 - rozdiel * 0.02)
-        kurz_2 = min(3.5, 2.5 + rozdiel * 0.05)
-    else:
-        kurz_1 = min(3.5, 2.5 + rozdiel * 0.05)
-        kurz_2 = max(1.5, 2.0 - rozdiel * 0.02)
+    # Pravdepodobnosť výhry pre tím 1 (E_A) a tím 2 (E_B) podľa vzorcov
+    EA = 1 / (1 + 10 ** ((hodnotenie2 - hodnotenie1) / 400))
+    EB = 1 / (1 + 10 ** ((hodnotenie1 - hodnotenie2) / 400))
     
-    kurz_X = 3.0 + rozdiel * 0.01
-    return round(kurz_1, 2), round(kurz_X, 2), round(kurz_2, 2)
+    # Kurzy sú prevrátenou hodnotou pravdepodobností
+    kurz_1 = round(1 / EA, 2)
+    kurz_2 = round(1 / EB, 2)
+    
+    # Stanovenie kurzu na remízu
+    kurz_X = round((kurz_1 + kurz_2) / 2, 2)
+    
+    return kurz_1, kurz_X, kurz_2
+
+
+# Funkcia na uloženie výsledku zápasu do súboru
+def uloz_vysledok(nazov1, goly_tim1, nazov2, goly_tim2):
+    vysledok = f"{nazov1} {goly_tim1}:{goly_tim2} {nazov2}\n"
+    with open("c:/2024-PI1-Python-1/Spameak_Casino/Betting/vysledky.txt", "a") as f:
+        f.write(vysledok)
+    print("Výsledok zápasu bol uložený do súboru vysledky.txt")
 
 # Funkcia na výpočet kurzu pre "Obaja dajú gól"
 def vypocitaj_kurz_goly(hodnotenie1, hodnotenie2):
@@ -75,6 +85,9 @@ def hlavny_program():
     print(f"\nKonečný výsledok: {nazov1} ({goly_tim1}) : {nazov2} ({goly_tim2})")
     print(f"Výsledok zápasu: {vysledok}")
     print(f"Obaja dali gól: {obaja_daju_gol}")
+
+    # Uloženie výsledku do súboru
+    uloz_vysledok(nazov1, goly_tim1, nazov2, goly_tim2)
     
     # Vyhodnotenie stávky používateľa
     if tip_vysledok == vysledok and tip_goly == obaja_daju_gol:

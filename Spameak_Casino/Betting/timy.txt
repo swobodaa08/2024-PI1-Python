@@ -1,5 +1,5 @@
 Real Madrid,980
-Barcelona,980
+Barcelona,979
 Manchester City,950
 Liverpool,920
 Juventus,890
