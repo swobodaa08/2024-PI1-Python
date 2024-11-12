@@ -19,3 +19,10 @@ Gamba
 Roulette
     Roulette 1 (Canvas)
         - Text v terminaly a profit v obrazku od canvas tkinter
+
+
+Betting
+    Betting 1 (Iba tip)
+    Betting 2 (Tip + stavky)
+    Betting 3 (Tip + stavky + na zaciatku si vyberam kapital)
+    

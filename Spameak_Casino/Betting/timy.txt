@@ -1,13 +1,107 @@
-Real Madrid,980
-Barcelona,979
-Manchester City,950
-Liverpool,920
-Juventus,890
-Horky,112
-Radostka,110
-Zilina,420
-Bratislava,490
-Kosice,380
-Trnava,390
-Divina,60
-Poprad,300
+Real Madrid,1000
+FC Barcelona,982
+AC Milan,978
+Liverpool FC,952
+Bayern Mníchov,951
+Manchester United,951
+Juventus,944
+Ajax Amsterdam,938
+Inter Miláno,937
+Chelsea FC,937
+Benfica,937
+Santos FC,925
+Flamengo,915
+River Plate,914
+Boca Juniors,911
+Paris Saint Germain,905
+Arsenal FC,905
+Porto,904
+Manchester City,900
+Atletico Madrid,899
+AS Roma,898
+Borussia Dortmund,898
+Tottenham Hotspur,891
+Napoli,890
+Olympique Marseille,886
+Internacional,885
+Gremio,884
+Sao Paulo FC,884
+Corinthians,874
+Celtic FC,856
+Rangers FC,844
+Steaua Bukurešť,840
+Galatasaray,833
+Feyenoord,824
+PSV Eindhoven,820
+Valencia CF,819
+Red Star Belgrade,805
+Club America,802
+Monterrey,799
+New York Cosmos,798
+Chivas Guadalajara,792
+Shakhtar Donetsk,790
+Dynamo Kyjev,785
+Sporting CP,779
+Lazio,772
+Hamburger SV,771
+VfB Stuttgart,770
+Olympiacos,760
+Besiktas,755
+Fenerbahce,749
+Urawa Red Diamonds,725
+Penarol,725
+Nacional,725
+Cruzeiro,718
+Anderlecht,711
+Leeds United,705
+Stade de Reims,699
+Atletico Nacional,684
+Al Ahly,681
+Al Hilal,680
+Independiente,677
+Sevilla FC,658
+Newcastle United,658
+Aston Villa,655
+Everton,654
+AS Monaco,650
+Werder Brémy,649
+Eintracht Frankfurt,644
+Wolverhampton Wanderers,642
+Torino,640
+Borussia Monchengladbach,640
+Bayer Leverkusen,778
+Swansea City,640
+Sampdoria,628
+Partizan Belehrad,628
+Club Brugge,627
+Zenit Petrohrad,620
+Metalist Charkov,559
+Internacional de Limeira,548
+Racing Club,525
+Universidad de Chile,511
+Gremio Esportivo Brasil,508
+Real Sociedad,501
+Palmeiras,499
+Fluminense,498
+Villarreal,498
+Lens,491
+Real Betis,490
+Deportivo La Coruña,488
+Bordeaux,488
+Mallorca,465
+CFR Cluj,461
+Dinamo Záhreb,425
+Kaiserslautern,400
+San Lorenzo,399
+Marseille,809
+Slovan Bratislava,375
+MSK Zilina,372
+Trnava,368
+Podbrezova,365
+Dunajska Streda,350
+Ruzomberok,339
+Banska Bystrica,335
+Kosice,330
+Presov,299
+Kysucke Nove Mesto,198
+Horky,180
