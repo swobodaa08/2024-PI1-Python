@@ -165,10 +165,12 @@ def hlavny_program():
         konto -= suma
         vyhra = round(suma * (kurz_1 if vysledok == "1" else kurz_X if vysledok == "X" else kurz_2), 2)
         konto += vyhra
+        round(konto, 2)
         print("----------------------------------------------------")
         print(f"Gratulujem! Vyhral/-a si {vyhra}€")
     else:
         konto -= suma
+        round(konto, 2)
         print("----------------------------------------------------")
         print("Bohužiaľ, tvoja stávka nebola úspešná")
     print("----------------------------------------------------")

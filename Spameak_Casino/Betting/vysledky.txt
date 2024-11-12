@@ -70,3 +70,22 @@ Aston Villa 1:3 Galatasaray
 AS Monaco 0:1 Internacional de Limeira
 Shakhtar Donetsk 2:2 MSK Zilina
 Universidad de Chile 1:3 PSV Eindhoven
+Al Hilal 0:1 Dynamo Kyjev
+FC Barcelona 0:2 Leeds United
+Manchester City 2:0 Dinamo Zahreb
+Manchester United 2:0 Elche CF
+Everton 0:2 Racing Club
+Galatasaray 3:1 Ovciarsko
+Atletico Nacional 4:1 Deportivo La Coruna
+Kaiserslautern 2:1 Ruzomberok
+Trnava 0:1 Gremio
+Fluminense 1:4 Arsenal FC
+Banska Bystrica 3:5 Dynamo Kyjev
+Valencia CF 3:4 Steaua Bukurest
+PSV Eindhoven 1:4 Club America
+Marseille 0:4 Ajax Amsterdam
+Getafe CF 1:4 Bayern Mnichov
+Leeds United 1:0 Celta Vigo
+Ovciarsko 1:5 Leeds United
+MSK Zilina 1:2 Valencia CF
+CFR Cluj 5:2 Deportivo La Coruna
