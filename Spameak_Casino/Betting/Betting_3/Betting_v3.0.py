@@ -3,6 +3,23 @@
 
 import random
 
+
+print("                                                       ")
+print("                                                       ")
+print("                                                       ")
+print("-------------------------------------------------------")
+print("                                                       ")
+print("Vitaj v hre SpameakBetting")
+print("Hra je veľmi jednoduchá, stačí tipnúť tím ktorý vyhrá")
+print("Táto hra je stále v Beta verzii, ak si narazil na chybu, kontaktuj môj instagram : @swobodaa08")
+print("Ak trafíš správne tím, ktorý vyhrá, tvoj vklad sa vynásobí kurzom vypísaným pred stávkou")
+print("Uži si Gamble <33333333")
+print("                                                       ")
+print("-------------------------------------------------------")
+print("                                                       ")
+print("                                                       ")
+print("                                                       ")
+
 # Kapital
 while True:
     try:
@@ -158,6 +175,5 @@ for i in range(počet_kôl):
  # Skontroluj, či je konto prázdne
     if konto <= 0:
         print("----------------------------------------------------")
-        print("Tvoj zostatok na konte je 0€. Program sa končí, ak chceš vložiť peniaze, znova zapni program.")
+        print("Tvoj zostatok na konte je 0€. Nemáš možnosť tipovať, pre reset, reštartuj program")
         print("----------------------------------------------------")
-        break
