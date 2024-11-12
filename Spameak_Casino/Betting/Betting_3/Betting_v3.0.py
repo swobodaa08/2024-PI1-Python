@@ -24,7 +24,7 @@ print("                                                       ")
 while True:
     try:
         vklad = float(input("Koľko eur chceš vložiť na svoj účet: "))
-        if 0.50 < vklad < 100000:
+        if 0.50 <= vklad <= 100000:
             break
         else:
             print("-----------------------------------------------------------------------------------------------------")
