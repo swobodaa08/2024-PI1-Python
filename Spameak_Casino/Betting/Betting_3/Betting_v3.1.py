@@ -1,4 +1,4 @@
-# SpameakBet v3.0 - [Copyright by SpameakBetting a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024]
+# SpameakBet v3.1 - [Copyright by SpameakBetting a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024]
 
 
 import random
@@ -100,6 +100,7 @@ def vyhodnot_zapas(hodnotenie1, hodnotenie2):
     
     return goly_tim1, goly_tim2
 
+
 # Hlavný program
 def hlavny_program():
     global konto
@@ -109,6 +110,9 @@ def hlavny_program():
     nazov2, hodnotenie2 = tim2
     
     kurz_1, kurz_X, kurz_2 = vypocitaj_kurzy(hodnotenie1, hodnotenie2)
+    round(kurz_1, 2)
+    round(kurz_2, 2)
+    round(kurz_X, 2)
     
     # Výstup pre užívateľa
     print("\n---------------------------------------------------")
@@ -129,9 +133,10 @@ def hlavny_program():
             break
         else:
             print("Zadaj prosím 1, X alebo 2.")
-    
-    
+
+
     # Kontrola vstupu pre sumu
+ 
     while True:
         try:
             suma = float(input("Zadaj koľko € chceš vsadiť: "))
@@ -147,14 +152,14 @@ def hlavny_program():
     # Vyhodnotenie zápasu
     goly_tim1, goly_tim2 = vyhodnot_zapas(hodnotenie1, hodnotenie2)
     vysledok = "1" if goly_tim1 > goly_tim2 else "2" if goly_tim2 > goly_tim1 else "X"
-    
+        
     # Výsledok zápasu a stávky
     print(f"\nKonečný výsledok: {nazov1} {goly_tim1}:{goly_tim2} {nazov2}")
     print(f"Výsledok zápasu: {vysledok}")
 
     # Uloženie výsledku do súboru
     uloz_vysledok(nazov1, goly_tim1, nazov2, goly_tim2)
-    
+        
     # Vyhodnotenie stávky používateľa
     if tip_vysledok == vysledok:
         konto -= suma
@@ -170,7 +175,7 @@ def hlavny_program():
     print(f"Aktuálny zostatok na konte: {konto}€")
     print("----------------------------------------------------")
 
-    # Hra prebehne počet_kôl krát
+# Hra prebehne počet_kôl krát
 for i in range(počet_kôl):
     print(f"\nKolo {i + 1} z {počet_kôl}:")
     hlavny_program()

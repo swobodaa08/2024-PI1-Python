@@ -2,11 +2,12 @@ Real Madrid,1000
 FC Barcelona,982
 AC Milan,978
 Liverpool FC,952
-Bayern Mníchov,951
+Bayern Mnichov,951
 Manchester United,951
 Juventus,944
+Manchester City,940
 Ajax Amsterdam,938
-Inter Miláno,937
+Inter Milano,937
 Chelsea FC,937
 Benfica,937
 Santos FC,925
@@ -16,7 +17,6 @@ Boca Juniors,911
 Paris Saint Germain,905
 Arsenal FC,905
 Porto,904
-Manchester City,900
 Atletico Madrid,899
 AS Roma,898
 Borussia Dortmund,898
@@ -29,7 +29,7 @@ Sao Paulo FC,884
 Corinthians,874
 Celtic FC,856
 Rangers FC,844
-Steaua Bukurešť,840
+Steaua Bukurest,840
 Galatasaray,833
 Feyenoord,824
 PSV Eindhoven,820
@@ -39,8 +39,10 @@ Club America,802
 Monterrey,799
 New York Cosmos,798
 Chivas Guadalajara,792
+Elche CF,792
 Shakhtar Donetsk,790
 Dynamo Kyjev,785
+Celta Vigo,780
 Sporting CP,779
 Lazio,772
 Hamburger SV,771
@@ -64,7 +66,7 @@ Newcastle United,658
 Aston Villa,655
 Everton,654
 AS Monaco,650
-Werder Brémy,649
+Werder Bremy,649
 Eintracht Frankfurt,644
 Wolverhampton Wanderers,642
 Torino,640
@@ -77,6 +79,7 @@ Club Brugge,627
 Zenit Petrohrad,620
 Metalist Charkov,559
 Internacional de Limeira,548
+Getafe CF,540
 Racing Club,525
 Universidad de Chile,511
 Gremio Esportivo Brasil,508
@@ -86,11 +89,11 @@ Fluminense,498
 Villarreal,498
 Lens,491
 Real Betis,490
-Deportivo La Coruña,488
+Deportivo La Coruna,488
 Bordeaux,488
 Mallorca,465
 CFR Cluj,461
-Dinamo Záhreb,425
+Dinamo Zahreb,425
 Kaiserslautern,400
 San Lorenzo,399
 Marseille,809
@@ -105,3 +108,7 @@ Kosice,330
 Presov,299
 Kysucke Nove Mesto,198
 Horky,180
+Ovciarsko,106
+Divina,75
+Krasnany,70
+Dolny Hricov,48
