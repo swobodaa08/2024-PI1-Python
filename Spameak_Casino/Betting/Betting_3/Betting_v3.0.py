@@ -156,6 +156,7 @@ def hlavny_program():
     
     # Vyhodnotenie stávky používateľa
     if tip_vysledok == vysledok:
+        konto -= suma
         vyhra = round(suma * (kurz_1 if vysledok == "1" else kurz_X if vysledok == "X" else kurz_2), 2)
         konto += vyhra
         print("----------------------------------------------------")
@@ -180,4 +181,4 @@ if konto <= 0:
     print("----------------------------------------------------")
 
 while True:
-    odpoved = input("Natipoval si všetky kolá, pre vypnutie zavri aplikáciu.").strip().lower()
+    odpoved = input(f"Konečný zostatok na účte : {konto}€, pre vypnutie zavri aplikáciu.").strip().lower()
