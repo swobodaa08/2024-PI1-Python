@@ -78,7 +78,7 @@ def vypocitaj_kurzy(hodnotenie1, hodnotenie2):
 # Funkcia na uloženie výsledku zápasu do súboru
 def uloz_vysledok(nazov1, goly_tim1, nazov2, goly_tim2):
     vysledok = f"{nazov1} {goly_tim1}:{goly_tim2} {nazov2}\n"
-    with open("c:/2024-PI1-Python-1/Spameak_Casino/Betting/vysledky_sk.txt", "a") as f:
+    with open("Spameak_Casino/Betting/vysledky_sk.txt", "a") as f:
         f.write(vysledok)
 
 # Funkcia na náhodné vyhodnotenie zápasu podľa pravdepodobností
@@ -104,7 +104,7 @@ def vyhodnot_zapas(hodnotenie1, hodnotenie2):
 # Hlavný program
 def hlavny_program():
     global konto
-    timy = nacitaj_timy("c:/2024-PI1-Python-1/Spameak_Casino/Betting/timy_sk.txt")
+    timy = nacitaj_timy("Spameak_Casino/Betting/timy_sk.txt")
     tim1, tim2 = random.sample(timy, 2)
     nazov1, hodnotenie1 = tim1
     nazov2, hodnotenie2 = tim2

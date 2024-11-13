@@ -1,14 +1,20 @@
 Zbynov,940
+KSK Zilina,922
 Horky,920
+Dolna Tizina,912
 Rudina,900
 Radostka,890
+Petrovice,860
 Hvozdnica,760
 Bytcica,740
 Dlhe Pole,590
 Ovciarsko,490
 Podhorie,480
 Vysoka nad Kysucou,330
+Velke Rovne,220
+Trnove,200
 Divina,100
+Skalite,89
 Dolny Hricov,40
 Krasnany,38
 Cierne,15

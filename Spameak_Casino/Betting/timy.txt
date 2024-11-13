@@ -106,9 +106,24 @@ Ruzomberok,339
 Banska Bystrica,335
 Kosice,330
 Presov,299
+Zbynov,220
 Kysucke Nove Mesto,198
+KSK Zilina,181
+Petrovice,190
 Horky,180
+Rudina,175
+Radostka,170
+Dolna Tizina,160
+Bytcica,156
+Velke Rovne,112
+Hvozdnica,110
 Ovciarsko,106
-Divina,75
-Krasnany,70
-Dolny Hricov,48
+Trnove,100
+Dlhe Pole,96
+Skalite,89
+Podhorie,85
+Vysoka nad Kysucou,69
+Divina,59
+Dolny Hricov,40
+Krasnany,38
+Cierne,20
