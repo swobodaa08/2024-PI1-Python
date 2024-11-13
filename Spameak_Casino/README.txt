@@ -25,4 +25,4 @@ Betting
     Betting 1 (Iba tip)
     Betting 2 (Tip + stavky)
     Betting 3 (Tip + stavky + na zaciatku si vyberam kapital)
-    
+    Betting_tkinter (Graficke)

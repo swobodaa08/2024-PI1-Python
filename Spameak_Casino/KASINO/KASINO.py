@@ -30,14 +30,7 @@ def my_upd():
     global konto
     konto += 1
     b1.config(text=f"Počet žetónov : {konto}")
-
-# Funkcia na uloženie progresu
-def save_prompt():
-    global konto
-    priezvisko = simpledialog.askstring("Uložiť progres", "Zadajte svoje priezvisko:")
-    if priezvisko:
-        save_progress(priezvisko, konto)
-        messagebox.showinfo("Uložené", f"Progres bol uložený pre priezvisko {priezvisko}!")
+    save_progress(priezvisko, konto)
 
 # Funkcia na ukončenie programu
 def exit_program():
@@ -48,15 +41,16 @@ def exit_program():
 def start_gamba():
     okno.destroy()  # Zavrie hlavné okno SpameakGamble
     
+    global konto
+    počet_kôl = 0
+
     print("                                                       ")
     print("-------------------------------------------------------")
     print("Vitaj v hre SpameakGamba")
     print("Hra je veľmi jednoduchá, stačí tipnúť číslo od 1 do 5")
     print("Ak trafíš správne číslo, vyhrávaš trojnásobok vkladu.")
+    print(f"Počet žetónov: {konto} = {konto}€")
     print("-------------------------------------------------------")
-
-    global konto
-    počet_kôl = 0
 
     # Kontrola vstupu pre počet kôl
     while True:
@@ -78,6 +72,10 @@ def start_gamba():
                     break
                 else:
                     print("Vklad musí byť medzi 0.50€ a 10000€ na jednu hru.")
+                if suma <= konto:
+                    break
+                else:
+                    print("Nemáš dostatok peňazí na túto stávku...")
             except ValueError:
                 print("Zadaj prosím platnú sumu (číslo).")
 
@@ -93,14 +91,18 @@ def start_gamba():
 
         b = random.randint(1, 5)
         if tip == b:
-            konto += suma * 3
+            konto -= suma
+            konto += (suma * 3)
             print(f"Vyhral/-a si! Výherné číslo bolo {b}. Tvoje konto je teraz {konto}€.")
+            save_progress(priezvisko, konto)
         else:
             konto -= suma
             print(f"Prehral/-a si... Výherné číslo bolo {b}. Tvoje konto je teraz {konto}€.")
+            save_progress(priezvisko, konto)
 
-        if konto < 0:
+        if konto <= 0:
             print("Tvoje konto je 0€.")
+            save_progress(priezvisko, 0)
             break
 
 # Získanie priezviska na začiatku
@@ -111,40 +113,32 @@ root.deiconify()
 
 if priezvisko:
     konto = load_progress(priezvisko)
-    if konto < 0:
-        messagebox.showinfo("Chyba", "Tvoje konto je 0€.")
-        root.destroy()
-    else:
-        root.destroy()
+    root.destroy()
 
         # Inicializácia hlavného okna
-        okno = tk.Tk()
-        okno.attributes('-fullscreen', True)
-        okno.title("SpameakGamble")
-        okno.geometry("1920x1080")
-        canvas = tk.Canvas()
-        canvas.pack()
+    okno = tk.Tk()
+    okno.attributes('-fullscreen', True)
+    okno.title("SpameakGamble")
+    okno.geometry("1920x1080")
+    canvas = tk.Canvas()
+    canvas.pack()
 
         # Pozadie farba
-        canvas.create_rectangle
+    canvas.create_rectangle
 
         # Tlačidlo na rátanie žetónov (zarovnané do stredu)
-        b1 = tk.Button(okno, text=f"Počet žetónov : {konto}", width=20,
-                       command=my_upd, bg="lime", font=('Helvetica', '20', 'bold'))
-        b1.place(relx=0.5, rely=0.5, anchor='center')
-
-        # Tlačidlo na uloženie progresu (pravý horný roh)
-        save_button = tk.Button(okno, text="Save", command=save_prompt, bg="yellow", font=('Helvetica', '12', 'bold'))
-        save_button.place(relx=0.95, rely=0.05, anchor='ne')
+    b1 = tk.Button(okno, text=f"Počet žetónov : {konto}", width=20,
+                    command=my_upd, bg="lime", font=('Helvetica', '20', 'bold'))
+    b1.place(relx=0.5, rely=0.5, anchor='center')
 
         # Tlačidlo "Gamba" (v strede napravo)
-        gamba_button = tk.Button(okno, text="Gamba", command=start_gamba, bg="magenta", font=('Helvetica', '12', 'bold'))
-        gamba_button.place(relx=0.75, rely=0.5, anchor='center')
+    gamba_button = tk.Button(okno, text="Gamba", command=start_gamba, bg="magenta", font=('Helvetica', '12', 'bold'))
+    gamba_button.place(relx=0.75, rely=0.5, anchor='center')
 
         # Tlačidlo na ukončenie programu (pravý dolný roh)
-        exit_button = tk.Button(okno, text="Koniec", command=exit_program, bg="red", font=('Helvetica', '12', 'bold'))
-        exit_button.place(relx=0.95, rely=0.95, anchor='se')
+    exit_button = tk.Button(okno, text="Koniec", command=exit_program, bg="red", font=('Helvetica', '12', 'bold'))
+    exit_button.place(relx=0.95, rely=0.95, anchor='se')
 
-        okno.mainloop()
+    okno.mainloop()
 else:
     messagebox.showinfo("Chyba", "Nebolo zadané priezvisko. Program sa ukončí.")
