@@ -1,0 +1,13 @@
+Horky,920
+Rudina,900
+Radostka,890
+Hvozdnica,760
+Bytcica,740
+Dlhe Pole,590
+Ovciarsko,490
+Podhorie,480
+Vysoka nad Kysucou,330
+Divina,100
+Dolny Hricov,40
+Krasnany,38
+Cierne,15
