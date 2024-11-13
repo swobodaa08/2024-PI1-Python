@@ -1,4 +1,4 @@
-# SpameakGamba Beta v4.0 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] # SpameakGamba Beta v3.0 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] 
+# SpameakCasino Beta v4.0 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] # SpameakGamba Beta v3.0 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] 
 
 
 
@@ -74,18 +74,17 @@ def start_gamba():
             print("Zadaj prosím platné číslo pre počet kôl.")
 
     # Princip hry
-    for i in range(počet_kôl):
+    for _ in range(počet_kôl):
         while True:
             try:
                 suma = float(input("Zadaj koľko € chceš vsadiť: "))
-                if 10000 >= suma >= 0.50:
+                if suma <= konto and 10000 >= suma >= 0.50:
                     break
                 else:
-                    print("Vklad musí byť medzi 0.50€ a 10000€ na jednu hru.")
-                if suma <= konto:
-                    break
-                else:
-                    print("Nemáš dostatok peňazí na túto stávku...")
+                    if suma >= konto:
+                        print("Nemáš dostatok peňazí na túto stávku...")
+                    else:
+                        print("Stávka musí byť aspon 0.50€ a nemôže byť vyššia ako 10000€")
             except ValueError:
                 print("Zadaj prosím platnú sumu (číslo).")
 
@@ -344,6 +343,10 @@ if priezvisko:
 
     # Vložte obrázok na Canvas
     canvas.create_image(0, 0, image=background_photo, anchor="nw")
+
+    # Meno používateľa
+    canvas.create_rectangle(10,10,300,100, fill="Gold")
+    canvas.create_text(155,55, text=f"{priezvisko}", font=("Helvetica", "20", "bold"))
 
     # Tlačidlo na rátanie žetónov (zarovnané do stredu)
     b1 = tk.Button(okno, text=f"Počet žetónov : {konto}", width=20,
