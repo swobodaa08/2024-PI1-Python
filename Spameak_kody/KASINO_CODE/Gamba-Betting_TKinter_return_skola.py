@@ -1,4 +1,4 @@
-# SpameakCasino Beta v4.1 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] # SpameakGamba Beta v3.0 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] 
+# SpameakCasino Beta v4.3 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] # SpameakGamba Beta v3.0 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] 
 
 
 
@@ -124,7 +124,7 @@ def start_bet():
     počet_kôl = 0
 
     # Original absolute path
-    absolute_path = Path("c:/2024-PI1-Python-1/Spameak_Casino/timy.txt")
+    absolute_path = Path("Z:/2024-PI1-Python/Spameak_Casino/timy.txt")
 
     # Get the current working directory
     current_dir = Path.cwd()
@@ -133,7 +133,7 @@ def start_bet():
     relative_path = absolute_path.relative_to(current_dir)
 
     # Original absolute path
-    absolute_path2 = Path("c:/2024-PI1-Python-1/Spameak_Casino/vysledky.txt")
+    absolute_path2 = Path("Z:/2024-PI1-Python/Spameak_Casino/vysledky.txt")
 
     # Get the current working directory
     current_dir2 = Path.cwd()
