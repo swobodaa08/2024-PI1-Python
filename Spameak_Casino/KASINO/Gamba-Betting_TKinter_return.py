@@ -37,7 +37,7 @@ def save_progress(priezvisko, progress):
 # Funkcia na aktualizáciu žetónov
 def my_upd():
     global konto
-    konto += 1
+    konto += 0.1
     b1.config(text=f"Počet žetónov : {konto}")
     save_progress(priezvisko, konto)
 
