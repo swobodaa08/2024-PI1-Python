@@ -38,7 +38,7 @@ def save_progress(priezvisko, progress):
 def my_upd():
     global konto
     konto += 1
-    b1.config(text=f"Počet žetónov : {konto}")
+    b1.config(text=f"Peňazí na účte : {konto}€")
     save_progress(priezvisko, konto)
 
 # Funkcia na ukončenie programu
@@ -59,7 +59,7 @@ def start_gamba():
     print("Vitaj v hre SpameakGamba")
     print("Hra je veľmi jednoduchá, stačí tipnúť číslo od 1 do 5")
     print("Ak trafíš správne číslo, vyhrávaš trojnásobok vkladu.")
-    print(f"Počet žetónov: {konto} = {konto}€")
+    print(f"Zostatok na účte: {konto}€")
     print("-------------------------------------------------------")
 
     # Kontrola vstupu pre počet kôl
@@ -349,7 +349,7 @@ if priezvisko:
     canvas.create_text(155,55, text=f"{priezvisko}", font=("Helvetica", "20", "bold"))
 
     # Tlačidlo na rátanie žetónov (zarovnané do stredu)
-    b1 = tk.Button(okno, text=f"Počet žetónov : {konto}", width=20,
+    b1 = tk.Button(okno, text=f"Peňazí na účte : {konto}€", width=20,
                     command=my_upd, bg="lime", font=('Helvetica', '40', 'bold'))
     b1.place(relx=0.5, rely=0.5, anchor='center')
 
