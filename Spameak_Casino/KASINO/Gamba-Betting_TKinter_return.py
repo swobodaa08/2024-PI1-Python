@@ -211,13 +211,13 @@ def start_bet():
         )[0]
 
         if vysledok == "1":
-            goly_tim1 = random.randint(1, 6)
+            goly_tim1 = random.randint(1, 4)
             goly_tim2 = random.randint(0, goly_tim1 - 1)
         elif vysledok == "2":
-            goly_tim2 = random.randint(1, 6)
+            goly_tim2 = random.randint(1, 4)
             goly_tim1 = random.randint(0, goly_tim2 - 1)
         else:
-            goly_tim1 = goly_tim2 = random.randint(0, 3)
+            goly_tim1 = goly_tim2 = random.randint(0, 2)
         
         return goly_tim1, goly_tim2
 

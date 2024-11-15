@@ -18,14 +18,14 @@ canvas = tk.Canvas(gamba, width=screen_width, height=screen_height)
 canvas.pack(fill="both", expand=True)
 
 # Načítanie a prispôsobenie obrázka
-image_path = "Spameak_Casino/Gamba.jpg"  # cesta k obrázku
+image_path = "Spameak_Casino/Gamba.jpg"
 background_image = Image.open(image_path)
 background_image = background_image.resize((screen_width, screen_height), Image.LANCZOS)
 background_photo = ImageTk.PhotoImage(background_image)
 
 # Inicializácia jasného obrázka na pozadí
 enhancer = ImageEnhance.Brightness(background_image)
-brightness_factor = 1.3  # Počiatočný jas
+brightness_factor = 1.3
 bright_background_image = enhancer.enhance(brightness_factor)
 background_photo = ImageTk.PhotoImage(bright_background_image)
 
@@ -39,30 +39,103 @@ canvas.create_text(screen_width / 2, 75, text="Spameak Gamba", font=("Helvetica"
 
 # Definícia tlačidiel
 
-stlacenie = 0
+počet_kôl = 0
+suma = 0
 
 def pokracovat():
     pokracovat_button.destroy()
-    global background_photo  # Aby sa aktualizovaný obrázok zobrazil správne
-    brightness_factor = 0.3  # Nastavenie tmavšej verzie obrázka
+    global background_photo
+    # global konto
+    brightness_factor = 0.3
     dark_background_image = enhancer.enhance(brightness_factor)
-    background_photo = ImageTk.PhotoImage(dark_background_image)  # Aktualizovaný obrázok
-    canvas.itemconfig(canvas_image, image=background_photo)  # Zmena obrázka na Canvas
-    stlacenie = stlacenie + 1
-
-if brightness_factor == 0.3 :
+    background_photo = ImageTk.PhotoImage(dark_background_image)
+    canvas.itemconfig(canvas_image, image=background_photo)
     kola = tk.Tk()
     kola.withdraw()
     while True:
         try:
-            počet_kôl = simpledialog.askstring("Počet Kôl", "Zadaj počet kôl, koľko chceš hrať:")
-            if 0 <= počet_kôl <= 20:
+            počet_kôl = simpledialog.askinteger("Počet Kôl", "Zadaj počet kôl, koľko chceš hrať:")
+            if 0 < počet_kôl < 21:
                 break
             else:
                 messagebox.showinfo("Chyba", "Počet kôl musí byť od 1 do 20")
         except ValueError:
             messagebox.showinfo("Chyba", "Zadaj číslo od 1 do 20")
     kola.deiconify()
+
+    for _ in range(počet_kôl):
+    # Kontrola vstupu pre sumu
+        peniaze = tk.Tk()
+        peniaze.withdraw()
+    while True:
+        try:
+            suma = simpledialog.askfloat("Suma", "Zadaj koľko € chceš vsadiť:")
+            if 10000 >= suma >= 0.50:
+                break
+            else:
+                messagebox.showinfo("Chyba", "Vklad musí byť aspoň 0.50€ a nemôže byť vyšší ako 10000€ na jednu hru...")
+        except ValueError:
+            messagebox.showinfo("Chyba", "Zadaj platnú sumu")
+        peniaze.deiconify()
+    # while True:
+    #     try:
+    #         tip = int(input("Zadaj číslo od 1 do 5 ktore tipuješ: "))
+    #         if 1 <= tip <= 5:
+    #             break
+    #         else:
+    #             print("-------------------------------------------------------------------------------------------------------------")
+    #             print("Také číslo ani nebolo v možnostiach, zadaj číslo od 1 do 5, aby si neprišiel o svoj vklad bez šance vyhrať...")
+    #             print("-------------------------------------------------------------------------------------------------------------")
+    #             print("                                                       ")
+    #     except ValueError:
+    #         print("-------------------------------------------")
+    #         print("ČISLOOOO! Zadaj prosím platnú sumu (číslo).")
+    #         print("-------------------------------------------")
+    #         print("                                                       ")
+    # b = random.randint(1, 5)
+    # počet_kôl -= 1
+    # if tip == b:
+    #     konto += suma * 3
+    #     if počet_kôl == 0:
+    #         break
+    #     else:
+    #         print("                                                       ")
+    #         print("                                                       ")
+    #         print("                                                       ")
+    #         print("                                                       ")
+    #         print("                                                       ")
+    #         print("-------------------------------------------------------------------------")
+    #         print("                                                       ")
+    #         print(f"Vyhral/-a si !!!!")
+    #         print(f"Výherné číslo bolo {b}, perfektne")
+    #         print(f"Počet zostávajúcich pokusov: {počet_kôl}")
+    #         if konto > 0:
+    #             print(f"Tvoj profit je zatiaľ {konto}€, ak budeš takto pokračovať zachvíľu z teba bude milionár :)")
+    #         else:
+    #             print(f"Avšak stále si už prehral/-a {konto * -1}€, ak chceš stále hrať, pokračuj")
+    #         print("                                                       ")
+    #         print("-------------------------------------------------------------------------")
+    # else:
+    #     konto -= suma
+    #     if počet_kôl == 0:
+    #         break
+    #     else:
+    #         print("                                                       ")
+    #         print("                                                       ")
+    #         print("                                                       ")
+    #         print("                                                       ")
+    #         print("-------------------------------------------------------------------------")
+    #         print("                                                       ")
+    #         print(f"Prehral/-a si.....")
+    #         print(f"Výherné číslo bolo {b}")
+    #         print(f"Počet zostávajúcich pokusov: {počet_kôl}")
+    #         if konto > 0:
+    #             print(f"Avšak nezúfaj, zatial si stále v profite {konto}€")
+    #         else:
+    #             print(f"Zatiaľ si prehral/-a {konto * -1}€, ak chceš skončiť, vypni tento program.")
+    #         print("                                                       ")
+    #         print("-------------------------------------------------------------------------")
+
 
 def exit_program():
     gamba.quit()
