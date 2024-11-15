@@ -5,7 +5,7 @@ canvas.pack()
 
 # Prvé písmeno S
     # Horna hrana
-canvas.create_rectangle(20,20,30,30, fill="red")
+canvas.create_rectangle(20,20,30,30, fill="#000000")
 canvas.create_rectangle(30,20,40,30, fill="blue")
 canvas.create_rectangle(40,20,50,30, fill="magenta")
 canvas.create_rectangle(50,20,60,30, fill="yellow")

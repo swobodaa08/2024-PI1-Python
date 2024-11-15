@@ -81,13 +81,13 @@ def click():
     # global počet_kôl
     
 
-def exit_program():
-    gamba.quit()
-    gamba.destroy()
+# def exit_program():
+#     gamba.quit()
+#     gamba.destroy()
 
-def spat():
-    gamba.quit
-    gamba.destroy()
+# def spat():
+#     gamba.quit
+#     gamba.destroy()
 
 # Vytvorenie tlačidla "Pokračovať"
 pokracovat_button = tk.Button(gamba, text="Pokračovať", command= pokracovat, bg="Lime", font=('Times New Roman', '36', 'bold'))
