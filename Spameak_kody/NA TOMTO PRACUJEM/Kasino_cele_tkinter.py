@@ -38,18 +38,18 @@ def save_progress(priezvisko, progress):
 def my_upd():
     global konto
     konto += 1
-    b1.config(text=f"Peňazí na účte : {konto}€")
+    b1.config(text=f"Počet žetónov : {konto}")
     save_progress(priezvisko, konto)
 
 # Funkcia na ukončenie programu
 def exit_program():
-    okno.quit()
-    okno.destroy()
+    lobby.quit()
+    lobby.destroy()
 
 
 # Funkcia na spustenie hry "SpameakGamba"
 def start_gamba():
-    okno.destroy()  # Zavrie hlavné okno SpameakGamble
+    lobby.destroy()  # Zavrie hlavné lobby SpameakGamble
     
     global konto
     počet_kôl = 0
@@ -59,7 +59,7 @@ def start_gamba():
     print("Vitaj v hre SpameakGamba")
     print("Hra je veľmi jednoduchá, stačí tipnúť číslo od 1 do 5")
     print("Ak trafíš správne číslo, vyhrávaš trojnásobok vkladu.")
-    print(f"Zostatok na účte: {konto}€")
+    print(f"Počet žetónov: {konto} = {konto}€")
     print("-------------------------------------------------------")
 
     # Kontrola vstupu pre počet kôl
@@ -117,7 +117,7 @@ def start_gamba():
 
 # Funkcia na spustenie hry "SpameakBet"
 def start_bet():
-    okno.destroy()  # Zavrie hlavné okno SpameakGamble
+    lobby.destroy()  # Zavrie hlavné lobby SpameakGamble
 
     from pathlib import Path
     global konto
@@ -211,13 +211,13 @@ def start_bet():
         )[0]
 
         if vysledok == "1":
-            goly_tim1 = random.randint(1, 4)
+            goly_tim1 = random.randint(1, 6)
             goly_tim2 = random.randint(0, goly_tim1 - 1)
         elif vysledok == "2":
-            goly_tim2 = random.randint(1, 4)
+            goly_tim2 = random.randint(1, 6)
             goly_tim1 = random.randint(0, goly_tim2 - 1)
         else:
-            goly_tim1 = goly_tim2 = random.randint(0, 2)
+            goly_tim1 = goly_tim2 = random.randint(0, 3)
         
         return goly_tim1, goly_tim2
 
@@ -317,32 +317,34 @@ def start_bet():
 
 
 # Získanie priezviska na začiatku
-root = tk.Tk()
-root.withdraw()
-priezvisko = simpledialog.askstring("Prihlásenie", "Zadajte svoje priezvisko:")
-root.deiconify()
+login = tk.Tk()
+login.withdraw()
+priezvisko = simpledialog.askstring("Prihlásenie", "Zadajte svojú prezývku:")
+login.deiconify()
 
 if priezvisko:
     konto = load_progress(priezvisko)
-    root.destroy()
+    login.destroy()
 
     # Inicializácia hlavného okna
     from PIL import Image, ImageTk
-    okno = tk.Tk()
-    # Obrazovka
-    screen_width = okno.winfo_screenwidth()
-    screen_height = okno.winfo_screenheight()
-    okno.attributes('-fullscreen', True)
-    okno.title("SpameakGamble")
-    okno.geometry(f"{screen_width}x{screen_height}")
-    canvas = tk.Canvas(okno, width=screen_width, height=screen_height)
-    canvas.pack(fill="both", expand=True)
+    lobby = tk.Tk()
+    screen_width = lobby.winfo_screenwidth()
+    screen_height = lobby.winfo_screenheight()
+    lobby.attributes('-fullscreen', True)
+    lobby.title("SpameakCasino")
+    lobby.geometry(f"{screen_width}x{screen_width}")
 
     # Načítanie obrázka a jeho prispôsobenie veľkosti Canvasu
+    canvas = tk.Canvas(lobby, width=1920, height=1080)
+    canvas.pack(fill="both", expand=True)
     image_path = "Spameak_Casino/Background.jpg"  # cesta k obrázku
     background_image = Image.open(image_path)
     background_image = background_image.resize((screen_width, screen_height), Image.LANCZOS)  # zmenšenie na veľkosť Canvasu
     background_photo = ImageTk.PhotoImage(background_image)
+    # Vytvorenie labelu s obrázkom ako pozadie
+    background_label = tk.Label(lobby, image=background_photo)
+    background_label.place(x=0, y=0, relwidth=1, relheight=1)  # umiestnenie na celú obrazovku
 
     # Vložte obrázok na Canvas
     canvas.create_image(0, 0, image=background_photo, anchor="nw")
@@ -352,22 +354,22 @@ if priezvisko:
     canvas.create_text(155,55, text=f"{priezvisko}", font=("Helvetica", "20", "bold"))
 
     # Tlačidlo na rátanie žetónov (zarovnané do stredu)
-    b1 = tk.Button(okno, text=f"Peňazí na účte : {konto}€", width=20,
+    b1 = tk.Button(lobby, text=f"Počet žetónov : {konto}", width=20,
                     command=my_upd, bg="lime", font=('Helvetica', '40', 'bold'))
     b1.place(relx=0.5, rely=0.5, anchor='center')
 
     # Tlačidlo "Gamba" (v strede napravo)
-    gamba_button = tk.Button(okno, text="Gamba", command=start_gamba, bg="magenta", font=('Helvetica', '25', 'bold'))
+    gamba_button = tk.Button(lobby, text="Gamba", command=start_gamba, bg="magenta", font=('Helvetica', '25', 'bold'))
     gamba_button.place(relx=0.08, rely=0.98, anchor='se')
 
     # Tlačidlo "Bet" (hore napravo)
-    bet_button = tk.Button(okno, text="Betting", command=start_bet, bg="cyan", font=('Helvetica', '25', 'bold'))
+    bet_button = tk.Button(lobby, text="Betting", command=start_bet, bg="cyan", font=('Helvetica', '25', 'bold'))
     bet_button.place(relx=0.5328, rely=0.98, anchor='se')
 
     # Tlačidlo na ukončenie programu (pravý dolný roh)
-    exit_button = tk.Button(okno, text="Koniec", command=exit_program, bg="red", font=('Helvetica', '25', 'bold'))
+    exit_button = tk.Button(lobby, text="Koniec", command=exit_program, bg="red", font=('Helvetica', '25', 'bold'))
     exit_button.place(relx=0.98, rely=0.98, anchor='se')
 
-    okno.mainloop()
+    lobby.mainloop()
 else:
     messagebox.showinfo("Chyba", "Nebolo zadané priezvisko. Program sa ukončí.")

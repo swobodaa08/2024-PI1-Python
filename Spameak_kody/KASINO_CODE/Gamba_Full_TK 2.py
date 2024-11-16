@@ -67,10 +67,11 @@ def pokracovat():
     # Kontrola vstupu pre sumu
         peniaze = tk.Tk()
         peniaze.withdraw()
+        peniaze.attributes("-topmost", True)
     while True:
         try:
             suma = simpledialog.askfloat("Suma", "Zadaj koľko € chceš vsadiť:")
-            if 10000 >= suma >= 0.50:
+            if suma is not None and 10000 >= suma >= 0.50:
                 break
             else:
                 messagebox.showinfo("Chyba", "Vklad musí byť aspoň 0.50€ a nemôže byť vyšší ako 10000€ na jednu hru...")

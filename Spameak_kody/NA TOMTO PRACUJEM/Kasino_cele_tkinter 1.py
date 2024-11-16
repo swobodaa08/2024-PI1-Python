@@ -329,13 +329,13 @@ if priezvisko:
     # Inicializácia hlavného okna
     from PIL import Image, ImageTk
     lobby = tk.Tk()
-    lobby.attributes('-fullscreen', True)
-    lobby.title("SpameakCasino")
-    lobby.geometry("1920x1080")
-
-    # Načítanie obrázka a jeho prispôsobenie veľkosti Canvasu
     screen_width = lobby.winfo_screenwidth()
     screen_height = lobby.winfo_screenheight()
+    lobby.attributes('-fullscreen', True)
+    lobby.title("SpameakCasino")
+    lobby.geometry(f"{screen_width}x{screen_width}")
+
+    # Načítanie obrázka a jeho prispôsobenie veľkosti Canvasu
     canvas = tk.Canvas(lobby, width=1920, height=1080)
     canvas.pack(fill="both", expand=True)
     image_path = "Spameak_Casino/Background.jpg"  # cesta k obrázku
