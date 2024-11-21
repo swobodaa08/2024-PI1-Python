@@ -112,7 +112,7 @@ def pokracovat():
             """Zobrazí chybové hlásenie pred oknom na zadávanie sumy."""
             error_window = tk.Toplevel(peniaze)
             error_window.title(title)
-            error_window.geometry(f"400x200+{x_offset}+{y_offset}")  # Nastavenie presnej pozície
+            error_window.geometry(f"600x200+{x_offset}+{y_offset}")  # Nastavenie presnej pozície
             error_window.transient(peniaze)  # Vytvoriť dieťa okna "peniaze"
             error_window.attributes("-topmost", True)  # Zobraziť na vrchu
             error_window.bind("<Return>", submit_suma)
