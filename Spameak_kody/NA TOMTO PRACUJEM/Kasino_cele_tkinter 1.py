@@ -251,7 +251,7 @@ def start_bet():
         # Používateľ zadá svoje tipy
         while True:
             tip_vysledok = input("Tipnite si víťaza (1, X alebo 2): ")
-            if tip_vysledok in ["1", "X", "2"]:
+            if tip_vysledok in ["1", "X", "x", "2"]:
                 break
             else:
                 print("Zadaj prosím 1, X alebo 2.")
@@ -262,18 +262,18 @@ def start_bet():
         while True:
             try:
                 suma = float(input("Zadaj koľko € chceš vsadiť: "))
-                if konto >= suma:
+                if konto >= suma and 0.50 <= suma <= 10000:
                     break
                 else:  
                     print("---------------------------------------------------")
-                    print("Nemáš dostatok peňazí na takúto stávku")
+                    print("Nieje možné vytvoriť stávku.. Uisti sa či je suma aspoň 50 centov, či nepresahuje 10000€ a či máš na stávku peniaze!")
                     print("---------------------------------------------------")
             except ValueError:
                 print("Prosím, zadaj platnú sumu (číslo).")
 
         # Vyhodnotenie zápasu
         goly_tim1, goly_tim2 = vyhodnot_zapas(hodnotenie1, hodnotenie2)
-        vysledok = "1" if goly_tim1 > goly_tim2 else "2" if goly_tim2 > goly_tim1 else "X"
+        vysledok = "1" if goly_tim1 > goly_tim2 else "2" if goly_tim2 > goly_tim1 else "X" and "x"
             
         # Výsledok zápasu a stávky
         print(f"\nKonečný výsledok: {nazov1} {goly_tim1}:{goly_tim2} {nazov2}")
@@ -285,7 +285,7 @@ def start_bet():
         # Vyhodnotenie stávky používateľa
         if tip_vysledok == vysledok:
             konto -= suma
-            vyhra = round(suma * (kurz_1 if vysledok == "1" else kurz_X if vysledok == "X" else kurz_2), 2)
+            vyhra = round(suma * (kurz_1 if vysledok == "1" else kurz_X if vysledok == "X" and "x" else kurz_2), 2)
             konto += vyhra
             round(konto, 2)
             print("----------------------------------------------------")

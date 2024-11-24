@@ -193,6 +193,10 @@ def start_bet():
         EB = 1 / (1 + 10 ** ((hodnotenie1 - hodnotenie2) / 400))
         kurz_1 = round(1 / EA, 2)
         kurz_2 = round(1 / EB, 2)
+        if kurz_1 > 150:
+            kurz_1 = 150
+        if kurz_2 > 150:
+            kurz_2 = 150
         kurz_X = round((kurz_1 + kurz_2) / 2, 2)
         return kurz_1, kurz_X, kurz_2
 
@@ -262,11 +266,11 @@ def start_bet():
         while True:
             try:
                 suma = float(input("Zadaj koľko € chceš vsadiť: "))
-                if konto >= suma:
+                if konto >= suma and 0.50 <= suma <= 10000:
                     break
                 else:  
                     print("---------------------------------------------------")
-                    print("Nemáš dostatok peňazí na takúto stávku")
+                    print("Nieje možné vytvoriť stávku.. Uisti sa či je suma aspoň 50 centov, či nepresahuje 10000€ a či máš na stávku peniaze!")
                     print("---------------------------------------------------")
             except ValueError:
                 print("Prosím, zadaj platnú sumu (číslo).")
