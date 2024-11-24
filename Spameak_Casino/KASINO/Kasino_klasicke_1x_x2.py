@@ -1,4 +1,4 @@
-# SpameakCasino Beta v4.3 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] # SpameakGamba Beta v3.0 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] 
+# SpameakCasino Beta v4.1 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] # SpameakGamba Beta v3.0 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] 
 
 
 
@@ -10,6 +10,7 @@ import random
 
 # Inicializácia konta
 konto = 0
+velkost = 24
 
 # Direktoria prihlasenia
 directory = os.path.join(os.getcwd(), "Spameak_Casino/Progress")
@@ -36,15 +37,20 @@ def save_progress(priezvisko, progress):
 
 # Funkcia na aktualizáciu žetónov
 def my_upd():
-    global konto
+    global konto, velkost
     konto += 1
-    b1.config(text=f"Počet žetónov : {konto}")
+    b1.config(text=f"Peňazí na účte : {konto}€")
     save_progress(priezvisko, konto)
 
 # Funkcia na ukončenie programu
 def exit_program():
     okno.quit()
     okno.destroy()
+
+def add_secret():
+    global konto
+    if konto < 100000:
+        konto = konto + 100000
 
 
 # Funkcia na spustenie hry "SpameakGamba"
@@ -59,7 +65,7 @@ def start_gamba():
     print("Vitaj v hre SpameakGamba")
     print("Hra je veľmi jednoduchá, stačí tipnúť číslo od 1 do 5")
     print("Ak trafíš správne číslo, vyhrávaš trojnásobok vkladu.")
-    print(f"Počet žetónov: {konto} = {konto}€")
+    print(f"Zostatok na účte: {konto}€")
     print("-------------------------------------------------------")
 
     # Kontrola vstupu pre počet kôl
@@ -124,7 +130,7 @@ def start_bet():
     počet_kôl = 0
 
     # Original absolute path
-    absolute_path = Path("Z:/2024-PI1-Python/Spameak_Casino/timy.txt")
+    absolute_path = Path("c:/2024-PI1-Python-1/Spameak_Casino/timy.txt")
 
     # Get the current working directory
     current_dir = Path.cwd()
@@ -133,7 +139,7 @@ def start_bet():
     relative_path = absolute_path.relative_to(current_dir)
 
     # Original absolute path
-    absolute_path2 = Path("Z:/2024-PI1-Python/Spameak_Casino/vysledky.txt")
+    absolute_path2 = Path("c:/2024-PI1-Python-1/Spameak_Casino/vysledky.txt")
 
     # Get the current working directory
     current_dir2 = Path.cwd()
@@ -194,7 +200,23 @@ def start_bet():
         kurz_1 = round(1 / EA, 2)
         kurz_2 = round(1 / EB, 2)
         kurz_X = round((kurz_1 + kurz_2) / 2, 2)
-        return kurz_1, kurz_X, kurz_2
+        if kurz_1 > 150:
+            kurz_1 = 150
+        if kurz_2 > 150:
+            kurz_2 = 150
+
+        kurz_1x = round(100 / (((1 / kurz_1) + (1 / kurz_X)) * 100), 2)
+        kurz_12 = round(100 / (((1 / kurz_1) + (1 / kurz_2) + ((1 / kurz_X) / 2)) * 100), 2)
+        kurz_x2 = round(100 / (((1 / kurz_2) + (1 / kurz_X)) * 100), 2)
+        
+        if kurz_1x <= 1:
+            kurz_1x = round(147 / (((1 / kurz_1) + (1 / kurz_X)) * 100), 2)
+        if kurz_x2 <= 1:
+            kurz_x2 = round(147 / (((1 / kurz_2) + (1 / kurz_X)) * 100), 2)
+        if kurz_12 <= 1:
+            kurz_12 = round(147 / (((1 / kurz_1) + (1 / kurz_2) + ((1 / kurz_X) / 2)) * 100), 2)
+        return kurz_1, kurz_X, kurz_2, kurz_1x, kurz_x2, kurz_12
+    
 
     # Funkcia na uloženie výsledku zápasu do súboru
     def uloz_vysledok(nazov1, goly_tim1, nazov2, goly_tim2):
@@ -211,13 +233,13 @@ def start_bet():
         )[0]
 
         if vysledok == "1":
-            goly_tim1 = random.randint(1, 6)
+            goly_tim1 = random.randint(1, 4)
             goly_tim2 = random.randint(0, goly_tim1 - 1)
         elif vysledok == "2":
-            goly_tim2 = random.randint(1, 6)
+            goly_tim2 = random.randint(1, 4)
             goly_tim1 = random.randint(0, goly_tim2 - 1)
         else:
-            goly_tim1 = goly_tim2 = random.randint(0, 3)
+            goly_tim1 = goly_tim2 = random.randint(0, 2)
         
         return goly_tim1, goly_tim2
 
@@ -231,10 +253,14 @@ def start_bet():
         nazov1, hodnotenie1 = tim1
         nazov2, hodnotenie2 = tim2
         
-        kurz_1, kurz_X, kurz_2 = vypocitaj_kurzy(hodnotenie1, hodnotenie2)
+        kurz_1, kurz_X, kurz_2, kurz_1x, kurz_12, kurz_x2 = vypocitaj_kurzy(hodnotenie1, hodnotenie2)
         round(kurz_1, 2)
         round(kurz_2, 2)
         round(kurz_X, 2)
+        if kurz_1x and kurz_12 and kurz_x2 == int:
+            round(kurz_1x, 2)
+            round(kurz_x2, 2)
+            round(kurz_12, 2)
         
         # Výstup pre užívateľa
         print("\n---------------------------------------------------")
@@ -246,15 +272,22 @@ def start_bet():
         print(f"1 (Vyhrá {nazov1}) = {kurz_1}")
         print(f"X (Remíza) = {kurz_X}")
         print(f"2 (Vyhrá {nazov2}) = {kurz_2}")
+        print("                                                     ")
+        print(f"1X (Vyhrá {nazov1} alebo remíza) = {kurz_1x}")
+        print(f"12 (Nebude remíza) = {kurz_12}")
+        print(f"X2 (Vyhrá {nazov2} alebo remíza) = {kurz_x2}")
         print("---------------------------------------------------")
         
         # Používateľ zadá svoje tipy
         while True:
-            tip_vysledok = input("Tipnite si víťaza (1, X alebo 2): ")
-            if tip_vysledok in ["1", "X", "2"]:
-                break
-            else:
-                print("Zadaj prosím 1, X alebo 2.")
+            try:
+                tip_vysledok = input("Tipnite si víťaza (1, X, 2, 1x, 12, x2): ")
+                if tip_vysledok in ["1", "X", "x", "2", "1x", "1X", "12", "X2", "x2"]:
+                    break
+                else:
+                    print("Zadaj prosím 1, X, 2, alebo 1x, x2, 12.")
+            except kurz_1x or kurz_12 or kurz_x2 == str:
+                print("Vyzerá to, že tip, ktorý sa snažíš podať je zamknutý, podaj na kurz ktorý neni zamknutý")
 
 
         # Kontrola vstupu pre sumu
@@ -262,30 +295,34 @@ def start_bet():
         while True:
             try:
                 suma = float(input("Zadaj koľko € chceš vsadiť: "))
-                if konto >= suma:
+                if konto >= suma and 0.50 <= suma <= 10000:
                     break
                 else:  
                     print("---------------------------------------------------")
-                    print("Nemáš dostatok peňazí na takúto stávku")
+                    print("Nieje možné vytvoriť stávku.. Uisti sa či je suma aspoň 50 centov, či nepresahuje 10000€ a či máš na stávku peniaze!")
                     print("---------------------------------------------------")
             except ValueError:
                 print("Prosím, zadaj platnú sumu (číslo).")
 
         # Vyhodnotenie zápasu
         goly_tim1, goly_tim2 = vyhodnot_zapas(hodnotenie1, hodnotenie2)
-        vysledok = "1" if goly_tim1 > goly_tim2 else "2" if goly_tim2 > goly_tim1 else "X"
+        if goly_tim1 > goly_tim2:
+            vysledok = ["1", "1x", "1X", "12"]
+        elif goly_tim2 > goly_tim1:
+            vysledok = ["2", "X2", "x2", "12"]
+        else:
+            vysledok = ["X", "x", "1X", "1x", "x2", "X2"]
             
         # Výsledok zápasu a stávky
         print(f"\nKonečný výsledok: {nazov1} {goly_tim1}:{goly_tim2} {nazov2}")
-        print(f"Výsledok zápasu: {vysledok}")
 
         # Uloženie výsledku do súboru
         uloz_vysledok(nazov1, goly_tim1, nazov2, goly_tim2)
             
         # Vyhodnotenie stávky používateľa
-        if tip_vysledok == vysledok:
+        if tip_vysledok in vysledok:
             konto -= suma
-            vyhra = round(suma * (kurz_1 if vysledok == "1" else kurz_X if vysledok == "X" else kurz_2), 2)
+            vyhra = round(suma * (kurz_1 if "1" in vysledok and tip_vysledok == "1" else kurz_X if "X" in vysledok and tip_vysledok in ["X", "x"] else kurz_2 if "2" in vysledok and tip_vysledok == "2" else kurz_1x if "1x" in vysledok and tip_vysledok.lower() == "1x" else kurz_x2 if "x2" in vysledok and tip_vysledok.lower() == "x2" else kurz_12), 2)
             konto += vyhra
             round(konto, 2)
             print("----------------------------------------------------")
@@ -329,16 +366,19 @@ if priezvisko:
     # Inicializácia hlavného okna
     from PIL import Image, ImageTk
     okno = tk.Tk()
+    # Obrazovka
+    screen_width = okno.winfo_screenwidth()
+    screen_height = okno.winfo_screenheight()
     okno.attributes('-fullscreen', True)
     okno.title("SpameakGamble")
-    okno.geometry("1920x1080")
-    canvas = tk.Canvas(okno, width=1920, height=1080)
+    okno.geometry(f"{screen_width}x{screen_height}")
+    canvas = tk.Canvas(okno, width=screen_width, height=screen_height)
     canvas.pack(fill="both", expand=True)
 
     # Načítanie obrázka a jeho prispôsobenie veľkosti Canvasu
     image_path = "Spameak_Casino/Background.jpg"  # cesta k obrázku
     background_image = Image.open(image_path)
-    background_image = background_image.resize((1920, 1080), Image.LANCZOS)  # zmenšenie na veľkosť Canvasu
+    background_image = background_image.resize((screen_width, screen_height), Image.LANCZOS)  # zmenšenie na veľkosť Canvasu
     background_photo = ImageTk.PhotoImage(background_image)
 
     # Vložte obrázok na Canvas
@@ -349,7 +389,7 @@ if priezvisko:
     canvas.create_text(155,55, text=f"{priezvisko}", font=("Helvetica", "20", "bold"))
 
     # Tlačidlo na rátanie žetónov (zarovnané do stredu)
-    b1 = tk.Button(okno, text=f"Počet žetónov : {konto}", width=20,
+    b1 = tk.Button(okno, text=f"Peňazí na účte : {konto}€", width=velkost,
                     command=my_upd, bg="lime", font=('Helvetica', '40', 'bold'))
     b1.place(relx=0.5, rely=0.5, anchor='center')
 
@@ -364,6 +404,10 @@ if priezvisko:
     # Tlačidlo na ukončenie programu (pravý dolný roh)
     exit_button = tk.Button(okno, text="Koniec", command=exit_program, bg="red", font=('Helvetica', '25', 'bold'))
     exit_button.place(relx=0.98, rely=0.98, anchor='se')
+
+    # Tlačidlo na ukončenie programu (pravý dolný roh)
+    secret_button = tk.Button(okno, text="-", command=add_secret, bg="black", font=('Helvetica', '5', 'bold'))
+    secret_button.place(relx=0.55, rely=0.285, anchor='se')
 
     okno.mainloop()
 else:
