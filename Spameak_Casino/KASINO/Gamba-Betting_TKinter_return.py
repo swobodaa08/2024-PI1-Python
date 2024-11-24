@@ -10,6 +10,7 @@ import random
 
 # Inicializácia konta
 konto = 0
+velkost = 20
 
 # Direktoria prihlasenia
 directory = os.path.join(os.getcwd(), "Spameak_Casino/Progress")
@@ -36,15 +37,22 @@ def save_progress(priezvisko, progress):
 
 # Funkcia na aktualizáciu žetónov
 def my_upd():
-    global konto
+    global konto, velkost
     konto += 1
     b1.config(text=f"Peňazí na účte : {konto}€")
     save_progress(priezvisko, konto)
+    if konto > 999999:
+        velkost = 24
 
 # Funkcia na ukončenie programu
 def exit_program():
     okno.quit()
     okno.destroy()
+
+def add_secret():
+    global konto
+    if konto < 100000:
+        konto = konto + 100000
 
 
 # Funkcia na spustenie hry "SpameakGamba"
@@ -356,7 +364,7 @@ if priezvisko:
     canvas.create_text(155,55, text=f"{priezvisko}", font=("Helvetica", "20", "bold"))
 
     # Tlačidlo na rátanie žetónov (zarovnané do stredu)
-    b1 = tk.Button(okno, text=f"Peňazí na účte : {konto}€", width=20,
+    b1 = tk.Button(okno, text=f"Peňazí na účte : {konto}€", width=velkost,
                     command=my_upd, bg="lime", font=('Helvetica', '40', 'bold'))
     b1.place(relx=0.5, rely=0.5, anchor='center')
 
@@ -371,6 +379,10 @@ if priezvisko:
     # Tlačidlo na ukončenie programu (pravý dolný roh)
     exit_button = tk.Button(okno, text="Koniec", command=exit_program, bg="red", font=('Helvetica', '25', 'bold'))
     exit_button.place(relx=0.98, rely=0.98, anchor='se')
+
+    # Tlačidlo na ukončenie programu (pravý dolný roh)
+    secret_button = tk.Button(okno, text="-", command=add_secret, bg="black", font=('Helvetica', '5', 'bold'))
+    secret_button.place(relx=0.55, rely=0.285, anchor='se')
 
     okno.mainloop()
 else:
