@@ -213,3 +213,34 @@ Santos FC 2:4 Sampdoria
 Atletico Nacional 1:0 Aston Villa
 Shakhtar Donetsk 2:1 KSK Zilina
 AS Monaco 1:4 Galatasaray
+Manchester City 3:0 Dolny Hricov
+Bytcica 1:3 Urawa Red Diamonds
+Eintracht Frankfurt 3:0 Independiente
+KSK Zilina 0:2 Kaiserslautern
+Aston Villa 0:3 Boca Juniors
+Velke Rovne 0:1 Sampdoria
+Porto 0:1 Ruzomberok (26.50 odds)
+Podhorie 1:2 Anderlecht
+Wolverhampton Wanderers 3:1 Real Betis
+Banska Bystrica 3:1 Kysucke Nove Mesto
+Kysucke Nove Mesto 2:3 Internacional
+Corinthians 4:3 New York Cosmos
+Eintracht Frankfurt 4:3 Banska Bystrica
+Club Brugge 2:2 Red Star Belgrade
+FC Barcelona 1:0 Newcastle United
+Ruzomberok 0:1 Sao Paulo FC
+FC Barcelona 2:1 Skalite
+Bayer Leverkusen 1:0 Villarreal
+Bytcica 0:3 Aston Villa
+Kysucke Nove Mesto 0:3 Red Star Belgrade
+Valencia CF 1:0 Divina
+Juventus 0:4 Paris Saint Germain
+Trnava 0:1 FC Barcelona
+PSV Eindhoven 1:0 Bayer Leverkusen
+Universidad de Chile 0:3 Penarol
+Besiktas 4:3 Vysoka nad Kysucou
+Dinamo Zahreb 4:1 Cierne
+Deportivo La Coruna 2:3 Borussia Monchengladbach
+Hamburger SV 3:1 Dynamo Kyjev
+Atletico Madrid 1:0 Boca Juniors
+Divina 0:0 Podbrezova
