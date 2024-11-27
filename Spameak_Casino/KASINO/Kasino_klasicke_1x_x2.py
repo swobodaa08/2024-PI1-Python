@@ -206,7 +206,7 @@ def start_bet():
             kurz_2 = 150
 
         if kurz_1 <= 1.15:
-            kurz_1x = "Locked"
+            kurz_1x = 1.00
         else:
             if kurz_1 < 10:
                 kurz_1x = (kurz_1 * 0.6)
@@ -214,7 +214,7 @@ def start_bet():
                 kurz_1x = (kurz_1 * 0.9)
 
         if kurz_2 <= 1.15:
-            kurz_x2 = "Locked"
+            kurz_x2 = 1.00
         else:
             if kurz_2 < 10:
                 kurz_x2 = (kurz_2 * 0.6)
@@ -222,12 +222,16 @@ def start_bet():
                 kurz_x2 = (kurz_2 * 0.9)
         
         if kurz_1 or kurz_2 <= 1.25:
-            kurz_12 = "Locked"
+            kurz_12 = 1.00
         else:
-            if kurz_1x and kurz_x2 == int:
-                kurz_12 = random.random(1.01, 1.35)
+            if kurz_1 and kurz_2 == int:
+                kurz_12 = random.randint(1, 1.35)
             else:
-                kurz_12 = "Locked"
+                kurz_12 = 1.00
+        
+        round(kurz_1x, 2)
+        round(kurz_x2, 2)
+        round(kurz_12, 2)
         
         return kurz_1, kurz_X, kurz_2, kurz_1x, kurz_x2, kurz_12
     
