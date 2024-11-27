@@ -10,7 +10,7 @@ import random
 
 # Inicializácia konta
 konto = 0
-velkost = 20
+velkost = 24
 
 # Direktoria prihlasenia
 directory = os.path.join(os.getcwd(), "Spameak_Casino/Progress")
