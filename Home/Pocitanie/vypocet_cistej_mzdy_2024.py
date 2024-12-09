@@ -21,4 +21,4 @@ bonus_za_deti = pocet_deti_do18 * 140
 cisty_prijem = hruba_mzda - poistenie_zamestnavatela - preddavok_za_dan_z_prijmov + bonus_za_deti
 round(cisty_prijem, 2)
 
-print(f"Tvoj čistý mesačný príjem je {cisty_prijem}€")
+print(f"Tvoj čistý mesačný príjem je {cisty_prijem}€, parada")
