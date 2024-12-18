@@ -275,3 +275,23 @@ Atletico Madrid 2:0 Palmeiras
 AC Milan 3:2 Petrovice
 Hamburger SV 1:4 Fenerbahce
 Presov 3:2 Metalist Charkov
+Deportivo La Coruna 0:1 Torino
+Red Star Belgrade 1:2 Chelsea FC
+Torino 2:1 Divina
+Chelsea FC 1:0 Ovciarsko
+Manchester United 2:1 Elche CF
+Shakhtar Donetsk 1:0 Mallorca
+Inter Milano 3:0 Villarreal
+Dinamo Zahreb 4:0 Metalist Charkov
+Manchester City 4:2 Real Madrid
+Paris Saint Germain 4:0 Hvozdnica
+Olympiacos 3:0 Mallorca
+Dunajska Streda 2:0 Krasnany
+Club America 0:2 VfB Stuttgart
+Atletico Nacional 0:3 Leeds United
+Juventus 1:0 Boca Juniors
+Al Ahly 4:1 Metalist Charkov
+Bordeaux 2:1 Eintracht Frankfurt
+Monterrey 0:3 Gremio
+Skalite 0:1 Hamburger SV
+Real Madrid 2:2 VfB Stuttgart
