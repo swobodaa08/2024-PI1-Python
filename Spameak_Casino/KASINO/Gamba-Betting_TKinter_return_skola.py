@@ -132,7 +132,7 @@ def start_bet():
     počet_kôl = 0
 
     # Original absolute path
-    absolute_path = Path("Z:/2024-PI1-Python/Spameak_Casino/timy.txt")
+    absolute_path = Path("Z:/2024-PI1-Python/2024-PI1-Python/Spameak_Casino/timy.txt")
 
     # Get the current working directory
     current_dir = Path.cwd()
@@ -141,7 +141,7 @@ def start_bet():
     relative_path = absolute_path.relative_to(current_dir)
 
     # Original absolute path
-    absolute_path2 = Path("Z:/2024-PI1-Python/Spameak_Casino/vysledky.txt")
+    absolute_path2 = Path("Z:/2024-PI1-Python/2024-PI1-Python/Spameak_Casino/vysledky.txt")
 
     # Get the current working directory
     current_dir2 = Path.cwd()
