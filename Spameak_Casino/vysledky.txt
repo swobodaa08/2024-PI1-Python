@@ -297,3 +297,46 @@ Skalite 0:1 Hamburger SV
 Real Madrid 2:2 VfB Stuttgart
 Lazio 4:3 Real Betis
 Podhorie 2:3 KSK Zilina
+Sampdoria 4:2 Fluminense
+Manchester United 3:1 AS Monaco
+Dinamo Zahreb 0:0 Club Brugge
+Lens 0:0 Ovciarsko
+AS Monaco 0:0 Everton
+Lazio 1:2 Sao Paulo FC
+Atletico Madrid 1:0 Palmeiras
+Racing Club 4:0 Bordeaux
+Al Hilal 0:3 Zenit Petrohrad
+Velke Rovne 0:2 Paris Saint Germain
+Fluminense 2:2 Al Ahly
+Leeds United 4:0 Trnava
+Aston Villa 2:0 Kysucke Nove Mesto
+Manchester City 3:2 Dunajska Streda
+Anderlecht 1:0 Bayer Leverkusen
+Werder Bremy 0:4 Marseille
+Banska Bystrica 0:1 Arsenal FC
+Bayer Leverkusen 0:3 Biele
+Red Star Belgrade 2:0 Sao Paulo FC
+Dolny Hricov 0:1 Everton
+Nacional 1:2 Sampdoria
+Swansea City 2:0 Sporting CP
+Club Brugge 1:4 Swansea City
+Ajax Amsterdam 3:1 Cierne
+Ajax Amsterdam 4:3 Fluminense
+Banska Bystrica 2:1 Vysoka nad Kysucou
+AS Monaco 2:0 Wolverhampton Wanderers
+Palmeiras 1:0 Juventus
+Chivas Guadalajara 1:2 Dynamo Kyjev
+Internacional 2:2 Dinamo Zahreb
+Torino 0:2 Sevilla FC
+Sevilla FC 3:2 Real Betis
+Bayern Mnichov 2:0 Atletico Nacional
+Villarreal 0:1 Stade de Reims
+Cruzeiro 2:3 Manchester United
+Getafe CF 1:0 Celta Vigo
+Podhorie 0:2 AC Milan
+Everton 0:1 Wolverhampton Wanderers
+Rudina 1:4 Manchester United
+Corinthians 1:0 Radostka
+Boca Juniors 4:2 Real Sociedad
+Podhorie 0:1 Rangers FC
+Sporting CP 0:4 Inter Milano

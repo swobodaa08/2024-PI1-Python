@@ -1,3 +1,4 @@
+Biele,2340
 Real Madrid,1000
 FC Barcelona,982
 AC Milan,978
@@ -126,4 +127,4 @@ Vysoka nad Kysucou,69
 Divina,59
 Dolny Hricov,40
 Krasnany,38
-Cierne,20
+Cierne,18
