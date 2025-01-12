@@ -11,6 +11,8 @@ import random
 # Inicializácia konta
 konto = 0
 velkost = 20
+click_secret = 0
+level = 1
 
 # Direktoria prihlasenia
 directory = os.path.join(os.getcwd(), "Spameak_Casino/Progress")
@@ -35,14 +37,25 @@ def save_progress(priezvisko, progress):
     with open(file_name, "wb") as f:
         pickle.dump(progress, f)
 
+# Level Check
+def level_check():
+    global level, konto
+    level_calc = konto / 50
+    round(level_calc, 2)
+    level = level_calc
+    print(level)
+    return level
+
 # Funkcia na aktualizáciu žetónov
 def my_upd():
     global konto, velkost
     konto += 1
+    level_check
     b1.config(text=f"Peňazí na účte : {konto}€")
     save_progress(priezvisko, konto)
     if konto > 999999:
         velkost = 24
+    canvas.create_text(155,55, text=f"({level}) - {priezvisko}", font=("Helvetica", "20", "bold"))
 
 # Funkcia na ukončenie programu
 def exit_program():
@@ -50,9 +63,13 @@ def exit_program():
     okno.destroy()
 
 def add_secret():
-    global konto
+    global konto, click_secret
+    click_secret += 1
     if konto < 100000:
         konto = konto + 100000
+        messagebox.showinfo("SECRET", "Objavil si secret button, ktorý ti dá 100 000€ gratulujem, button je len jednorázový :)")
+    if click_secret >= 10:
+        messagebox.showerror("TROJAN.EXE", "Nestlacaj ma uz nic nedostanes")
 
 
 # Funkcia na spustenie hry "SpameakGamba"
@@ -341,6 +358,8 @@ if priezvisko:
     # Inicializácia hlavného okna
     from PIL import Image, ImageTk
     okno = tk.Tk()
+
+
     # Obrazovka
     screen_width = okno.winfo_screenwidth()
     screen_height = okno.winfo_screenheight()
@@ -361,7 +380,6 @@ if priezvisko:
 
     # Meno používateľa
     canvas.create_rectangle(10,10,300,100, fill="Gold")
-    canvas.create_text(155,55, text=f"{priezvisko}", font=("Helvetica", "20", "bold"))
 
     # Tlačidlo na rátanie žetónov (zarovnané do stredu)
     b1 = tk.Button(okno, text=f"Peňazí na účte : {konto}€", width=velkost,
