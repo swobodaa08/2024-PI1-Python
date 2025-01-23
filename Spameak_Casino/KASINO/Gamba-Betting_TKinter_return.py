@@ -14,6 +14,7 @@ velkost = 20
 click_secret = 0
 level = 1
 
+
 # Direktoria prihlasenia
 directory = os.path.join(os.getcwd(), "Spameak_Casino/Progress")
 
@@ -37,25 +38,19 @@ def save_progress(priezvisko, progress):
     with open(file_name, "wb") as f:
         pickle.dump(progress, f)
 
-# Level Check
-def level_check():
-    global level, konto
-    level_calc = konto / 50
-    round(level_calc, 2)
-    level = level_calc
-    print(level)
-    return level
-
 # Funkcia na aktualizáciu žetónov
 def my_upd():
-    global konto, velkost
+    global konto, velkost, level, priezvisko
     konto += 1
-    level_check
+    if konto >= 50 * level:
+        canvas.delete("element_id")
+        level = level + 1
+        element_id = canvas.create_text(155,55, text=f"({level}) - {priezvisko}", font=("Helvetica", "20", "bold"))
     b1.config(text=f"Peňazí na účte : {konto}€")
     save_progress(priezvisko, konto)
     if konto > 999999:
         velkost = 24
-    canvas.create_text(155,55, text=f"({level}) - {priezvisko}", font=("Helvetica", "20", "bold"))
+    return level, velkost
 
 # Funkcia na ukončenie programu
 def exit_program():
