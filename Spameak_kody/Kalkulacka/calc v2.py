@@ -1,4 +1,4 @@
-# SpameakCalc - Outdated
+# SpameakCalc
 
 import tkinter as tk
 
@@ -10,6 +10,8 @@ okno_height = 600
 okno.geometry(f"{okno_width}x{okno_height}")
 okno.title("SpameakCalc")
 
+x = ""
+y = ""
 first_number = ""
 second_number = ""
 operacia = 0
@@ -21,14 +23,16 @@ vysledok = 0
 canvas.create_rectangle(10,30,490,120, fill="cyan")
 # Definicia Cisel
 def number1():
-    global first_number, second_number, operacia
+    global first_number, second_number, operacia, x, y
     if operacia == 0:
-        first_number = first_number + "1"
+        x = x + "1"
+        first_number = int(x)
         canvas.delete
         canvas.create_rectangle(10,30,490,120, fill="cyan")
         canvas.create_text(250, 80, text=f"{first_number}", font=("Heltvica", "21", "bold"))
     else:
-        second_number = second_number + "1"
+        y = y + "1"
+        second_number = int(y)
         if operacia_krat == 1:
             canvas.delete
             canvas.create_rectangle(10,30,490,120, fill="cyan")
@@ -49,14 +53,16 @@ def number1():
     print(second_number)
 
 def number2():
-    global first_number, second_number, operacia
+    global first_number, second_number, operacia, x, y
     if operacia == 0:
-        first_number = first_number + "2"
+        x = x + "2"
+        first_number = int(x)
         canvas.delete
         canvas.create_rectangle(10,30,490,120, fill="cyan")
         canvas.create_text(250, 80, text=f"{first_number}", font=("Heltvica", "21", "bold"))
     else:
-        second_number = second_number + "2"
+        y = y + "2"
+        second_number = int(y)
         if operacia_krat == 1:
             canvas.delete
             canvas.create_rectangle(10,30,490,120, fill="cyan")
@@ -78,14 +84,16 @@ def number2():
 
 
 def number3():
-    global first_number, second_number, operacia
+    global first_number, second_number, operacia, x, y
     if operacia == 0:
-        first_number = first_number + "3"
+        x = x + "3"
+        first_number = int(x)
         canvas.delete
         canvas.create_rectangle(10,30,490,120, fill="cyan")
         canvas.create_text(250, 80, text=f"{first_number}", font=("Heltvica", "21", "bold"))
     else:
-        second_number = second_number + "3"
+        y = y + "3"
+        second_number = int(y)
         if operacia_krat == 1:
             canvas.delete
             canvas.create_rectangle(10,30,490,120, fill="cyan")
@@ -107,14 +115,16 @@ def number3():
 
 
 def number4():
-    global first_number, second_number, operacia
+    global first_number, second_number, operacia, x, y
     if operacia == 0:
-        first_number = first_number + "4"
+        x = x + "4"
+        first_number = int(x)
         canvas.delete
         canvas.create_rectangle(10,30,490,120, fill="cyan")
         canvas.create_text(250, 80, text=f"{first_number}", font=("Heltvica", "21", "bold"))
     else:
-        second_number = second_number + "4"
+        y = y + "4"
+        second_number = int(y)
         if operacia_krat == 1:
             canvas.delete
             canvas.create_rectangle(10,30,490,120, fill="cyan")
@@ -136,14 +146,16 @@ def number4():
 
 
 def number5():
-    global first_number, second_number, operacia
+    global first_number, second_number, operacia, x, y
     if operacia == 0:
-        first_number = first_number + "5"
+        x = x + "5"
+        first_number = int(x)
         canvas.delete
         canvas.create_rectangle(10,30,490,120, fill="cyan")
         canvas.create_text(250, 80, text=f"{first_number}", font=("Heltvica", "21", "bold"))
     else:
-        second_number = second_number + "5"
+        y = y + "5"
+        second_number = int(y)
         if operacia_krat == 1:
             canvas.delete
             canvas.create_rectangle(10,30,490,120, fill="cyan")
@@ -165,14 +177,16 @@ def number5():
 
 
 def number6():
-    global first_number, second_number, operacia
+    global first_number, second_number, operacia, x, y
     if operacia == 0:
-        first_number = first_number + "6"
+        x = x + "6"
+        first_number = int(x)
         canvas.delete
         canvas.create_rectangle(10,30,490,120, fill="cyan")
         canvas.create_text(250, 80, text=f"{first_number}", font=("Heltvica", "21", "bold"))
     else:
-        second_number = second_number + "6"
+        y = y + "6"
+        second_number = int(y)
         if operacia_krat == 1:
             canvas.delete
             canvas.create_rectangle(10,30,490,120, fill="cyan")
@@ -194,14 +208,16 @@ def number6():
 
 
 def number7():
-    global first_number, second_number, operacia
+    global first_number, second_number, operacia, x, y
     if operacia == 0:
-        first_number = first_number + "7"
+        x = x + "7"
+        first_number = int(x)
         canvas.delete
         canvas.create_rectangle(10,30,490,120, fill="cyan")
         canvas.create_text(250, 80, text=f"{first_number}", font=("Heltvica", "21", "bold"))
     else:
-        second_number = second_number + "7"
+        y = y + "7"
+        second_number = int(y)
         if operacia_krat == 1:
             canvas.delete
             canvas.create_rectangle(10,30,490,120, fill="cyan")
@@ -223,14 +239,16 @@ def number7():
 
 
 def number8():
-    global first_number, second_number, operacia
+    global first_number, second_number, operacia, x, y
     if operacia == 0:
-        first_number = first_number + "8"
+        x = x + "8"
+        first_number = int(x)
         canvas.delete
         canvas.create_rectangle(10,30,490,120, fill="cyan")
         canvas.create_text(250, 80, text=f"{first_number}", font=("Heltvica", "21", "bold"))
     else:
-        second_number = second_number + "8"
+        y = y + "8"
+        second_number = int(y)
         if operacia_krat == 1:
             canvas.delete
             canvas.create_rectangle(10,30,490,120, fill="cyan")
@@ -252,14 +270,16 @@ def number8():
 
 
 def number9():
-    global first_number, second_number, operacia
+    global first_number, second_number, operacia, x, y
     if operacia == 0:
-        first_number = first_number + "9"
+        x = x + "9"
+        first_number = int(x)
         canvas.delete
         canvas.create_rectangle(10,30,490,120, fill="cyan")
         canvas.create_text(250, 80, text=f"{first_number}", font=("Heltvica", "21", "bold"))
     else:
-        second_number = second_number + "9"
+        y = y + "9"
+        second_number = int(y)
         if operacia_krat == 1:
             canvas.delete
             canvas.create_rectangle(10,30,490,120, fill="cyan")
@@ -281,14 +301,16 @@ def number9():
 
 
 def number0():
-    global first_number, second_number, operacia
+    global first_number, second_number, operacia, x, y
     if operacia == 0:
-        first_number = first_number + "0"
+        x = x + "0"
+        first_number = int(x)
         canvas.delete
         canvas.create_rectangle(10,30,490,120, fill="cyan")
         canvas.create_text(250, 80, text=f"{first_number}", font=("Heltvica", "21", "bold"))
     else:
-        second_number = second_number + "0"
+        y = y + "0"
+        second_number = int(y)
         if operacia_krat == 1:
             canvas.delete
             canvas.create_rectangle(10,30,490,120, fill="cyan")
@@ -353,9 +375,9 @@ def operation_divide():
 # Definicia ostatne
 
 def equal():
-    global first_number, second_number, operacia, operacia_plus, operacia_minus, operacia_krat, operacia_deleno, vysledok
-    cislo_1 = int(first_number)
-    cislo_2 = int(second_number)
+    global first_number, second_number, operacia, operacia_plus, operacia_minus, operacia_krat, operacia_deleno, vysledok, x, y
+    cislo_1 = first_number
+    cislo_2 = second_number
     if operacia_plus == 1:
         vysledok = cislo_1 + cislo_2
     elif operacia_minus == 1:
@@ -371,6 +393,8 @@ def equal():
     operacia_krat = 0
     operacia_plus = 0
     operacia_minus = 0
+    x = ""
+    y = ""
     first_number = ""
     second_number = ""
     print(f"= {vysledok}")
@@ -384,10 +408,13 @@ def equal():
         canvas.create_text(250, 80, text=f"{vysledok}", font=("Heltvica", "25", "bold"))
 
 def backspace():
-    global first_number, second_number, operacia
+    global first_number, second_number, operacia, x, y
     operacia = 0
     print("")
     first_number = ""
+    second_number = ""
+    x = ""
+    y = ""
     canvas.delete("all")
     canvas.create_rectangle(10,30,490,120, fill="cyan")
 
