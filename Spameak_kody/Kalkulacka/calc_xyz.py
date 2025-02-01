@@ -21,7 +21,9 @@ operacia_krat = 0
 operacia_deleno = 0
 vysledok = 0
 canvas.create_rectangle(10,30,490,120, fill="cyan")
+
 # Definicia Cisel
+
 def number1():
     global first_number, next_numbers, operacia, x, y
     if operacia == 0:
@@ -418,7 +420,7 @@ def backspace():
     canvas.delete("all")
     canvas.create_rectangle(10,30,490,120, fill="cyan")
 
-
+# Buttony
 
 b1 = tk.Button(okno, text="1", command=number1, font=("Heltvica", "30"))
 b1.place(relx=0.15, rely=0.25)
