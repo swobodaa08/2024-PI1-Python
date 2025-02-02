@@ -17,15 +17,15 @@ BLUE = (0, 0, 255)
 GREEN = (0, 255, 0)
 
 # Load fruit images
-SYMBOLS = ['cherry', 'lemon', 'watermelon', 'star', 'money']
+SYMBOLS = ['ananas', 'apple', 'cherry', 'grape', 'strawberry']
 images = {symbol: pygame.image.load(f"{symbol}.png") for symbol in SYMBOLS}
 
 PAYOUTS = {
-    ('cherry', 'cherry', 'cherry'): 5,
-    ('lemon', 'lemon', 'lemon'): 10,
-    ('watermelon', 'watermelon', 'watermelon'): 20,
-    ('star', 'star', 'star'): 50,
-    ('money', 'money', 'money'): 100,  # Jackpot
+    ('ananas', 'ananas', 'ananas'): 5,
+    ('apple', 'apple', 'apple'): 10,
+    ('cherry', 'cherry', 'cherry'): 20,
+    ('grape', 'grape', 'grape'): 50,
+    ('strawberry', 'strawberry', 'strawberry'): 100,  # Jackpot
 }
 
 # Font
