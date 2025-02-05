@@ -126,7 +126,7 @@ def start_gamba():
 # Funkcia na spustenie hry "Automat - Slot"
 def start_slot():
     okno.destroy()
-    global konto
+    konto = load_progress(priezvisko)
 
     # Initialize pygame
     pygame.init()
@@ -170,12 +170,12 @@ def start_slot():
 
     # Function to draw the slot machine
     def draw_machine():
+        global konto, slots
         screen.fill(WHITE)
         balance_text = font.render(f"Balance: ${konto}", True, BLACK)
         bet_text = font.render(f"Bet: ${bet}", True, BLACK)
         screen.blit(balance_text, (10, 10))
         screen.blit(bet_text, (10, 50))
-        
         for i, symbol in enumerate(slots):
             screen.blit(images[symbol], (80 + i * 100, 150))
         
@@ -197,24 +197,26 @@ def start_slot():
     # Function for spinning animation
     def spin_animation():
         global slots
+        initial_slots = slots.copy()
         for _ in range(10):
             slots = [random.choice(SYMBOLS) for _ in range(3)]
             draw_machine()
+            pygame.display.flip()
             pygame.time.delay(100)
+        slots = initial_slots
+
 
     # Function to spin
     def spin():
-        global slots, konto
+        global konto
         if konto < bet:
             return
         konto -= bet
         save_progress(priezvisko, konto)
         spin_animation()
-        slots = [random.choice(SYMBOLS) for _ in range(3)]
         draw_machine()
         check_win()
     
-
     # Function to check for winnings
     def check_win():
         global konto
