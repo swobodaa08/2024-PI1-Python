@@ -32,7 +32,7 @@ class SlotMachine:
         self.reel_labels = []
         self.reel_frames = []
         
-        for i in range(3):
+        for _ in range(3):
             frame = tk.Frame(root, width=80, height=80)
             frame.pack(side=tk.LEFT, padx=10)
             label = tk.Label(frame, text=random.choice(SYMBOLS), font=("Arial", 40))
