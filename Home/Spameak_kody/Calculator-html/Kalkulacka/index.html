@@ -12,6 +12,10 @@
     <div id="calculator">
         <input id="display" readonly>
         <div id="keys">
+            <button onclick="clearDisplay()" class="operator-btn">C</button>
+            <button onclick="lastResult()" class="operator-btn">←</button>
+            <button onclick="appendToDisplay('(')" class="bracket-btn">(</button>
+            <button onclick="appendToDisplay(')')" class="bracket-btn">)</button>
             <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
             <button onclick="appendToDisplay('7')">7</button>
             <button onclick="appendToDisplay('8')">8</button>
@@ -24,13 +28,10 @@
             <button onclick="appendToDisplay('1')">1</button>
             <button onclick="appendToDisplay('2')">2</button>
             <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+            <button onclick="appendToDisplay('/')" class="operator-btn">÷</button>
             <button onclick="appendToDisplay('0')">0</button>
             <button onclick="appendToDisplay('.')">.</button>
             <button onclick="calculate()" class="equal-btn">=</button>
-            <button onclick="clearDisplay()" class="operator-btn">C</button>
-            <button onclick="lastResult()" class="operator-btn">←</button>
-            <button onclick="mocnina()" class="operator-btn">^</button>
         </div>
     </div>
 

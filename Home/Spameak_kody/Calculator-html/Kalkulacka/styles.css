@@ -49,7 +49,7 @@ button:hover{
 }
 
 button:active{
-    background-color:hsl(0, 0%, 50%);
+    background-color:hsl(0, 0%, 30%)
 }
 
 .operator-btn{
@@ -65,13 +65,25 @@ button:active{
 }
 
 .equal-btn{
-    background-color: purple;
+    background-color: rgb(223, 13, 174);
 }
 
 .equal-btn:hover{
-    background-color: hsl(300, 100%, 35%);
+    background-color: rgb(179, 10, 199);
 }
 
 .equal-btn:active{
-    background-color: hsl(300, 100%, 45%);
+    background-color: rgb(231, 11, 220);
+}
+
+.bracket-btn{
+    background-color: hsl(3, 100%, 55%);
+}
+
+.bracket-btn:hover{
+    background-color: hsl(3, 100%, 65%);
+}
+
+.bracket-btn:active{
+    background-color: hsl(3, 100%, 75%);
 }

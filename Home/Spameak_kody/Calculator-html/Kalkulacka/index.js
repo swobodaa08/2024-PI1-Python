@@ -24,8 +24,3 @@ function calculate(){
 function lastResult(){
     display.value = last_result
 }
-
-function mocnina(input){
-    display.value += input;
-    display.value = eval(display.value);
-}
