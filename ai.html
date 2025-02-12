@@ -1,0 +1,79 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpameakCasino</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('background.jpg');
+            background-size: cover;
+            color: white;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #konto {
+            font-size: 30px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to SpameakCasino</h1>
+        <div id="konto">Peňazí na účte: <span id="balance">0</span>€</div>
+        <button class="button" onclick="increaseBalance()">Zarábať peniaze</button>
+        <button class="button" onclick="startGamba()">Gamba</button>
+        <button class="button" onclick="startBet()">Betting</button>
+        <button class="button" onclick="exitGame()">Koniec</button>
+    </div>
+    
+    <script>
+        let balance = 0;
+        
+        function increaseBalance() {
+            balance += 1;
+            document.getElementById('balance').innerText = balance;
+        }
+        
+        function startGamba() {
+            let betAmount = parseFloat(prompt("Zadaj koľko € chceš vsadiť:"));
+            if (isNaN(betAmount) || betAmount <= 0 || betAmount > balance) {
+                alert("Neplatná suma!");
+                return;
+            }
+            let userChoice = parseInt(prompt("Zadaj číslo od 1 do 5:"));
+            if (userChoice < 1 || userChoice > 5) {
+                alert("Zadaj číslo od 1 do 5.");
+                return;
+            }
+            let randomNum = Math.floor(Math.random() * 5) + 1;
+            if (userChoice === randomNum) {
+                balance += betAmount * 2;
+                alert(`Vyhral si! Výherné číslo bolo ${randomNum}.`);
+            } else {
+                balance -= betAmount;
+                alert(`Prehral si... Výherné číslo bolo ${randomNum}.`);
+            }
+            document.getElementById('balance').innerText = balance;
+        }
+        
+        function startBet() {
+            alert("Funkcia Betting ešte nie je implementovaná");
+        }
+        
+        function exitGame() {
+            alert("Ukončuje sa program...");
+        }
+    </script>
+</body>
+</html>
