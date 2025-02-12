@@ -14,8 +14,18 @@ function clearDisplay(){
 function calculate(){
     try{
         display.value = eval(display.value);
+        last_result = display.value;
     }
     catch(error){
         display.value = "Error";
     }
+}
+
+function lastResult(){
+    display.value = last_result
+}
+
+function mocnina(input){
+    display.value += input;
+    display.value = eval(display.value);
 }
