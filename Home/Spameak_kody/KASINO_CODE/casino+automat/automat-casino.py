@@ -14,7 +14,7 @@ konto = 0
 velkost = 24
 
 # Direktoria prihlasenia
-directory = os.path.join(os.getcwd(), "Spameak_Casino/Progress")
+directory = os.path.join(os.getcwd(), "Home/Spameak_kody/Spameak_Casino/Progress")
 
 # Funkcia na načítanie progresu podľa priezviska
 def load_progress(priezvisko):
@@ -477,7 +477,7 @@ if priezvisko:
     canvas.pack(fill="both", expand=True)
 
     # Načítanie obrázka a jeho prispôsobenie veľkosti Canvasu
-    image_path = "Spameak_Casino/Background.jpg"  # cesta k obrázku
+    image_path = "Home/Spameak_kody/Spameak_Casino/Background.jpg"  # cesta k obrázku
     background_image = Image.open(image_path)
     background_image = background_image.resize((screen_width, screen_height), Image.LANCZOS)  # zmenšenie na veľkosť Canvasu
     background_photo = ImageTk.PhotoImage(background_image)
