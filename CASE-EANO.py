@@ -72,11 +72,7 @@ def update_profit():
     casino_profit = math.ceil(casino)
     profit.config(text=f"Casino profit : {casino_profit}€")  # Update label text
     save_casino(casino)
-    if okno.winfo_exists:
-        try:
-            okno.after((random.randint(550, 3000)), update_profit)  # Call this function again after x seconds
-        except tk.TclError:  # Handles the case when the window is closed
-            print("Window closed. Stopping updates.")
+    root.after((random.randint(550, 3000)), update_profit)  # Call this function again after x seconds
 
 # Funkcia na ukončenie programu
 def exit_program():
@@ -173,7 +169,7 @@ def start_bet():
     casino_profit = math.ceil(casino)
 
     # Original absolute path
-    absolute_path = Path("C:/2024-PI1-Python-1/Home/Spameak_kody/Spameak_Casino/timy.txt")
+    absolute_path = Path("Z:/2024-PI1-Python/2024-PI1-Python/Home/Spameak_kody/Spameak_Casino/timy.txt")
 
     # Get the current working directory
     current_dir = Path.cwd()
@@ -182,7 +178,7 @@ def start_bet():
     relative_path = absolute_path.relative_to(current_dir)
 
     # Original absolute path
-    absolute_path2 = Path("C:/2024-PI1-Python-1/Home/Spameak_kody/Spameak_Casino/vysledky.txt")
+    absolute_path2 = Path("Z:/2024-PI1-Python/2024-PI1-Python/Home/Spameak_kody/Spameak_Casino/vysledky.txt")
 
     # Get the current working directory
     current_dir2 = Path.cwd()
