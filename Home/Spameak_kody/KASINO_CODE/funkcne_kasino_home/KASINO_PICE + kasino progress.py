@@ -1,4 +1,4 @@
-# SpameakCasino Beta v4.1 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] # SpameakGamba Beta v3.0 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] 
+# SpameakCasino Beta v4.3 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] # SpameakGamba Beta v3.0 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] 
 
 
 
@@ -7,13 +7,13 @@ from tkinter import simpledialog, messagebox
 import pickle
 import os
 import random
+import math
 
 # Inicializácia konta
 konto = 0
-velkost = 20
-click_secret = 0
-level = 1
-
+konto = math.ceil(konto)
+velkost = 24
+casino = 0
 
 # Direktoria prihlasenia
 directory = os.path.join(os.getcwd(), "Home/Spameak_kody/Spameak_Casino/Progress")
@@ -25,6 +25,13 @@ def load_progress(priezvisko):
         with open(file_name, "rb") as f:
             return pickle.load(f)
     return 0  # Ak súbor neexistuje, začni s 0 €
+
+def load_casino():
+    file_name_casino = os.path.join(directory, "casino_progress.pkl")
+    if os.path.exists(file_name_casino):
+        with open(file_name_casino, "rb") as f:
+            return pickle.load(f)
+    return 0
 
 # Funkcia na uloženie progresu podľa priezviska
 def save_progress(priezvisko, progress):
@@ -38,19 +45,34 @@ def save_progress(priezvisko, progress):
     with open(file_name, "wb") as f:
         pickle.dump(progress, f)
 
+def save_casino(progress):
+    os.makedirs(directory, exist_ok=True)
+    file_name_casino = os.path.join(directory, "casino_progress.pkl")
+    with open(file_name_casino, "wb") as f:
+        pickle.dump(progress, f)
+
 # Funkcia na aktualizáciu žetónov
 def my_upd():
-    global konto, velkost, level, priezvisko
+    global konto, velkost, casino
     konto += 1
-    if konto >= 50 * level:
-        canvas.delete("element_id")
-        level = level + 1
-        element_id = canvas.create_text(155,55, text=f"({level}) - {priezvisko}", font=("Helvetica", "20", "bold"))
+    casino -= 1
+    casino_profit = math.ceil(casino)
     b1.config(text=f"Peňazí na účte : {konto}€")
+    profit.config(text=f"Casino profit : {casino_profit}€")
+    save_casino(casino)
     save_progress(priezvisko, konto)
     if konto > 999999:
         velkost = 24
-    return level, velkost
+
+
+# Funkcia na automaticke profity casina
+def update_profit():
+    global casino
+    casino += (random.randint(1, 10000))
+    casino_profit = math.ceil(casino)
+    profit.config(text=f"Casino profit : {casino_profit}€")  # Update label text
+    save_casino(casino)
+    root.after((random.randint(850, 7200)), update_profit)  # Call this function again after 1 second
 
 # Funkcia na ukončenie programu
 def exit_program():
@@ -58,21 +80,18 @@ def exit_program():
     okno.destroy()
 
 def add_secret():
-    global konto, click_secret
-    click_secret += 1
+    global konto
     if konto < 100000:
         konto = konto + 100000
-        messagebox.showinfo("SECRET", "Objavil si secret button, ktorý ti dá 100 000€ gratulujem, button je len jednorázový :)")
-    if click_secret >= 10:
-        messagebox.showerror("TROJAN.EXE", "Nestlacaj ma uz nic nedostanes")
 
 
 # Funkcia na spustenie hry "SpameakGamba"
 def start_gamba():
     okno.destroy()  # Zavrie hlavné okno SpameakGamble
     
-    global konto
+    global konto, casino
     počet_kôl = 0
+    casino_profit = math.ceil(casino)
 
     print("                                                       ")
     print("-------------------------------------------------------")
@@ -80,6 +99,7 @@ def start_gamba():
     print("Hra je veľmi jednoduchá, stačí tipnúť číslo od 1 do 5")
     print("Ak trafíš správne číslo, vyhrávaš trojnásobok vkladu.")
     print(f"Zostatok na účte: {konto}€")
+    print(f"Svoboda z kasína má profit: {casino_profit}€")
     print("-------------------------------------------------------")
 
     # Kontrola vstupu pre počet kôl
@@ -122,11 +142,15 @@ def start_gamba():
         if tip == b:
             konto -= suma
             konto += (suma * 3)
+            casino -= (suma * 3)
             print(f"Vyhral/-a si! Výherné číslo bolo {b}. Tvoje konto je teraz {konto}€.")
+            save_casino(casino)
             save_progress(priezvisko, konto)
         else:
             konto -= suma
+            casino += suma
             print(f"Prehral/-a si... Výherné číslo bolo {b}. Tvoje konto je teraz {konto}€.")
+            save_casino(casino)
             save_progress(priezvisko, konto)
 
         if konto <= 0:
@@ -140,11 +164,12 @@ def start_bet():
     okno.destroy()  # Zavrie hlavné okno SpameakGamble
 
     from pathlib import Path
-    global konto
+    global konto, casino
     počet_kôl = 0
+    casino_profit = math.ceil(casino)
 
     # Original absolute path
-    absolute_path = Path("c:/2024-PI1-Python-1/Spameak_Casino/timy.txt") or Path("Z:/2024-PI1-Python/2024-PI1-Python/Spameak_Casino/timy.txt")
+    absolute_path = Path("Z:/2024-PI1-Python/2024-PI1-Python/Spameak_Casino/timy.txt")
 
     # Get the current working directory
     current_dir = Path.cwd()
@@ -153,7 +178,7 @@ def start_bet():
     relative_path = absolute_path.relative_to(current_dir)
 
     # Original absolute path
-    absolute_path2 = Path("c:/2024-PI1-Python-1/Spameak_Casino/vysledky.txt") or Path("Z:/2024-PI1-Python/2024-PI1-Python/Spameak_Casino/vysledky.txt")
+    absolute_path2 = Path("Z:/2024-PI1-Python/2024-PI1-Python/Spameak_Casino/vysledky.txt")
 
     # Get the current working directory
     current_dir2 = Path.cwd()
@@ -171,6 +196,8 @@ def start_bet():
     print("Hra je veľmi jednoduchá, stačí tipnúť tím ktorý vyhrá")
     print("Táto hra je stále v Beta verzii, ak si narazil na chybu, kontaktuj môj instagram : @swobodaa08")
     print("Ak trafíš správne tím, ktorý vyhrá, tvoj vklad sa vynásobí kurzom vypísaným pred stávkou")
+    print(f"Zostatok na účte: {konto}€")
+    print(f"Svoboda z kasína má profit: {casino_profit}€")
     print("Uži si Gamble <33333333")
     print("                                                       ")
     print("-------------------------------------------------------")
@@ -249,7 +276,7 @@ def start_bet():
     # Hlavný program
 
     def hlavny_program():
-        global konto
+        global konto, casino
         timy = nacitaj_timy(relative_path)
         tim1, tim2 = random.sample(timy, 2)
         nazov1, hodnotenie1 = tim1
@@ -311,15 +338,19 @@ def start_bet():
             konto -= suma
             vyhra = round(suma * (kurz_1 if vysledok == "1" else kurz_X if vysledok == "X" and "x" else kurz_2), 2)
             konto += vyhra
+            casino -= vyhra
             round(konto, 2)
             print("----------------------------------------------------")
             print(f"Gratulujem! Vyhral/-a si {vyhra}€")
+            save_casino(casino)
             save_progress(priezvisko, konto)
         else:
             konto -= suma
+            casino += suma
             round(konto, 2)
             print("----------------------------------------------------")
             print("Bohužiaľ, tvoja stávka nebola úspešná")
+            save_casino(casino)
             save_progress(priezvisko, konto)
         print("----------------------------------------------------")
         print(f"Aktuálny zostatok na konte: {konto}€")
@@ -348,13 +379,12 @@ root.deiconify()
 
 if priezvisko:
     konto = load_progress(priezvisko)
+    casino = load_casino()
     root.destroy()
 
     # Inicializácia hlavného okna
     from PIL import Image, ImageTk
     okno = tk.Tk()
-
-
     # Obrazovka
     screen_width = okno.winfo_screenwidth()
     screen_height = okno.winfo_screenheight()
@@ -375,6 +405,15 @@ if priezvisko:
 
     # Meno používateľa
     canvas.create_rectangle(10,10,300,100, fill="Gold")
+    canvas.create_text(155,55, text=f"{priezvisko}", font=("Helvetica", "20", "bold"))
+
+    # Casino Profit
+    casino_profit = math.ceil(casino)
+    # canvas.create_rectangle(600,10,1300,100, fill="pink")
+    # canvas.create_text(950,55, text=f"Casino profit : {casino_profit}€", font=("Helvetica", "20", "bold"))
+    
+    profit = tk.Button(okno, text=f"Casino profit : {casino_profit}€", width=velkost, command=None, state="disabled", bg="pink", font=('Helvetica', '30', 'bold'))
+    profit.place(relx=0.5, rely=0.08, anchor='center')
 
     # Tlačidlo na rátanie žetónov (zarovnané do stredu)
     b1 = tk.Button(okno, text=f"Peňazí na účte : {konto}€", width=velkost,
@@ -396,6 +435,8 @@ if priezvisko:
     # Tlačidlo na ukončenie programu (pravý dolný roh)
     secret_button = tk.Button(okno, text="-", command=add_secret, bg="black", font=('Helvetica', '5', 'bold'))
     secret_button.place(relx=0.55, rely=0.285, anchor='se')
+
+    update_profit()
 
     okno.mainloop()
 else:
