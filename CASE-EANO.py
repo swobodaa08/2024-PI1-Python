@@ -1,7 +1,6 @@
 # SpameakCasino Beta v4.3 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] # SpameakGamba Beta v3.0 - [Copyright by SpameakGamba a.s. 2024 - Developed and Modified by @swobodaa08 - SpameakWear s.r.o. 2024] 
 
 
-
 import tkinter as tk
 from tkinter import simpledialog, messagebox
 import pickle
@@ -11,7 +10,6 @@ import math
 
 # Inicializácia konta
 konto = 0
-konto = math.ceil(konto)
 velkost = 24
 casino = 0
 
