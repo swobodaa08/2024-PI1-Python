@@ -32,11 +32,12 @@ while True:
     print("[1] pre zasifrovanie")
     print("[2] pre rozsifrovanie")
     print("[3] pre ukoncenie")
+    print("[4] pre generator nahodneho hesla")
 
-    choice = input("Vyber cislo: ")
+    choice = int(input("Vyber cislo: "))
     text2 = ""
 
-    if choice == "1":
+    if choice == 1:
         text = input("Zadaj text: ")
         text = text.lower()
         for i in text:
@@ -47,7 +48,7 @@ while True:
         print("Zasifrovany text: ",text2)
         print("----------------")
 
-    elif choice == "2":
+    elif choice == 2:
         text = input("Zadaj text: ")
         text = text.lower()
         for i in text:
@@ -58,8 +59,14 @@ while True:
         print("Rozsifrovany text:",text2)
         print("----------------")
         
-    elif choice == "3":
+    elif choice == 3:
         break
+
+    elif choice == 4:
+        for i in range(random.randint(8,16)):
+            text2 += chr(random.randint(1,390))
+        print(f"Random heslo : {text2}")
+        print("----------------")
     else:
         print("zla volba")
         print("----------------")
