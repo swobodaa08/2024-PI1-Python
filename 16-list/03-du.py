@@ -1,0 +1,1 @@
+# min a max teplota v ktorom dni
