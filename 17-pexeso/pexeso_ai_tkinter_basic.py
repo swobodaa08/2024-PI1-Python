@@ -1,5 +1,6 @@
 import tkinter as tk
 import random
+from math import ceil
 
 # Globálne premenné
 symbols = list("A B C D E F G H".split()) * 2
@@ -11,8 +12,10 @@ buttons = [[None for _ in range(4)] for _ in range(4)]
 first_click = [None]  # uložené ako zoznam kvôli mutácii v rámci funkcie
 locked = [False]
 found_pairs = [0]
+pokusy = 0
 
 def on_click(r, c):
+    global pokusy
     if locked[0] or revealed[r][c]:
         return
 
@@ -39,6 +42,7 @@ def on_click(r, c):
             root.after(1000, lambda: hide_cards(r1, c1, r2, c2))
 
         first_click[0] = None
+        pokusy += 1
 
 def hide_cards(r1, c1, r2, c2):
     buttons[r1][c1].config(text=" ", bg="lightgray")
@@ -51,7 +55,9 @@ def check_win():
         for row in buttons:
             for btn in row:
                 btn.config(state="disabled")
-        win_label = tk.Label(root, text="🎉 Vyhral si!", font=("Arial", 16), fg="green")
+        uspesnost = (8 / pokusy) * 100
+        uspesnost = ceil(uspesnost)
+        win_label = tk.Label(root, text=f"🎉 Vyhral si! \n Počet odokrytí : {pokusy} \n Úspešnosť odokrytí : {uspesnost}%", font=("Arial", 16), fg="green")
         win_label.grid(row=5, column=0, columnspan=4, pady=10)
 
 # Vytvorenie GUI
