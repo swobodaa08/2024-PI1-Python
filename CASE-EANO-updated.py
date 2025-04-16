@@ -165,9 +165,9 @@ def start_bet():
     global konto, casino
     počet_kôl = 0
     casino_profit = math.ceil(casino)
-
+    
     # Original absolute path
-    absolute_path = Path("Z:/2024-PI1-Python/2024-PI1-Python/Home/Spameak_kody/Spameak_Casino/timy.txt")
+    absolute_path = Path("Z:/2024-PI1-Python/2024-PI1-Python/Home/Spameak_kody/Spameak_Casino/timy_futbal.txt")
 
     # Get the current working directory
     current_dir = Path.cwd()
