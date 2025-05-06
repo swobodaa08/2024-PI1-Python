@@ -2,9 +2,9 @@ import tkinter as tk
 import random
 
 
-okno = tk.Tk()
-okno.title("Náhodné tvary")
-canvas = tk.Canvas(okno, width=800, height=800)
+root = tk.Tk()
+root.title("Náhodné tvary")
+canvas = tk.Canvas(root, width=800, height=800)
 canvas.pack()
 
 
@@ -26,7 +26,7 @@ def nakresli(tvar, x, y, f):
             fill=f)
 
 
-with open("tvary.txt", "w", encoding="utf-8") as subor:
+with open("18-txt/tvary.txt", "w", encoding="utf-8") as subor:
     for _ in range(10):
         t = random.choice(tvary)
         x = random.randint(50, 750)
@@ -35,4 +35,4 @@ with open("tvary.txt", "w", encoding="utf-8") as subor:
         nakresli(t, x, y, f)
         print(t, x, y, f, file=subor)
 
-okno.mainloop()
+root.mainloop()
