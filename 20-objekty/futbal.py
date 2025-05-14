@@ -1,12 +1,14 @@
 import random
 
 class Futbalista:
-    def __init__(self, meno, timy, urovne):
+    def __init__(self, meno, priezvisko, rocnik, timy, urovne):
         self.meno = meno
+        self.priezvisko = priezvisko
+        self.rocnik = rocnik
         self.klub = random.choice(timy)
         self.cena = random.choice(urovne) * random.randint(650, 945)
     def showcase(self):
-        print(f"\n{self.meno} je futbalista za tím {self.klub}, jeho trhová hodnota je {self.cena}€\n")
+        print(f"\n{self.meno} {self.priezvisko} je odteraz futbalista za tím {self.klub}, narodil sa v roku {self.rocnik} a jeho trhová hodnota bude {self.cena}€")
 
 timy = []
 urovne = []
@@ -14,15 +16,16 @@ with open("Home/Spameak_kody/Spameak_Casino/timy_futbal.txt", "r") as f:
     for riadok in f:
         nazov, hodnotenie = riadok.strip().split(',')
         timy.append(nazov)
-        timy.append(hodnotenie)
         urovne.append(int(hodnotenie))
 
-sutek = Futbalista("Samuel Sutek", timy, urovne)
-svoboda = Futbalista("Samuel Svoboda", timy, urovne)
-sopor = Futbalista("David Sopor", timy, urovne)
-mitka = Futbalista("Martin Mitka", timy, urovne)
+while True:
+    meno = input("\n--- Pridanie nového hráča do systému ---\nZadaj meno: ")
+    priezvisko = input("Zadaj priezvisko: ")
+    rocnik = int(input("Zadaj rok narodenia: "))
+    novy_hrac = Futbalista(meno, priezvisko, rocnik, timy, urovne)
 
-svoboda.showcase()
-sutek.showcase()
-sopor.showcase()
-mitka.showcase()
+    novy_hrac.showcase()
+
+    subor = open("20-objekty/hraci.txt", "a", encoding="UTF-8")
+    subor.write(f"{meno} {priezvisko}, {rocnik}, {novy_hrac.klub}, {novy_hrac.cena}€\n")
+    subor.close()

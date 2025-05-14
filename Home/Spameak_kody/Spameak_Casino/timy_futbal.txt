@@ -117,6 +117,7 @@ Radostka,170
 Dolna Tizina,160
 Bytcica,156
 Velke Rovne,112
+Staskov,111
 Hvozdnica,110
 Ovciarsko,106
 Trnove,100
