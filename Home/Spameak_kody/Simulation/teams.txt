@@ -1,0 +1,19 @@
+Tím: FC Nitra
+elo: 85
+goals_scored: 49
+goals_conceded: 37
+yellow: 21
+red: 2
+win: 10
+loss: 4
+draw: 2
+
+Tím: MŠK Žilina
+elo: 92
+goals_scored: 79
+goals_conceded: 14
+yellow: 26
+red: 5
+win: 12
+loss: 2
+draw: 0
