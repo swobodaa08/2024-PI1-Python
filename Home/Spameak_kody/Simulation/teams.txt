@@ -100,23 +100,23 @@ draw: 6
 
 Team: Inter Milano
 elo: 937
-goals_scored: 68
+goals_scored: 74
 goals_conceded: 41
-yellow: 41
+yellow: 47
 red: 4
-win: 8
+win: 9
 loss: 8
 draw: 4
 
 Team: Chelsea FC
 elo: 937
-goals_scored: 77
-goals_conceded: 44
-yellow: 41
+goals_scored: 78
+goals_conceded: 45
+yellow: 43
 red: 10
 win: 15
 loss: 3
-draw: 2
+draw: 3
 
 Team: Benfica
 elo: 937
@@ -130,12 +130,12 @@ draw: 1
 
 Team: Santos FC
 elo: 925
-goals_scored: 79
-goals_conceded: 47
-yellow: 41
+goals_scored: 83
+goals_conceded: 53
+yellow: 44
 red: 0
 win: 14
-loss: 6
+loss: 7
 draw: 0
 
 Team: Flamengo
@@ -390,13 +390,13 @@ draw: 8
 
 Team: Monterrey
 elo: 799
-goals_scored: 51
-goals_conceded: 60
-yellow: 33
+goals_scored: 52
+goals_conceded: 61
+yellow: 38
 red: 0
 win: 14
 loss: 4
-draw: 2
+draw: 3
 
 Team: New York Cosmos
 elo: 798
@@ -540,11 +540,11 @@ draw: 0
 
 Team: Penarol
 elo: 725
-goals_scored: 68
-goals_conceded: 59
-yellow: 20
+goals_scored: 74
+goals_conceded: 63
+yellow: 25
 red: 8
-win: 6
+win: 7
 loss: 11
 draw: 3
 
@@ -1110,11 +1110,11 @@ draw: 11
 
 Team: KSK Zilina
 elo: 181
-goals_scored: 53
-goals_conceded: 60
+goals_scored: 55
+goals_conceded: 61
 yellow: 44
 red: 1
-win: 5
+win: 6
 loss: 10
 draw: 5
 
@@ -1130,11 +1130,11 @@ draw: 0
 
 Team: Horky
 elo: 180
-goals_scored: 55
+goals_scored: 56
 goals_conceded: 67
-yellow: 63
-red: 10
-win: 14
+yellow: 67
+red: 11
+win: 15
 loss: 5
 draw: 4
 
@@ -1210,12 +1210,12 @@ draw: 8
 
 Team: Ovciarsko
 elo: 106
-goals_scored: 49
-goals_conceded: 56
-yellow: 47
+goals_scored: 50
+goals_conceded: 65
+yellow: 50
 red: 3
 win: 14
-loss: 5
+loss: 8
 draw: 1
 
 Team: Trnove
