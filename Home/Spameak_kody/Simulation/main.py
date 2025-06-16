@@ -60,9 +60,18 @@ def simuluj_zapas(tim1, tim2, staty1, staty2, delay=0.19):
 
     udalosti.sort()
 
+    # Pridanie nadstaveného času
+    nadstaveny_cas = random.randint(1, 8)
+
+
     print("\n🎮 Simulácia zápasu začína...\n")
-    for minuta in range(1, 91):
-        print(f"⏱️ {minuta}. minúta")
+    for minuta in range(1, 91 + nadstaveny_cas):
+        if minuta == 90:
+            print(f"🔁 Nadstavený čas: {nadstaveny_cas} minút")
+        if minuta > 90:
+            print(f"⏱️| 90+{minuta-90}. minúta")
+        else:
+            print(f"⏱️| {minuta}. minúta")
         for m, udalost in udalosti:
             if m == minuta:
                 print("   " + udalost)

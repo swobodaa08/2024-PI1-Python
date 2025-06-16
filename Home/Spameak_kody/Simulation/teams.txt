@@ -20,11 +20,11 @@ draw: 0
 
 Team: FC Barcelona
 elo: 982
-goals_scored: 72
-goals_conceded: 36
-yellow: 25
+goals_scored: 77
+goals_conceded: 40
+yellow: 30
 red: 0
-win: 14
+win: 15
 loss: 1
 draw: 5
 
@@ -1130,21 +1130,21 @@ draw: 0
 
 Team: Horky
 elo: 180
-goals_scored: 46
-goals_conceded: 55
-yellow: 44
+goals_scored: 55
+goals_conceded: 67
+yellow: 63
 red: 10
 win: 14
-loss: 2
+loss: 5
 draw: 4
 
 Team: Rudina
 elo: 175
-goals_scored: 67
-goals_conceded: 59
-yellow: 36
+goals_scored: 71
+goals_conceded: 62
+yellow: 42
 red: 1
-win: 7
+win: 8
 loss: 7
 draw: 6
 
@@ -1270,12 +1270,12 @@ draw: 9
 
 Team: Divina
 elo: 59
-goals_scored: 49
-goals_conceded: 55
+goals_scored: 50
+goals_conceded: 59
 yellow: 27
 red: 4
 win: 6
-loss: 12
+loss: 13
 draw: 2
 
 Team: Dolny Hricov
@@ -1300,11 +1300,11 @@ draw: 7
 
 Team: Cierne
 elo: 18
-goals_scored: 59
-goals_conceded: 56
-yellow: 34
+goals_scored: 66
+goals_conceded: 59
+yellow: 49
 red: 2
-win: 5
+win: 7
 loss: 2
 draw: 13
 
