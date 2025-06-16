@@ -20,13 +20,13 @@ def nacitaj_timove_statistiky(subor):
 def zapis_timove_statistiky(subor, timy):
     with open(subor, 'w', encoding='utf-8') as f:
         for nazov, data in timy.items():
-            f.write(f"Tím: {nazov}\n")
+            f.write(f"Team: {nazov}\n")
             for k, v in data.items():
                 f.write(f"{k}: {v}\n")
             f.write("\n")
 
 # Generovanie výsledku zápasu
-def simuluj_zapas(tim1, tim2, staty1, staty2, delay=0.15):
+def simuluj_zapas(tim1, tim2, staty1, staty2, delay=0.19):
     def vypocitaj_goly(utok, obrana):
         zaklad = random.gauss(utok / 10, 1)
         efektivne = max(0, int(zaklad - obrana / 30 + random.uniform(-1, 1)))

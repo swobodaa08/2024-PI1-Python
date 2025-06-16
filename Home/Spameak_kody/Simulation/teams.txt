@@ -1,19 +1,1310 @@
-Tím: FC Nitra
-elo: 85
-goals_scored: 49
-goals_conceded: 37
-yellow: 21
+Team: Biele
+elo: 2340
+goals_scored: 107
+goals_conceded: 20
+yellow: 41
+red: 2
+win: 20
+loss: 0
+draw: 0
+
+Team: Real Madrid
+elo: 1000
+goals_scored: 79
+goals_conceded: 38
+yellow: 26
+red: 9
+win: 11
+loss: 9
+draw: 0
+
+Team: FC Barcelona
+elo: 982
+goals_scored: 72
+goals_conceded: 36
+yellow: 25
+red: 0
+win: 14
+loss: 1
+draw: 5
+
+Team: AC Milan
+elo: 978
+goals_scored: 87
+goals_conceded: 39
+yellow: 40
+red: 9
+win: 15
+loss: 2
+draw: 3
+
+Team: Liverpool FC
+elo: 952
+goals_scored: 80
+goals_conceded: 39
+yellow: 22
+red: 6
+win: 16
+loss: 1
+draw: 3
+
+Team: Bayern Mnichov
+elo: 951
+goals_scored: 85
+goals_conceded: 41
+yellow: 41
+red: 5
+win: 16
+loss: 4
+draw: 0
+
+Team: Manchester United
+elo: 951
+goals_scored: 88
+goals_conceded: 43
+yellow: 42
 red: 2
 win: 10
+loss: 1
+draw: 9
+
+Team: Juventus
+elo: 944
+goals_scored: 80
+goals_conceded: 45
+yellow: 24
+red: 8
+win: 13
+loss: 4
+draw: 3
+
+Team: Manchester City
+elo: 940
+goals_scored: 91
+goals_conceded: 45
+yellow: 21
+red: 4
+win: 16
+loss: 4
+draw: 0
+
+Team: Ajax Amsterdam
+elo: 938
+goals_scored: 90
+goals_conceded: 40
+yellow: 44
+red: 6
+win: 12
+loss: 2
+draw: 6
+
+Team: Inter Milano
+elo: 937
+goals_scored: 68
+goals_conceded: 41
+yellow: 41
+red: 4
+win: 8
+loss: 8
+draw: 4
+
+Team: Chelsea FC
+elo: 937
+goals_scored: 77
+goals_conceded: 44
+yellow: 41
+red: 10
+win: 15
+loss: 3
+draw: 2
+
+Team: Benfica
+elo: 937
+goals_scored: 60
+goals_conceded: 46
+yellow: 34
+red: 7
+win: 15
+loss: 4
+draw: 1
+
+Team: Santos FC
+elo: 925
+goals_scored: 79
+goals_conceded: 47
+yellow: 41
+red: 0
+win: 14
+loss: 6
+draw: 0
+
+Team: Flamengo
+elo: 915
+goals_scored: 62
+goals_conceded: 43
+yellow: 21
+red: 4
+win: 12
+loss: 1
+draw: 7
+
+Team: River Plate
+elo: 914
+goals_scored: 83
+goals_conceded: 42
+yellow: 33
+red: 10
+win: 9
+loss: 4
+draw: 7
+
+Team: Boca Juniors
+elo: 911
+goals_scored: 60
+goals_conceded: 43
+yellow: 27
+red: 6
+win: 11
+loss: 9
+draw: 0
+
+Team: Paris Saint Germain
+elo: 905
+goals_scored: 65
+goals_conceded: 48
+yellow: 49
+red: 3
+win: 10
+loss: 8
+draw: 2
+
+Team: Arsenal FC
+elo: 905
+goals_scored: 81
+goals_conceded: 47
+yellow: 25
+red: 3
+win: 9
+loss: 1
+draw: 10
+
+Team: Porto
+elo: 904
+goals_scored: 56
+goals_conceded: 45
+yellow: 45
+red: 0
+win: 11
+loss: 8
+draw: 1
+
+Team: Atletico Madrid
+elo: 899
+goals_scored: 81
+goals_conceded: 48
+yellow: 39
+red: 8
+win: 11
+loss: 7
+draw: 2
+
+Team: AS Roma
+elo: 898
+goals_scored: 61
+goals_conceded: 46
+yellow: 48
+red: 4
+win: 15
+loss: 5
+draw: 0
+
+Team: Borussia Dortmund
+elo: 898
+goals_scored: 58
+goals_conceded: 49
+yellow: 42
+red: 2
+win: 11
+loss: 8
+draw: 1
+
+Team: Tottenham Hotspur
+elo: 891
+goals_scored: 73
+goals_conceded: 44
+yellow: 49
+red: 9
+win: 9
+loss: 5
+draw: 6
+
+Team: Napoli
+elo: 890
+goals_scored: 59
+goals_conceded: 46
+yellow: 32
+red: 8
+win: 8
+loss: 2
+draw: 10
+
+Team: Olympique Marseille
+elo: 886
+goals_scored: 64
+goals_conceded: 47
+yellow: 39
+red: 9
+win: 15
+loss: 4
+draw: 1
+
+Team: Internacional
+elo: 885
+goals_scored: 69
+goals_conceded: 43
+yellow: 49
+red: 2
+win: 13
+loss: 2
+draw: 5
+
+Team: Gremio
+elo: 884
+goals_scored: 58
+goals_conceded: 48
+yellow: 32
+red: 8
+win: 13
+loss: 2
+draw: 5
+
+Team: Sao Paulo FC
+elo: 884
+goals_scored: 58
+goals_conceded: 47
+yellow: 47
+red: 0
+win: 15
+loss: 3
+draw: 2
+
+Team: Corinthians
+elo: 874
+goals_scored: 63
+goals_conceded: 49
+yellow: 42
+red: 0
+win: 11
+loss: 3
+draw: 6
+
+Team: Celtic FC
+elo: 856
+goals_scored: 54
+goals_conceded: 51
+yellow: 23
+red: 10
+win: 11
+loss: 0
+draw: 9
+
+Team: Rangers FC
+elo: 844
+goals_scored: 72
+goals_conceded: 48
+yellow: 25
+red: 8
+win: 13
+loss: 4
+draw: 3
+
+Team: Steaua Bukurest
+elo: 840
+goals_scored: 49
+goals_conceded: 56
+yellow: 45
+red: 9
+win: 7
+loss: 4
+draw: 9
+
+Team: Galatasaray
+elo: 833
+goals_scored: 71
+goals_conceded: 50
+yellow: 49
+red: 9
+win: 7
+loss: 3
+draw: 10
+
+Team: Feyenoord
+elo: 824
+goals_scored: 54
+goals_conceded: 56
+yellow: 26
+red: 7
+win: 10
+loss: 3
+draw: 7
+
+Team: PSV Eindhoven
+elo: 820
+goals_scored: 68
+goals_conceded: 54
+yellow: 21
+red: 9
+win: 12
+loss: 7
+draw: 1
+
+Team: Valencia CF
+elo: 819
+goals_scored: 47
+goals_conceded: 51
+yellow: 30
+red: 0
+win: 11
+loss: 7
+draw: 2
+
+Team: Red Star Belgrade
+elo: 805
+goals_scored: 67
+goals_conceded: 51
+yellow: 25
+red: 2
+win: 5
+loss: 10
+draw: 5
+
+Team: Club America
+elo: 802
+goals_scored: 65
+goals_conceded: 51
+yellow: 32
+red: 3
+win: 12
+loss: 0
+draw: 8
+
+Team: Monterrey
+elo: 799
+goals_scored: 51
+goals_conceded: 60
+yellow: 33
+red: 0
+win: 14
 loss: 4
 draw: 2
 
-Tím: MŠK Žilina
-elo: 92
-goals_scored: 79
-goals_conceded: 14
-yellow: 26
-red: 5
+Team: New York Cosmos
+elo: 798
+goals_scored: 46
+goals_conceded: 55
+yellow: 33
+red: 3
 win: 12
-loss: 2
+loss: 3
+draw: 5
+
+Team: Chivas Guadalajara
+elo: 792
+goals_scored: 61
+goals_conceded: 57
+yellow: 43
+red: 6
+win: 9
+loss: 0
+draw: 11
+
+Team: Elche CF
+elo: 792
+goals_scored: 42
+goals_conceded: 60
+yellow: 41
+red: 9
+win: 5
+loss: 4
+draw: 11
+
+Team: Shakhtar Donetsk
+elo: 790
+goals_scored: 46
+goals_conceded: 58
+yellow: 43
+red: 0
+win: 5
+loss: 1
+draw: 14
+
+Team: Dynamo Kyjev
+elo: 785
+goals_scored: 41
+goals_conceded: 51
+yellow: 32
+red: 0
+win: 12
+loss: 0
+draw: 8
+
+Team: Celta Vigo
+elo: 780
+goals_scored: 41
+goals_conceded: 53
+yellow: 45
+red: 7
+win: 13
+loss: 3
+draw: 4
+
+Team: Sporting CP
+elo: 779
+goals_scored: 42
+goals_conceded: 50
+yellow: 43
+red: 10
+win: 14
+loss: 6
 draw: 0
+
+Team: Lazio
+elo: 772
+goals_scored: 63
+goals_conceded: 59
+yellow: 38
+red: 7
+win: 9
+loss: 3
+draw: 8
+
+Team: Hamburger SV
+elo: 771
+goals_scored: 50
+goals_conceded: 53
+yellow: 25
+red: 7
+win: 11
+loss: 6
+draw: 3
+
+Team: VfB Stuttgart
+elo: 770
+goals_scored: 66
+goals_conceded: 53
+yellow: 31
+red: 6
+win: 9
+loss: 8
+draw: 3
+
+Team: Olympiacos
+elo: 760
+goals_scored: 65
+goals_conceded: 52
+yellow: 49
+red: 9
+win: 10
+loss: 7
+draw: 3
+
+Team: Besiktas
+elo: 755
+goals_scored: 61
+goals_conceded: 60
+yellow: 40
+red: 4
+win: 8
+loss: 1
+draw: 11
+
+Team: Fenerbahce
+elo: 749
+goals_scored: 59
+goals_conceded: 58
+yellow: 47
+red: 7
+win: 10
+loss: 10
+draw: 0
+
+Team: Urawa Red Diamonds
+elo: 725
+goals_scored: 48
+goals_conceded: 60
+yellow: 25
+red: 0
+win: 12
+loss: 8
+draw: 0
+
+Team: Penarol
+elo: 725
+goals_scored: 68
+goals_conceded: 59
+yellow: 20
+red: 8
+win: 6
+loss: 11
+draw: 3
+
+Team: Nacional
+elo: 725
+goals_scored: 45
+goals_conceded: 59
+yellow: 24
+red: 2
+win: 12
+loss: 0
+draw: 8
+
+Team: Cruzeiro
+elo: 718
+goals_scored: 66
+goals_conceded: 52
+yellow: 45
+red: 9
+win: 11
+loss: 7
+draw: 2
+
+Team: Anderlecht
+elo: 711
+goals_scored: 63
+goals_conceded: 58
+yellow: 28
+red: 0
+win: 11
+loss: 9
+draw: 0
+
+Team: Leeds United
+elo: 705
+goals_scored: 44
+goals_conceded: 50
+yellow: 42
+red: 8
+win: 6
+loss: 11
+draw: 3
+
+Team: Stade de Reims
+elo: 699
+goals_scored: 68
+goals_conceded: 60
+yellow: 48
+red: 3
+win: 14
+loss: 3
+draw: 3
+
+Team: Atletico Nacional
+elo: 684
+goals_scored: 64
+goals_conceded: 53
+yellow: 34
+red: 2
+win: 11
+loss: 3
+draw: 6
+
+Team: Al Ahly
+elo: 681
+goals_scored: 45
+goals_conceded: 51
+yellow: 40
+red: 3
+win: 6
+loss: 2
+draw: 12
+
+Team: Al Hilal
+elo: 680
+goals_scored: 61
+goals_conceded: 60
+yellow: 35
+red: 9
+win: 11
+loss: 1
+draw: 8
+
+Team: Independiente
+elo: 677
+goals_scored: 68
+goals_conceded: 59
+yellow: 28
+red: 9
+win: 7
+loss: 12
+draw: 1
+
+Team: Sevilla FC
+elo: 658
+goals_scored: 59
+goals_conceded: 54
+yellow: 35
+red: 9
+win: 7
+loss: 2
+draw: 11
+
+Team: Newcastle United
+elo: 658
+goals_scored: 50
+goals_conceded: 50
+yellow: 45
+red: 3
+win: 6
+loss: 7
+draw: 7
+
+Team: Aston Villa
+elo: 655
+goals_scored: 69
+goals_conceded: 57
+yellow: 38
+red: 0
+win: 14
+loss: 0
+draw: 6
+
+Team: Everton
+elo: 654
+goals_scored: 65
+goals_conceded: 55
+yellow: 33
+red: 1
+win: 13
+loss: 6
+draw: 1
+
+Team: AS Monaco
+elo: 650
+goals_scored: 44
+goals_conceded: 56
+yellow: 23
+red: 1
+win: 5
+loss: 2
+draw: 13
+
+Team: Werder Bremy
+elo: 649
+goals_scored: 51
+goals_conceded: 54
+yellow: 36
+red: 3
+win: 14
+loss: 3
+draw: 3
+
+Team: Eintracht Frankfurt
+elo: 644
+goals_scored: 59
+goals_conceded: 52
+yellow: 33
+red: 1
+win: 9
+loss: 2
+draw: 9
+
+Team: Wolverhampton Wanderers
+elo: 642
+goals_scored: 60
+goals_conceded: 57
+yellow: 38
+red: 2
+win: 5
+loss: 5
+draw: 10
+
+Team: Torino
+elo: 640
+goals_scored: 58
+goals_conceded: 52
+yellow: 29
+red: 9
+win: 14
+loss: 5
+draw: 1
+
+Team: Borussia Monchengladbach
+elo: 640
+goals_scored: 40
+goals_conceded: 51
+yellow: 21
+red: 4
+win: 14
+loss: 4
+draw: 2
+
+Team: Bayer Leverkusen
+elo: 778
+goals_scored: 65
+goals_conceded: 58
+yellow: 28
+red: 5
+win: 8
+loss: 9
+draw: 3
+
+Team: Swansea City
+elo: 640
+goals_scored: 65
+goals_conceded: 59
+yellow: 29
+red: 5
+win: 13
+loss: 7
+draw: 0
+
+Team: Sampdoria
+elo: 628
+goals_scored: 47
+goals_conceded: 54
+yellow: 38
+red: 7
+win: 14
+loss: 0
+draw: 6
+
+Team: Partizan Belehrad
+elo: 628
+goals_scored: 55
+goals_conceded: 56
+yellow: 21
+red: 9
+win: 10
+loss: 7
+draw: 3
+
+Team: Club Brugge
+elo: 627
+goals_scored: 58
+goals_conceded: 51
+yellow: 44
+red: 1
+win: 10
+loss: 3
+draw: 7
+
+Team: Zenit Petrohrad
+elo: 620
+goals_scored: 40
+goals_conceded: 60
+yellow: 22
+red: 4
+win: 6
+loss: 8
+draw: 6
+
+Team: Metalist Charkov
+elo: 559
+goals_scored: 41
+goals_conceded: 53
+yellow: 48
+red: 9
+win: 9
+loss: 8
+draw: 3
+
+Team: Internacional de Limeira
+elo: 548
+goals_scored: 62
+goals_conceded: 55
+yellow: 50
+red: 5
+win: 6
+loss: 11
+draw: 3
+
+Team: Getafe CF
+elo: 540
+goals_scored: 49
+goals_conceded: 54
+yellow: 38
+red: 4
+win: 9
+loss: 1
+draw: 10
+
+Team: Racing Club
+elo: 525
+goals_scored: 43
+goals_conceded: 57
+yellow: 40
+red: 7
+win: 11
+loss: 4
+draw: 5
+
+Team: Universidad de Chile
+elo: 511
+goals_scored: 56
+goals_conceded: 56
+yellow: 23
+red: 3
+win: 9
+loss: 4
+draw: 7
+
+Team: Gremio Esportivo Brasil
+elo: 508
+goals_scored: 58
+goals_conceded: 53
+yellow: 24
+red: 1
+win: 6
+loss: 2
+draw: 12
+
+Team: Real Sociedad
+elo: 501
+goals_scored: 56
+goals_conceded: 60
+yellow: 40
+red: 7
+win: 11
+loss: 7
+draw: 2
+
+Team: Palmeiras
+elo: 499
+goals_scored: 46
+goals_conceded: 56
+yellow: 50
+red: 10
+win: 7
+loss: 12
+draw: 1
+
+Team: Fluminense
+elo: 498
+goals_scored: 42
+goals_conceded: 57
+yellow: 23
+red: 0
+win: 6
+loss: 2
+draw: 12
+
+Team: Villarreal
+elo: 498
+goals_scored: 47
+goals_conceded: 59
+yellow: 26
+red: 10
+win: 10
+loss: 2
+draw: 8
+
+Team: Lens
+elo: 491
+goals_scored: 61
+goals_conceded: 55
+yellow: 45
+red: 5
+win: 13
+loss: 4
+draw: 3
+
+Team: Real Betis
+elo: 490
+goals_scored: 48
+goals_conceded: 59
+yellow: 33
+red: 6
+win: 8
+loss: 10
+draw: 2
+
+Team: Deportivo La Coruna
+elo: 488
+goals_scored: 41
+goals_conceded: 51
+yellow: 49
+red: 3
+win: 7
+loss: 13
+draw: 0
+
+Team: Bordeaux
+elo: 488
+goals_scored: 68
+goals_conceded: 60
+yellow: 29
+red: 10
+win: 10
+loss: 10
+draw: 0
+
+Team: Mallorca
+elo: 465
+goals_scored: 70
+goals_conceded: 54
+yellow: 31
+red: 2
+win: 11
+loss: 5
+draw: 4
+
+Team: CFR Cluj
+elo: 461
+goals_scored: 56
+goals_conceded: 55
+yellow: 30
+red: 4
+win: 5
+loss: 14
+draw: 1
+
+Team: Dinamo Zahreb
+elo: 425
+goals_scored: 49
+goals_conceded: 59
+yellow: 21
+red: 5
+win: 7
+loss: 0
+draw: 13
+
+Team: Kaiserslautern
+elo: 400
+goals_scored: 69
+goals_conceded: 51
+yellow: 50
+red: 1
+win: 11
+loss: 4
+draw: 5
+
+Team: San Lorenzo
+elo: 399
+goals_scored: 65
+goals_conceded: 50
+yellow: 21
+red: 8
+win: 9
+loss: 2
+draw: 9
+
+Team: Marseille
+elo: 809
+goals_scored: 66
+goals_conceded: 53
+yellow: 42
+red: 6
+win: 5
+loss: 1
+draw: 14
+
+Team: Slovan Bratislava
+elo: 375
+goals_scored: 69
+goals_conceded: 51
+yellow: 26
+red: 4
+win: 8
+loss: 2
+draw: 10
+
+Team: MSK Zilina
+elo: 372
+goals_scored: 57
+goals_conceded: 58
+yellow: 41
+red: 6
+win: 9
+loss: 1
+draw: 10
+
+Team: Trnava
+elo: 368
+goals_scored: 66
+goals_conceded: 50
+yellow: 22
+red: 9
+win: 6
+loss: 6
+draw: 8
+
+Team: Podbrezova
+elo: 365
+goals_scored: 61
+goals_conceded: 54
+yellow: 36
+red: 0
+win: 5
+loss: 8
+draw: 7
+
+Team: Dunajska Streda
+elo: 350
+goals_scored: 58
+goals_conceded: 52
+yellow: 47
+red: 9
+win: 14
+loss: 3
+draw: 3
+
+Team: Ruzomberok
+elo: 339
+goals_scored: 46
+goals_conceded: 59
+yellow: 21
+red: 4
+win: 12
+loss: 7
+draw: 1
+
+Team: Banska Bystrica
+elo: 335
+goals_scored: 64
+goals_conceded: 58
+yellow: 38
+red: 2
+win: 11
+loss: 1
+draw: 8
+
+Team: Kosice
+elo: 330
+goals_scored: 64
+goals_conceded: 60
+yellow: 20
+red: 6
+win: 11
+loss: 0
+draw: 9
+
+Team: Presov
+elo: 299
+goals_scored: 52
+goals_conceded: 54
+yellow: 39
+red: 8
+win: 8
+loss: 6
+draw: 6
+
+Team: Zbynov
+elo: 220
+goals_scored: 53
+goals_conceded: 52
+yellow: 42
+red: 10
+win: 5
+loss: 0
+draw: 15
+
+Team: Kysucke Nove Mesto
+elo: 198
+goals_scored: 47
+goals_conceded: 59
+yellow: 21
+red: 5
+win: 9
+loss: 0
+draw: 11
+
+Team: KSK Zilina
+elo: 181
+goals_scored: 53
+goals_conceded: 60
+yellow: 44
+red: 1
+win: 5
+loss: 10
+draw: 5
+
+Team: Petrovice
+elo: 190
+goals_scored: 41
+goals_conceded: 53
+yellow: 37
+red: 10
+win: 9
+loss: 11
+draw: 0
+
+Team: Horky
+elo: 180
+goals_scored: 46
+goals_conceded: 55
+yellow: 44
+red: 10
+win: 14
+loss: 2
+draw: 4
+
+Team: Rudina
+elo: 175
+goals_scored: 67
+goals_conceded: 59
+yellow: 36
+red: 1
+win: 7
+loss: 7
+draw: 6
+
+Team: Radostka
+elo: 170
+goals_scored: 68
+goals_conceded: 53
+yellow: 36
+red: 6
+win: 10
+loss: 8
+draw: 2
+
+Team: Dolna Tizina
+elo: 160
+goals_scored: 66
+goals_conceded: 54
+yellow: 41
+red: 2
+win: 10
+loss: 9
+draw: 1
+
+Team: Bytcica
+elo: 156
+goals_scored: 45
+goals_conceded: 53
+yellow: 40
+red: 8
+win: 12
+loss: 4
+draw: 4
+
+Team: Velke Rovne
+elo: 112
+goals_scored: 45
+goals_conceded: 50
+yellow: 48
+red: 1
+win: 9
+loss: 4
+draw: 7
+
+Team: Staskov
+elo: 111
+goals_scored: 53
+goals_conceded: 55
+yellow: 46
+red: 7
+win: 8
+loss: 10
+draw: 2
+
+Team: Hvozdnica
+elo: 110
+goals_scored: 51
+goals_conceded: 50
+yellow: 48
+red: 1
+win: 12
+loss: 0
+draw: 8
+
+Team: Ovciarsko
+elo: 106
+goals_scored: 49
+goals_conceded: 56
+yellow: 47
+red: 3
+win: 14
+loss: 5
+draw: 1
+
+Team: Trnove
+elo: 100
+goals_scored: 57
+goals_conceded: 52
+yellow: 20
+red: 8
+win: 8
+loss: 5
+draw: 7
+
+Team: Dlhe Pole
+elo: 96
+goals_scored: 68
+goals_conceded: 55
+yellow: 29
+red: 0
+win: 10
+loss: 5
+draw: 5
+
+Team: Skalite
+elo: 89
+goals_scored: 63
+goals_conceded: 50
+yellow: 29
+red: 4
+win: 6
+loss: 10
+draw: 4
+
+Team: Podhorie
+elo: 85
+goals_scored: 63
+goals_conceded: 53
+yellow: 38
+red: 2
+win: 9
+loss: 8
+draw: 3
+
+Team: Vysoka nad Kysucou
+elo: 69
+goals_scored: 69
+goals_conceded: 54
+yellow: 20
+red: 10
+win: 10
+loss: 1
+draw: 9
+
+Team: Divina
+elo: 59
+goals_scored: 49
+goals_conceded: 55
+yellow: 27
+red: 4
+win: 6
+loss: 12
+draw: 2
+
+Team: Dolny Hricov
+elo: 40
+goals_scored: 46
+goals_conceded: 53
+yellow: 30
+red: 1
+win: 10
+loss: 4
+draw: 6
+
+Team: Krasnany
+elo: 38
+goals_scored: 51
+goals_conceded: 58
+yellow: 43
+red: 10
+win: 8
+loss: 5
+draw: 7
+
+Team: Cierne
+elo: 18
+goals_scored: 59
+goals_conceded: 56
+yellow: 34
+red: 2
+win: 5
+loss: 2
+draw: 13
+
