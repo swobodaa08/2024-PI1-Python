@@ -1,20 +1,20 @@
 Team: Biele
 elo: 2340
-goals_scored: 107
-goals_conceded: 20
-yellow: 41
+goals_scored: 116
+goals_conceded: 21
+yellow: 45
 red: 2
-win: 20
+win: 22
 loss: 0
 draw: 0
 
 Team: Real Madrid
 elo: 1000
-goals_scored: 79
-goals_conceded: 38
-yellow: 26
+goals_scored: 87
+goals_conceded: 39
+yellow: 32
 red: 9
-win: 11
+win: 12
 loss: 9
 draw: 0
 
@@ -100,22 +100,22 @@ draw: 6
 
 Team: Inter Milano
 elo: 937
-goals_scored: 74
-goals_conceded: 41
-yellow: 47
+goals_scored: 82
+goals_conceded: 44
+yellow: 60
 red: 4
-win: 9
-loss: 8
+win: 11
+loss: 9
 draw: 4
 
 Team: Chelsea FC
 elo: 937
-goals_scored: 78
-goals_conceded: 45
-yellow: 43
+goals_scored: 86
+goals_conceded: 46
+yellow: 46
 red: 10
-win: 15
-loss: 3
+win: 16
+loss: 4
 draw: 3
 
 Team: Benfica
@@ -210,12 +210,12 @@ draw: 2
 
 Team: AS Roma
 elo: 898
-goals_scored: 61
-goals_conceded: 46
-yellow: 48
+goals_scored: 66
+goals_conceded: 54
+yellow: 54
 red: 4
-win: 15
-loss: 5
+win: 16
+loss: 6
 draw: 0
 
 Team: Borussia Dortmund
@@ -451,11 +451,11 @@ draw: 8
 Team: Celta Vigo
 elo: 780
 goals_scored: 41
-goals_conceded: 53
-yellow: 45
+goals_conceded: 57
+yellow: 48
 red: 7
 win: 13
-loss: 3
+loss: 4
 draw: 4
 
 Team: Sporting CP
@@ -1110,11 +1110,11 @@ draw: 11
 
 Team: KSK Zilina
 elo: 181
-goals_scored: 55
-goals_conceded: 61
-yellow: 44
+goals_scored: 61
+goals_conceded: 64
+yellow: 47
 red: 1
-win: 6
+win: 7
 loss: 10
 draw: 5
 
@@ -1130,12 +1130,12 @@ draw: 0
 
 Team: Horky
 elo: 180
-goals_scored: 56
-goals_conceded: 67
-yellow: 67
+goals_scored: 59
+goals_conceded: 73
+yellow: 73
 red: 11
 win: 15
-loss: 5
+loss: 6
 draw: 4
 
 Team: Rudina
@@ -1191,11 +1191,11 @@ draw: 7
 Team: Staskov
 elo: 111
 goals_scored: 53
-goals_conceded: 55
-yellow: 46
+goals_conceded: 61
+yellow: 48
 red: 7
 win: 8
-loss: 10
+loss: 11
 draw: 2
 
 Team: Hvozdnica
@@ -1211,11 +1211,11 @@ draw: 8
 Team: Ovciarsko
 elo: 106
 goals_scored: 50
-goals_conceded: 65
-yellow: 50
+goals_conceded: 73
+yellow: 53
 red: 3
 win: 14
-loss: 8
+loss: 9
 draw: 1
 
 Team: Trnove
@@ -1291,11 +1291,11 @@ draw: 6
 Team: Krasnany
 elo: 38
 goals_scored: 51
-goals_conceded: 58
-yellow: 43
+goals_conceded: 64
+yellow: 46
 red: 10
 win: 8
-loss: 5
+loss: 6
 draw: 7
 
 Team: Cierne
