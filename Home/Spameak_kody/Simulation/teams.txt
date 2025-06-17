@@ -1,20 +1,20 @@
 Team: Biele
 elo: 2340
-goals_scored: 116
+goals_scored: 138
 goals_conceded: 21
-yellow: 45
+yellow: 51
 red: 2
-win: 22
+win: 23
 loss: 0
 draw: 0
 
 Team: Real Madrid
 elo: 1000
-goals_scored: 87
+goals_scored: 101
 goals_conceded: 39
-yellow: 32
+yellow: 36
 red: 9
-win: 12
+win: 13
 loss: 9
 draw: 0
 
@@ -1211,11 +1211,11 @@ draw: 8
 Team: Ovciarsko
 elo: 106
 goals_scored: 50
-goals_conceded: 73
-yellow: 53
+goals_conceded: 87
+yellow: 57
 red: 3
 win: 14
-loss: 9
+loss: 10
 draw: 1
 
 Team: Trnove
@@ -1301,10 +1301,10 @@ draw: 7
 Team: Cierne
 elo: 18
 goals_scored: 66
-goals_conceded: 59
-yellow: 49
+goals_conceded: 81
+yellow: 51
 red: 2
 win: 7
-loss: 2
+loss: 3
 draw: 13
 

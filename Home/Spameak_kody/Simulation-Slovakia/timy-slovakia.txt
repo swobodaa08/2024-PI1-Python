@@ -1,0 +1,170 @@
+Team: Dolny Kubin
+elo: 950
+goals_scored: 66
+goals_conceded: 81
+yellow: 51
+red: 2
+win: 7
+loss: 3
+draw: 13
+
+Team: Banska Bystrica B
+elo: 925
+goals_scored: 70
+goals_conceded: 81
+yellow: 51
+red: 2
+win: 8
+loss: 3
+draw: 13
+
+Team: Bytča
+elo: 917
+goals_scored: 68
+goals_conceded: 81
+yellow: 56
+red: 2
+win: 8
+loss: 3
+draw: 13
+
+Team: Kysuca
+elo: 889
+goals_scored: 66
+goals_conceded: 81
+yellow: 51
+red: 2
+win: 7
+loss: 3
+draw: 13
+
+Team: Banova
+elo: 790
+goals_scored: 66
+goals_conceded: 81
+yellow: 51
+red: 2
+win: 7
+loss: 3
+draw: 13
+
+Team: Nededza
+elo: 756
+goals_scored: 66
+goals_conceded: 81
+yellow: 51
+red: 2
+win: 7
+loss: 3
+draw: 13
+
+Team: Krasno
+elo: 740
+goals_scored: 69
+goals_conceded: 81
+yellow: 54
+red: 2
+win: 8
+loss: 3
+draw: 13
+
+Team: Martin B
+elo: 720
+goals_scored: 66
+goals_conceded: 81
+yellow: 51
+red: 2
+win: 7
+loss: 3
+draw: 13
+
+Team: Banska Stiavnica
+elo: 701
+goals_scored: 66
+goals_conceded: 81
+yellow: 51
+red: 2
+win: 7
+loss: 3
+draw: 13
+
+Team: Rimavska Sobota
+elo: 664
+goals_scored: 66
+goals_conceded: 81
+yellow: 51
+red: 2
+win: 7
+loss: 3
+draw: 13
+
+Team: Oravska Jasenica
+elo: 600
+goals_scored: 66
+goals_conceded: 81
+yellow: 51
+red: 2
+win: 7
+loss: 3
+draw: 13
+
+Team: Detva
+elo: 511
+goals_scored: 67
+goals_conceded: 81
+yellow: 59
+red: 2
+win: 8
+loss: 3
+draw: 14
+
+Team: Vrutky
+elo: 480
+goals_scored: 66
+goals_conceded: 81
+yellow: 51
+red: 2
+win: 7
+loss: 3
+draw: 13
+
+Team: Horky
+elo: 470
+goals_scored: 57
+goals_conceded: 100
+yellow: 26
+red: 1
+win: 13
+loss: 7
+draw: 14
+
+Team: Kovacova
+elo: 390
+goals_scored: 66
+goals_conceded: 81
+yellow: 51
+red: 2
+win: 7
+loss: 3
+draw: 13
+
+Team: Cadca
+elo: 240
+goals_scored: 66
+goals_conceded: 81
+yellow: 51
+red: 2
+win: 7
+loss: 3
+draw: 13
+
+Team: Nova Bana
+elo: 90
+goals_scored: 66
+goals_conceded: 88
+yellow: 53
+red: 2
+win: 7
+loss: 4
+draw: 13
+
