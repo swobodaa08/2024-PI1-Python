@@ -457,7 +457,7 @@ if __name__ == "__main__":
         
     # Používateľ zadá svoje tipy
     while True:
-        print(f"[1] Kto vyhrá\n[2] Počet gólov v zápase(viac ako)\n[3] Počet gólov {tim1}\n[4] Počet gólov {tim2}\n[5] Počet žltých kariet v zápase\n[6] Počet žltých kariet {tim1}\n[7] Počet žltých kariet {tim2}\n---------------------------------")
+        print(f"[1] Kto vyhrá\n[LOCKED] Počet gólov v zápase(viac ako)\n[LOCKED] Počet gólov {tim1}\n[LOCKED] Počet gólov {tim2}\n[LOCKED] Počet žltých kariet v zápase\n[LOCKED] Počet žltých kariet {tim1}\n[LOCKED] Počet žltých kariet {tim2}\n---------------------------------")
         choice = int(input("Vyber podla čísla, na čo si chceš podať: "))
 
         if choice == 1:
@@ -467,7 +467,7 @@ if __name__ == "__main__":
             else:
                 print("Zadaj prosím 1, X alebo 2.")
         
-        elif choice == 2:
+        elif choice == 666:
             print(f"Viac ako 0.5 góla: {kurz_over05}\n"
                 f"Viac ako 1.5 góla: {kurz_over15}\n"
                 f"Viac ako 2.5 góla: {kurz_over25}\n"
@@ -483,6 +483,9 @@ if __name__ == "__main__":
                 break
             else:
                 print("Tvoj tip na počet gólov musí byť aspon 1 gól...")
+        
+        else:
+            continue
 
     while True:
             try:

@@ -10,11 +10,11 @@ draw: 0
 
 Team: Real Madrid
 elo: 1000
-goals_scored: 101
+goals_scored: 123
 goals_conceded: 39
-yellow: 36
+yellow: 42
 red: 9
-win: 13
+win: 14
 loss: 9
 draw: 0
 
@@ -100,11 +100,11 @@ draw: 6
 
 Team: Inter Milano
 elo: 937
-goals_scored: 82
+goals_scored: 84
 goals_conceded: 44
 yellow: 60
 red: 4
-win: 11
+win: 12
 loss: 9
 draw: 4
 
@@ -631,11 +631,11 @@ draw: 8
 Team: Independiente
 elo: 677
 goals_scored: 68
-goals_conceded: 59
-yellow: 28
+goals_conceded: 61
+yellow: 34
 red: 9
 win: 7
-loss: 12
+loss: 13
 draw: 1
 
 Team: Sevilla FC
@@ -1301,10 +1301,10 @@ draw: 7
 Team: Cierne
 elo: 18
 goals_scored: 66
-goals_conceded: 81
+goals_conceded: 103
 yellow: 51
 red: 2
 win: 7
-loss: 3
+loss: 4
 draw: 13
 

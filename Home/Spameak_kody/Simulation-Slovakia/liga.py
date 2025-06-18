@@ -57,13 +57,15 @@ def simuluj_zapas(tim1, tim2, staty1, staty2, delay=0.25):
     goly1 = np.random.poisson(exp_g1)
     goly2 = np.random.poisson(exp_g2)
 
-    zlute1 = random.randint(0, 6)
-    zlute2 = random.randint(0, 6)
+    zlute1 = random.randint(0, 4)
+    zlute2 = random.randint(0, 5)
     cervene1 = 1 if random.random() < staty1["red"] / 100 else 0
     cervene2 = 1 if random.random() < staty2["red"] / 100 else 0
 
+    nadstaveny_cas = random.randint(1, 8)
+
     def rozdel_minuty(pocet):
-        return sorted(random.sample(range(1, 91), pocet))
+        return sorted(random.sample(range(1, 91 + nadstaveny_cas), pocet))
 
     udalosti = []
 
@@ -81,8 +83,6 @@ def simuluj_zapas(tim1, tim2, staty1, staty2, delay=0.25):
         udalosti.append((m, f"🟥 Červená karta pre {tim2}"))
 
     udalosti.sort()
-
-    nadstaveny_cas = random.randint(1, 8)
 
     print("\n🎮 Simulácia zápasu začína...\n")
     for minuta in range(1, 91 + nadstaveny_cas):
@@ -122,8 +122,8 @@ def simuluj_zapas(tim1, tim2, staty1, staty2, delay=0.25):
     strely1 = random.randint(4, 8) + goly1 * random.randint(2, 4)
     strely2 = random.randint(4, 8) + goly2 * random.randint(2, 4)
 
-    na_branu1 = max(goly1 + random.randint(1, 4), goly1)
-    na_branu2 = max(goly2 + random.randint(1, 4), goly2)
+    na_branu1 = random.randint(goly1, goly1 + random.randint(1, 6))
+    na_branu2 = random.randint(goly2, goly2 + random.randint(1, 4))
 
     drzanie1 = random.randint(51, 75) if staty1["elo"] > staty2["elo"] else random.randint(25, 49)
     drzanie2 = 100 - drzanie1
@@ -133,7 +133,7 @@ def simuluj_zapas(tim1, tim2, staty1, staty2, delay=0.25):
 
     offsides1 = random.randint(0, 3)
     offsides2 = random.randint(0, 3)
-    fauly1 = random.randint(7, 14) + zlute1
+    fauly1 = random.randint(5, 12) + zlute1
     fauly2 = random.randint(7, 14) + zlute2
 
     print("\n🏁 Zápas skončil!\n")
@@ -169,14 +169,17 @@ def simuluj_zapas(tim1, tim2, staty1, staty2, delay=0.25):
 # ======= HLAVNÝ PROGRAM ========
 if __name__ == "__main__":
     konto = 10000
-    while konto > 0:
+    hry = int(input("\n--------------------------\nKolko kôl chceš hrať?(1-20): "))
+    if 20 < hry < 1:
+        hry = 3
+    while hry > 0:
         timy = nacitaj_timove_statistiky("Home/Spameak_kody/Simulation-Slovakia/timy-slovakia.txt")
 
         timy_zoznam = list(timy.keys())
         print("Dostupné tímy:")
         for idx, nazov in enumerate(timy_zoznam):
             print(f"{idx+1}. {nazov}")
-        print(f"\nTvoj zostatok na účte: {konto}€\n--------------------------------\n")
+        print(f"\nTvoj zostatok na účte: {konto}€\nPočet zostávajúcich kôl: {hry}\n--------------------------------\n")
         
         a = int(input("Vyber číslo domáceho tímu: ")) - 1
         b = int(input("Vyber číslo hosťovského tímu: ")) - 1
@@ -244,3 +247,4 @@ if __name__ == "__main__":
             print(f"Aktuálny zostatok na konte: {konto}€\n---------------------------------")
 
         zapis_timove_statistiky("Home/Spameak_kody/Simulation-Slovakia/timy-slovakia.txt", timy)
+        hry -= 1
