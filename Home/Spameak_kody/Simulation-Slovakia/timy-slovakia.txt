@@ -1,10 +1,10 @@
 Team: Dolny Kubin
 elo: 966
-goals_scored: 199
+goals_scored: 208
 goals_conceded: 12
-yellow: 42
+yellow: 45
 red: 10
-win: 9
+win: 10
 loss: 3
 draw: 13
 
@@ -22,11 +22,11 @@ Team: Bytča
 elo: 910
 goals_scored: 201
 goals_conceded: 39
-yellow: 62
+yellow: 64
 red: 7
 win: 9
 loss: 3
-draw: 14
+draw: 15
 
 Team: Kysuca
 elo: 889
@@ -35,96 +35,6 @@ goals_conceded: 81
 yellow: 51
 red: 2
 win: 7
-loss: 3
-draw: 13
-
-Team: Banova
-elo: 790
-goals_scored: 66
-goals_conceded: 81
-yellow: 51
-red: 2
-win: 7
-loss: 3
-draw: 13
-
-Team: Nededza
-elo: 756
-goals_scored: 66
-goals_conceded: 81
-yellow: 51
-red: 2
-win: 7
-loss: 3
-draw: 13
-
-Team: Krasno
-elo: 740
-goals_scored: 69
-goals_conceded: 81
-yellow: 54
-red: 2
-win: 8
-loss: 3
-draw: 13
-
-Team: Martin B
-elo: 720
-goals_scored: 66
-goals_conceded: 81
-yellow: 51
-red: 2
-win: 7
-loss: 3
-draw: 13
-
-Team: Banska Stiavnica
-elo: 701
-goals_scored: 66
-goals_conceded: 81
-yellow: 51
-red: 2
-win: 7
-loss: 3
-draw: 13
-
-Team: Rimavska Sobota
-elo: 664
-goals_scored: 66
-goals_conceded: 81
-yellow: 51
-red: 2
-win: 7
-loss: 3
-draw: 13
-
-Team: Oravska Jasenica
-elo: 600
-goals_scored: 66
-goals_conceded: 81
-yellow: 51
-red: 2
-win: 7
-loss: 3
-draw: 13
-
-Team: Brezno
-elo: 555
-goals_scored: 66
-goals_conceded: 81
-yellow: 38
-red: 11
-win: 7
-loss: 3
-draw: 13
-
-Team: Detva
-elo: 511
-goals_scored: 67
-goals_conceded: 81
-yellow: 59
-red: 2
-win: 8
 loss: 3
 draw: 14
 
@@ -162,11 +72,11 @@ Team: Martin B
 elo: 700
 goals_scored: 69
 goals_conceded: 82
-yellow: 58
-red: 4
+yellow: 60
+red: 5
 win: 8
 loss: 3
-draw: 15
+draw: 16
 
 Team: Banska Stiavnica
 elo: 675
@@ -192,9 +102,19 @@ Team: Oravska Jasenica
 elo: 599
 goals_scored: 71
 goals_conceded: 87
-yellow: 70
+yellow: 73
 red: 8
 win: 10
+loss: 5
+draw: 18
+
+Team: Brezno
+elo: 556
+goals_scored: 72
+goals_conceded: 87
+yellow: 32
+red: 17
+win: 11
 loss: 5
 draw: 17
 
@@ -221,11 +141,11 @@ draw: 13
 Team: Horky
 elo: 470
 goals_scored: 57
-goals_conceded: 101
-yellow: 32
+goals_conceded: 102
+yellow: 35
 red: 1
 win: 13
-loss: 8
+loss: 9
 draw: 14
 
 Team: Kovacova
@@ -251,10 +171,10 @@ draw: 14
 Team: Nova Bana
 elo: 100
 goals_scored: 69
-goals_conceded: 149
-yellow: 63
+goals_conceded: 158
+yellow: 65
 red: 34
 win: 7
-loss: 10
+loss: 11
 draw: 13
 
