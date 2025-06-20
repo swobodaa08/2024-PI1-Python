@@ -10,11 +10,11 @@ draw: 13
 
 Team: Banska Bystrica B
 elo: 925
-goals_scored: 70
+goals_scored: 71
 goals_conceded: 81
-yellow: 51
+yellow: 54
 red: 2
-win: 8
+win: 9
 loss: 3
 draw: 13
 
@@ -108,6 +108,16 @@ win: 7
 loss: 3
 draw: 13
 
+Team: Brezno
+elo: 555
+goals_scored: 66
+goals_conceded: 81
+yellow: 38
+red: 11
+win: 7
+loss: 3
+draw: 13
+
 Team: Detva
 elo: 511
 goals_scored: 67
@@ -131,11 +141,11 @@ draw: 13
 Team: Horky
 elo: 470
 goals_scored: 57
-goals_conceded: 100
-yellow: 26
+goals_conceded: 101
+yellow: 32
 red: 1
 win: 13
-loss: 7
+loss: 8
 draw: 14
 
 Team: Kovacova
