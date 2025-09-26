@@ -60,11 +60,11 @@ draw: 14
 
 Team: Krasno
 elo: 710
-goals_scored: 73
+goals_scored: 89
 goals_conceded: 82
-yellow: 59
+yellow: 60
 red: 8
-win: 10
+win: 11
 loss: 3
 draw: 15
 
@@ -140,11 +140,11 @@ draw: 13
 
 Team: Horky
 elo: 470
-goals_scored: 57
-goals_conceded: 102
-yellow: 39
+goals_scored: 61
+goals_conceded: 103
+yellow: 44
 red: 1
-win: 13
+win: 14
 loss: 9
 draw: 15
 
@@ -180,10 +180,11 @@ draw: 13
 
 Team: ŠK Sásová
 elo: 60
-goals_scored: 12
-goals_conceded: 188
-yellow: 33
+goals_scored: 13
+goals_conceded: 208
+yellow: 35
 red: 10
 win: 7
-loss: 11
+loss: 13
 draw: 13
+
