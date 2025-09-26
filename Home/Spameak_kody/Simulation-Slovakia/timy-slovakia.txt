@@ -126,7 +126,7 @@ yellow: 67
 red: 13
 win: 8
 loss: 3
-draw: 16
+draw: 17
 
 Team: Vrutky
 elo: 489
@@ -140,13 +140,13 @@ draw: 13
 
 Team: Horky
 elo: 470
-goals_scored: 57
+goals_scored: 65
 goals_conceded: 102
-yellow: 35
+yellow: 44
 red: 1
-win: 13
+win: 14
 loss: 9
-draw: 14
+draw: 15
 
 Team: Kovacova
 elo: 394
@@ -171,10 +171,10 @@ draw: 14
 Team: Nova Bana
 elo: 100
 goals_scored: 69
-goals_conceded: 158
-yellow: 65
+goals_conceded: 166
+yellow: 66
 red: 34
 win: 7
-loss: 11
+loss: 12
 draw: 13
 
