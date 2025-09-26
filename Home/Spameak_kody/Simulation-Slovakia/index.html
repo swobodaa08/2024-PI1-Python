@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>var $B = __BRYTHON__,
+        _b_ = $B.builtins,
+        locals_exec = $B.imported["exec"],
+        locals = locals_exec,
+        frame = ["exec", locals, "exec", locals]
+    var __file__ = '<string>'
+    locals.__name__ = 'exec'
+    locals.__doc__ = _b_.None
+    frame.positions = [[1,0,25],[2,0,18],[170,3,8],[172,10,73],[172,14,68],[176,15,84],[178,22,17],[178,27,11],[178,27,9],[179,8,23],[180,26,22],[180,12,10],[181,12,26],[181,21,5],[182,8,111],[184,12,45],[184,12,41],[184,16,36],[185,12,48],[185,12,44],[185,16,39],[187,21,14],[187,37,14],[187,8,10],[189,33,39],[189,49,10],[189,61,10],[189,8,22],[191,8,71],[192,8,40],[193,8,62],[194,8,62],[195,8,25],[196,8,62],[197,8,37],[198,8,31],[199,8,37],[200,8,60],[204,27,45],[208,16,35],[212,27,46],[212,33,39],[216,24,60],[217,24,125],[218,24,60],[220,20,43],[222,19,49],[222,45,10],[222,57,10],[225,8,34],[226,8,27],[226,14,20],[227,8,29],[228,26,30],[228,26,28],[228,26,22],[228,12,10],[229,12,16],[230,24,13],[230,24,11],[230,16,4],[231,16,20],[234,11,20],[234,11,18],[234,11,12],[234,35,24],[235,20,119],[235,26,109],[235,26,4],[235,44,24],[235,91,24],[237,20,15],[238,12,61],[239,12,43],[240,12,81],[242,21,4],[243,20,15],[244,12,61],[245,12,46],[246,12,61],[247,12,81],[249,8,88]]
+    locals.__annotations__ = locals.__annotations__ || $B.empty_dict()
+    $B.enter_frame(frame, __file__, 1)
+    
+    var _frame_obj = $B.frame_obj
+    var stack_length = $B.count_frames()
+    try{
+      $B.set_lineno(frame, 1)
+      $B.$import("random", [], {}, locals, 1)
+      $B.$import("time", [], {}, locals, 1)
+      $B.$import("math", [], {}, locals, 1)
+      $B.set_lineno(frame, 2)
+      $B.$import("numpy", [], {'numpy' : 'np'}, locals, 3)
+      $B.set_lineno(frame, 5)
+      function nacitaj_timove_statistiky756208(){
+        var locals
+        var locals_exec_nacitaj_timove_statistiky = locals = nacitaj_timove_statistiky756208.$args_parser(nacitaj_timove_statistiky756208, arguments)
+        var frame = ["nacitaj_timove_statistiky", locals, "exec", locals_exec, nacitaj_timove_statistiky756208]
+        $B.enter_frame(frame, __file__, 5)
+        frame.positions = [[6,7,4,45],[7,15,30],[7,15,22],[7,15,16],[7,15,14],[7,15,8],[7,15,6],[7,15,1],[6,9,34],[10,17,24],[10,17,18],[10,17,12],[10,17,10],[13,28,17],[13,28,12],[13,12,13],[14,32,15],[14,32,13],[14,12,17],[14,16,12],[14,16,10],[15,16,15],[15,16,7],[16,37,11],[16,37,9],[16,29,4],[16,18,6],[17,8,11]]
+        var stack_length = $B.count_frames()
+        try{
+          $B.js_this = this
+          $B.set_lineno(frame, 6)
+          var mgr_756209 = $B.$call(_b_.open, 17)(locals.subor, 'r', {$kw:[{encoding: 'utf-8'}]}),
+              klass = $B.get_class(mgr_756209)
+          try{
+            var exit_756209 = $B.$getattr(mgr_756209, '__exit__'),
+                enter_756209 = $B.$getattr(klass, '__enter__')
+          }catch(err){
+            var klass_name = $B.class_name(mgr_756209)
+            frame.inum = 1
+            throw _b_.TypeError.$factory("'" + klass_name + "' object does not support the context manager protocol")
+          }
+          var value_756209 = $B.$call(enter_756209)(mgr_756209),
+              exc_756209 = true
+          try{
+            try{
+              $B.set_lineno(frame, 6)
+              locals_exec_nacitaj_timove_statistiky.f = value_756209
+              $B.set_lineno(frame, 7)
+              locals_exec_nacitaj_timove_statistiky.data = $B.$call($B.$getattr_pep657($B.$call($B.$getattr_pep657($B.$call($B.$getattr_pep657($B.resolve_local('f', 15), 'read', 13), 11)(), 'strip', 9), 7)(), 'split', 5), 3)('\n\n')
+            }catch(err_756209){
+              frame.$lineno = 6
+              exc_756209 = false
+              err_756209 = $B.exception(err_756209, frame)
+              var $b = $B.$call(exit_756209)(err_756209.__class__, err_756209,
+                  $B.$getattr(err_756209, '__traceback__'))
+              if(! $B.$bool($b)){
+                throw err_756209
+              }
+            }
+          }finally{
+            frame.$lineno = 6
+            if(exc_756209){
+              try{
+                $B.$call(exit_756209)(_b_.None, _b_.None, _b_.None)
+              }catch(err){
+                if($B.count_frames() < stack_length){
+                  $B.frame_obj = $B.push_frame(frame)
+                }
+                throw err
+              }
+            }
+          }
+          
+          $B.set_lineno(frame, 8)
+          locals_exec_nacitaj_timove_statistiky.timy = _b_.dict.$literal([])
+          frame.$lineno = 9
+          var no_break_756210 = true,
+              iterator_756210 = locals.data
+          for(var next_756210 of $B.make_js_iterator(iterator_756210, frame, 9)){
+            locals_exec_nacitaj_timove_statistiky.blok = next_756210
+            $B.set_lineno(frame, 10)
+            locals_exec_nacitaj_timove_statistiky.riadky = $B.$call($B.$getattr_pep657($B.$call($B.$getattr_pep657(locals.blok, 'strip', 25), 23)(), 'split', 21), 19)('\n')
+            $B.set_lineno(frame, 11)
+            locals_exec_nacitaj_timove_statistiky.tim = _b_.dict.$literal([])
+            frame.$lineno = 12
+            var no_break_756211 = true,
+                iterator_756211 = locals.riadky
+            for(var next_756211 of $B.make_js_iterator(iterator_756211, frame, 12)){
+              locals_exec_nacitaj_timove_statistiky.riadok = next_756211
+              $B.set_lineno(frame, 13)
+              var v756212 = $B.$call($B.$getattr_pep657(locals.riadok, 'split', 29), 27)(':')
+              var it_756213 = $B.unpacker(v756212, 2, false, 31)
+              locals_exec_nacitaj_timove_statistiky.kluc = it_756213.read_one()
+              locals_exec_nacitaj_timove_statistiky.hodnota = it_756213.read_one()
+              $B.set_lineno(frame, 14)
+              $B.$setitem(locals_exec_nacitaj_timove_statistiky.tim, $B.$call($B.$getattr_pep657(locals.kluc, 'strip', 41), 39)(), $B.$call($B.$getattr_pep657(locals.hodnota, 'strip', 35), 33)(), 37)
+            }
+            
+            $B.set_lineno(frame, 15)
+            locals_exec_nacitaj_timove_statistiky.nazov = $B.$call($B.$getattr_pep657(locals.tim, 'pop', 45), 43)('Team')
+            $B.set_lineno(frame, 16)
+            locals_exec_nacitaj_timove_statistiky.tim = (function(expr){
+              var next_func_756214 = $B.make_js_iterator(expr, frame, 16)
+              var result_756214 = $B.empty_dict()
+              try{
+                for(var next_756214 of next_func_756214){
+                  $B.set_lineno(frame, 16)
+                  var v756215 = next_756214
+                  var it_756216 = $B.unpacker(v756215, 2, false, 51)
+                  locals_exec_nacitaj_timove_statistiky.k = it_756216.read_one()
+                  locals_exec_nacitaj_timove_statistiky.v = it_756216.read_one()
+                  _b_.dict.$setitem(result_756214, locals.k, $B.$call(_b_.int, 53)(locals.v))
+                }
+              }catch(err){
+                $B.set_exc(err, frame)
+                throw err
+              }
+              return result_756214
+            })($B.$call($B.$getattr_pep657(locals.tim, 'items', 49), 47)())
+            
+            $B.set_lineno(frame, 17)
+            $B.$setitem(locals_exec_nacitaj_timove_statistiky.timy, locals.nazov, locals.tim, 55)
+          }
+          
+          $B.set_lineno(frame, 18)
+          return $B.trace_return_and_leave(frame, locals.timy)
+        }catch(err){
+          $B.set_exc_and_leave(frame, err)
+        }
+      }
+      nacitaj_timove_statistiky756208.$function_infos = ['exec', 'nacitaj_timove_statistiky', 'nacitaj_timove_statistiky', __file__, _b_.None, _b_.None, _b_.None, ['subor'], null, null,
+      1, 5, 3, [], 0, 0, ['subor','f','data','timy','blok','riadky','tim','riadok','kluc','hodnota','nazov','k','v'], [], []]
+      nacitaj_timove_statistiky756208.$args_parser = $B.make_args_parser_and_parse
+      locals_exec.nacitaj_timove_statistiky = nacitaj_timove_statistiky756208
+      
+      $B.set_lineno(frame, 20)
+      function zapis_timove_statistiky756217(){
+        var locals
+        var locals_exec_zapis_timove_statistiky = locals = zapis_timove_statistiky756217.$args_parser(zapis_timove_statistiky756217, arguments)
+        var frame = ["zapis_timove_statistiky", locals, "exec", locals_exec, zapis_timove_statistiky756217]
+        $B.enter_frame(frame, __file__, 20)
+        frame.positions = [[21,26,4,25],[22,27,12],[22,27,10],[22,12,11],[23,12,27],[23,12,7],[23,12,1],[24,24,12],[24,24,10],[24,16,4],[25,16,22],[25,16,7],[25,16,1],[26,12,13],[26,12,7],[26,12,1],[21,9,34]]
+        var stack_length = $B.count_frames()
+        try{
+          $B.js_this = this
+          $B.set_lineno(frame, 21)
+          var mgr_756224 = $B.$call(_b_.open, 33)(locals.subor, 'w', {$kw:[{encoding: 'utf-8'}]}),
+              klass = $B.get_class(mgr_756224)
+          try{
+            var exit_756224 = $B.$getattr(mgr_756224, '__exit__'),
+                enter_756224 = $B.$getattr(klass, '__enter__')
+          }catch(err){
+            var klass_name = $B.class_name(mgr_756224)
+            frame.inum = 1
+            throw _b_.TypeError.$factory("'" + klass_name + "' object does not support the context manager protocol")
+          }
+          var value_756224 = $B.$call(enter_756224)(mgr_756224),
+              exc_756224 = true
+          try{
+            try{
+              $B.set_lineno(frame, 21)
+              locals_exec_zapis_timove_statistiky.f = value_756224
+              frame.$lineno = 22
+              var no_break_756218 = true,
+                  iterator_756218 = $B.$call($B.$getattr_pep657(locals.timy, 'items', 5), 3)()
+              for(var next_756218 of $B.make_js_iterator(iterator_756218, frame, 22)){
+                var v756219 = next_756218
+                var it_756220 = $B.unpacker(v756219, 2, false, 7)
+                locals_exec_zapis_timove_statistiky.nazov = it_756220.read_one()
+                locals_exec_zapis_timove_statistiky.data = it_756220.read_one()
+                $B.set_lineno(frame, 23);
+                $B.$call($B.$getattr_pep657($B.resolve_local('f', 13), 'write', 11), 9)('Team: ' + _b_.str.$factory(locals.nazov) + '\n')
+                frame.$lineno = 24
+                var no_break_756221 = true,
+                    iterator_756221 = $B.$call($B.$getattr_pep657(locals.data, 'items', 17), 15)()
+                for(var next_756221 of $B.make_js_iterator(iterator_756221, frame, 24)){
+                  var v756222 = next_756221
+                  var it_756223 = $B.unpacker(v756222, 2, false, 19)
+                  locals_exec_zapis_timove_statistiky.k = it_756223.read_one()
+                  locals_exec_zapis_timove_statistiky.v = it_756223.read_one()
+                  $B.set_lineno(frame, 25);
+                  $B.$call($B.$getattr_pep657($B.resolve_local('f', 25), 'write', 23), 21)(_b_.str.$factory(locals.k) + ': ' + _b_.str.$factory(locals.v) + '\n')
+                }
+                
+                $B.set_lineno(frame, 26);
+                $B.$call($B.$getattr_pep657($B.resolve_local('f', 31), 'write', 29), 27)('\n')
+              }
+            }catch(err_756224){
+              frame.$lineno = 21
+              exc_756224 = false
+              err_756224 = $B.exception(err_756224, frame)
+              var $b = $B.$call(exit_756224)(err_756224.__class__, err_756224,
+                  $B.$getattr(err_756224, '__traceback__'))
+              if(! $B.$bool($b)){
+                throw err_756224
+              }
+            }
+          }finally{
+            frame.$lineno = 21
+            if(exc_756224){
+              try{
+                $B.$call(exit_756224)(_b_.None, _b_.None, _b_.None)
+              }catch(err){
+                if($B.count_frames() < stack_length){
+                  $B.frame_obj = $B.push_frame(frame)
+                }
+                throw err
+              }
+            }
+          }
+          return $B.trace_return_and_leave(frame, _b_.None)
+        }catch(err){
+          $B.set_exc_and_leave(frame, err)
+        }
+      }
+      zapis_timove_statistiky756217.$function_infos = ['exec', 'zapis_timove_statistiky', 'zapis_timove_statistiky', __file__, _b_.None, _b_.None, _b_.None, ['subor','timy'], null, null,
+      2, 20, 3, [], 0, 0, ['subor','timy','f','nazov','data','k','v'], [], []]
+      zapis_timove_statistiky756217.$args_parser = $B.make_args_parser_and_parse
+      locals_exec.zapis_timove_statistiky = zapis_timove_statistiky756217
+      
+      $B.set_lineno(frame, 28)
+      function vypocitaj_kurzy756225(){
+        var locals
+        var locals_exec_vypocitaj_kurzy = locals = vypocitaj_kurzy756225.$args_parser(vypocitaj_kurzy756225, arguments)
+        var frame = ["vypocitaj_kurzy", locals, "exec", locals_exec, vypocitaj_kurzy756225]
+        $B.enter_frame(frame, __file__, 28)
+        frame.positions = [[29,9,55],[29,14,49],[29,18,45],[29,25,37],[29,26,29],[29,26,13],[29,42,13],[30,9,55],[30,14,49],[30,18,45],[30,25,37],[30,26,29],[30,26,13],[30,42,13],[32,13,26],[32,17,16],[32,23,6],[33,13,26],[33,17,16],[33,23,6],[34,13,31],[34,19,21],[34,20,15]]
+        try{
+          $B.js_this = this
+          $B.set_lineno(frame, 29)
+          locals_exec_vypocitaj_kurzy.EA = $B.rich_op('__truediv__', 1, $B.rich_op('__add__', 1, $B.rich_op('__pow__', 10, $B.rich_op('__truediv__', $B.rich_op('__sub__', $B.$getitem(locals.staty2, 'elo', 11), $B.$getitem(locals.staty1, 'elo', 13), 9), 400, 7), 5), 3), 1)
+          $B.set_lineno(frame, 30)
+          locals_exec_vypocitaj_kurzy.EB = $B.rich_op('__truediv__', 1, $B.rich_op('__add__', 1, $B.rich_op('__pow__', 10, $B.rich_op('__truediv__', $B.rich_op('__sub__', $B.$getitem(locals.staty1, 'elo', 25), $B.$getitem(locals.staty2, 'elo', 27), 23), 400, 21), 19), 17), 15)
+          $B.set_lineno(frame, 32)
+          locals_exec_vypocitaj_kurzy.kurz_1 = $B.$call(_b_.min, 29)($B.$call(_b_.round, 31)($B.rich_op('__truediv__', 1, locals.EA, 33), 2), 150)
+          $B.set_lineno(frame, 33)
+          locals_exec_vypocitaj_kurzy.kurz_2 = $B.$call(_b_.min, 35)($B.$call(_b_.round, 37)($B.rich_op('__truediv__', 1, locals.EB, 39), 2), 150)
+          $B.set_lineno(frame, 34)
+          locals_exec_vypocitaj_kurzy.kurz_X = $B.$call(_b_.round, 41)($B.rich_op('__truediv__', $B.rich_op('__add__', locals.kurz_1, locals.kurz_2, 45), 2, 43), 2)
+          $B.set_lineno(frame, 36)
+          return $B.trace_return_and_leave(frame, $B.fast_tuple([locals.kurz_1, locals.kurz_X, locals.kurz_2]))
+        }catch(err){
+          $B.set_exc_and_leave(frame, err)
+        }
+      }
+      vypocitaj_kurzy756225.$function_infos = ['exec', 'vypocitaj_kurzy', 'vypocitaj_kurzy', __file__, _b_.None, _b_.None, _b_.None, ['staty1','staty2'], null, null,
+      2, 28, 3, [], 0, 0, ['staty1','staty2','EA','EB','kurz_1','kurz_2','kurz_X'], [], []]
+      vypocitaj_kurzy756225.$args_parser = $B.make_args_parser_and_parse
+      locals_exec.vypocitaj_kurzy = vypocitaj_kurzy756225
+      
+      $B.set_lineno(frame, 40)
+      function simuluj_zapas756226(){
+        var locals
+        var locals_exec_simuluj_zapas = locals = simuluj_zapas756226.$args_parser(simuluj_zapas756226, arguments)
+        var frame = ["simuluj_zapas", locals, "exec", locals_exec, simuluj_zapas756226]
+        $B.enter_frame(frame, __file__, 40)
+        frame.positions = [[56,21,44],[56,36,13],[56,51,13],[56,4,14],[57,12,25],[57,12,17],[57,12,9],[58,12,25],[58,12,17],[58,12,9],[60,13,20],[60,13,14],[61,13,20],[61,13,14],[62,20,15],[62,20,13],[62,38,19],[62,38,13],[63,20,15],[63,20,13],[63,38,19],[63,38,13],[65,21,20],[65,21,14],[72,13,20],[73,8,48],[73,8,15],[74,13,20],[75,8,48],[75,8,15],[76,13,21],[77,8,49],[77,8,15],[78,13,21],[79,8,49],[79,8,15],[80,13,23],[81,8,52],[81,8,15],[82,13,23],[83,8,52],[83,8,15],[85,4,15],[85,4,13],[87,4,42],[88,18,29],[88,27,19],[90,12,51],[92,12,36],[92,28,9],[94,12,30],[95,12,10],[97,16,22],[97,22,15],[98,8,17],[98,8,10],[122,14,51],[122,14,20],[122,14,14],[122,37,28],[122,45,20],[122,45,14],[123,14,51],[123,14,20],[123,14,14],[123,37,28],[123,45,20],[123,45,14],[125,16,51],[125,16,14],[125,38,28],[125,46,20],[125,46,14],[126,16,51],[126,16,14],[126,38,28],[126,46,20],[126,46,14],[128,41,13],[128,57,13],[128,15,22],[128,15,14],[128,76,22],[128,76,14],[129,15,14],[131,12,28],[131,12,20],[131,12,14],[132,12,28],[132,12,20],[132,12,14],[134,16,20],[134,16,14],[135,16,20],[135,16,14],[136,13,30],[136,13,21],[136,13,14],[137,13,30],[137,13,21],[137,13,14],[139,4,30]]
+        try{
+          $B.js_this = this
+          $B.set_lineno(frame, 41)
+          function expected_goals756227(){
+            var locals
+            var locals_exec_simuluj_zapas_expected_goals = locals = expected_goals756227.$args_parser(expected_goals756227, arguments)
+            var frame = ["expected_goals", locals, "exec", locals_exec, expected_goals756227]
+            $B.enter_frame(frame, __file__, 41)
+            frame.positions = [[47,16,23],[47,17,8],[47,30,8],[50,13,51],[50,27,36],[50,41,21],[50,41,8],[51,13,55],[51,27,40],[51,41,25],[51,41,8],[51,50,9]]
+            try{
+              $B.js_this = this
+              $B.set_lineno(frame, 43)
+              locals_exec_simuluj_zapas_expected_goals.max_goly = 20
+              $B.set_lineno(frame, 44)
+              locals_exec_simuluj_zapas_expected_goals.min_goly = ({__class__: _b_.float, value: 0.2})
+              $B.set_lineno(frame, 47)
+              locals_exec_simuluj_zapas_expected_goals.ratio = $B.rich_op('__truediv__', $B.rich_op('__add__', locals.elo1, 1, 3), $B.rich_op('__add__', locals.elo2, 1, 5), 1)
+              $B.set_lineno(frame, 50)
+              locals_exec_simuluj_zapas_expected_goals.g1 = $B.$call(_b_.min, 7)(locals.max_goly, $B.$call(_b_.max, 9)(locals.min_goly, $B.$call($B.$getattr_pep657(locals_exec.math, 'log', 13), 11)(locals.ratio, ({__class__: _b_.float, value: 1.25}))))
+              $B.set_lineno(frame, 51)
+              locals_exec_simuluj_zapas_expected_goals.g2 = $B.$call(_b_.min, 15)(locals.max_goly, $B.$call(_b_.max, 17)(locals.min_goly, $B.$call($B.$getattr_pep657(locals_exec.math, 'log', 21), 19)($B.rich_op('__truediv__', 1, locals.ratio, 23), ({__class__: _b_.float, value: 1.25}))))
+              $B.set_lineno(frame, 53)
+              return $B.trace_return_and_leave(frame, $B.fast_tuple([locals.g1, locals.g2]))
+            }catch(err){
+              $B.set_exc_and_leave(frame, err)
+            }
+          }
+          expected_goals756227.$function_infos = ['exec', 'expected_goals', 'expected_goals', __file__, _b_.None, _b_.None, _b_.None, ['elo1','elo2'], null, null,
+          2, 41, 3, [], 0, 0, ['elo1','elo2','max_goly','min_goly','ratio','g1','g2'], [], []]
+          expected_goals756227.$args_parser = $B.make_args_parser_and_parse
+          locals_exec_simuluj_zapas.expected_goals = expected_goals756227
+          
+          $B.set_lineno(frame, 56)
+          var v756228 = $B.$call(locals.expected_goals, 1)($B.$getitem(locals.staty1, 'elo', 3), $B.$getitem(locals.staty2, 'elo', 5))
+          var it_756229 = $B.unpacker(v756228, 2, false, 7)
+          locals_exec_simuluj_zapas.exp_g1 = it_756229.read_one()
+          locals_exec_simuluj_zapas.exp_g2 = it_756229.read_one()
+          $B.set_lineno(frame, 57)
+          locals_exec_simuluj_zapas.goly1 = $B.$call($B.$getattr_pep657($B.$getattr_pep657(locals_exec.np, 'random', 13), 'poisson', 11), 9)(locals.exp_g1)
+          $B.set_lineno(frame, 58)
+          locals_exec_simuluj_zapas.goly2 = $B.$call($B.$getattr_pep657($B.$getattr_pep657(locals_exec.np, 'random', 19), 'poisson', 17), 15)(locals.exp_g2)
+          $B.set_lineno(frame, 60)
+          locals_exec_simuluj_zapas.zlute1 = $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 23), 21)(0, 4)
+          $B.set_lineno(frame, 61)
+          locals_exec_simuluj_zapas.zlute2 = $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 27), 25)(0, 5)
+          $B.set_lineno(frame, 62)
+          locals_exec_simuluj_zapas.cervene1 = ($B.$bool($B.rich_comp('__lt__', $B.$call($B.$getattr_pep657(locals_exec.random, 'random', 31), 29)(), $B.rich_op('__truediv__', $B.$getitem(locals.staty1, 'red', 35), 100, 33))) ? 1: 0)
+          $B.set_lineno(frame, 63)
+          locals_exec_simuluj_zapas.cervene2 = ($B.$bool($B.rich_comp('__lt__', $B.$call($B.$getattr_pep657(locals_exec.random, 'random', 39), 37)(), $B.rich_op('__truediv__', $B.$getitem(locals.staty2, 'red', 43), 100, 41))) ? 1: 0)
+          $B.set_lineno(frame, 65)
+          locals_exec_simuluj_zapas.nadstaveny_cas = $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 47), 45)(1, 8)
+          $B.set_lineno(frame, 67)
+          function rozdel_minuty756230(){
+            var locals
+            var locals_exec_simuluj_zapas_rozdel_minuty = locals = rozdel_minuty756230.$args_parser(rozdel_minuty756230, arguments)
+            var frame = ["rozdel_minuty", locals, "exec", locals_exec, rozdel_minuty756230]
+            $B.enter_frame(frame, __file__, 67)
+            frame.positions = [[68,15,59],[68,22,51],[68,22,13],[68,36,29],[68,45,19]]
+            try{
+              $B.js_this = this
+              $B.set_lineno(frame, 68)
+              return $B.trace_return_and_leave(frame, $B.$call(_b_.sorted, 1)($B.$call($B.$getattr_pep657(locals_exec.random, 'sample', 5), 3)($B.$call(_b_.range, 7)(1, $B.rich_op('__add__', 91, locals_exec_simuluj_zapas.nadstaveny_cas, 9)), locals.pocet)))
+            }catch(err){
+              $B.set_exc_and_leave(frame, err)
+            }
+          }
+          rozdel_minuty756230.$function_infos = ['exec', 'rozdel_minuty', 'rozdel_minuty', __file__, _b_.None, _b_.None, _b_.None, ['pocet'], null, null,
+          1, 67, 3, ['nadstaveny_cas'], 0, 0, ['pocet'], [], []]
+          rozdel_minuty756230.$args_parser = $B.make_args_parser_and_parse
+          locals_exec_simuluj_zapas.rozdel_minuty = rozdel_minuty756230
+          
+          $B.set_lineno(frame, 70)
+          locals_exec_simuluj_zapas.udalosti = $B.$list([])
+          frame.$lineno = 72
+          var no_break_756231 = true,
+              iterator_756231 = $B.$call(locals.rozdel_minuty, 49)(locals.goly1)
+          for(var next_756231 of $B.make_js_iterator(iterator_756231, frame, 72)){
+            locals_exec_simuluj_zapas.m = next_756231
+            $B.set_lineno(frame, 73);
+            $B.$call($B.$getattr_pep657(locals_exec_simuluj_zapas.udalosti, 'append', 53), 51)($B.fast_tuple([locals.m, '⚽ Gól! ' + _b_.str.$factory(locals_exec_simuluj_zapas.tim1) + ' skóroval.']))
+          }
+          
+          frame.$lineno = 74
+          var no_break_756232 = true,
+              iterator_756232 = $B.$call(locals.rozdel_minuty, 55)(locals.goly2)
+          for(var next_756232 of $B.make_js_iterator(iterator_756232, frame, 74)){
+            locals_exec_simuluj_zapas.m = next_756232
+            $B.set_lineno(frame, 75);
+            $B.$call($B.$getattr_pep657(locals_exec_simuluj_zapas.udalosti, 'append', 59), 57)($B.fast_tuple([locals.m, '⚽ Gól! ' + _b_.str.$factory(locals_exec_simuluj_zapas.tim2) + ' skóroval.']))
+          }
+          
+          frame.$lineno = 76
+          var no_break_756233 = true,
+              iterator_756233 = $B.$call(locals.rozdel_minuty, 61)(locals.zlute1)
+          for(var next_756233 of $B.make_js_iterator(iterator_756233, frame, 76)){
+            locals_exec_simuluj_zapas.m = next_756233
+            $B.set_lineno(frame, 77);
+            $B.$call($B.$getattr_pep657(locals_exec_simuluj_zapas.udalosti, 'append', 65), 63)($B.fast_tuple([locals.m, $B.make_String('🟨 Žltá karta pre ', [0]) + _b_.str.$factory(locals_exec_simuluj_zapas.tim1)]))
+          }
+          
+          frame.$lineno = 78
+          var no_break_756234 = true,
+              iterator_756234 = $B.$call(locals.rozdel_minuty, 67)(locals.zlute2)
+          for(var next_756234 of $B.make_js_iterator(iterator_756234, frame, 78)){
+            locals_exec_simuluj_zapas.m = next_756234
+            $B.set_lineno(frame, 79);
+            $B.$call($B.$getattr_pep657(locals_exec_simuluj_zapas.udalosti, 'append', 71), 69)($B.fast_tuple([locals.m, $B.make_String('🟨 Žltá karta pre ', [0]) + _b_.str.$factory(locals_exec_simuluj_zapas.tim2)]))
+          }
+          
+          frame.$lineno = 80
+          var no_break_756235 = true,
+              iterator_756235 = $B.$call(locals.rozdel_minuty, 73)(locals.cervene1)
+          for(var next_756235 of $B.make_js_iterator(iterator_756235, frame, 80)){
+            locals_exec_simuluj_zapas.m = next_756235
+            $B.set_lineno(frame, 81);
+            $B.$call($B.$getattr_pep657(locals_exec_simuluj_zapas.udalosti, 'append', 77), 75)($B.fast_tuple([locals.m, $B.make_String('🟥 Červená karta pre ', [0]) + _b_.str.$factory(locals_exec_simuluj_zapas.tim1)]))
+          }
+          
+          frame.$lineno = 82
+          var no_break_756236 = true,
+              iterator_756236 = $B.$call(locals.rozdel_minuty, 79)(locals.cervene2)
+          for(var next_756236 of $B.make_js_iterator(iterator_756236, frame, 82)){
+            locals_exec_simuluj_zapas.m = next_756236
+            $B.set_lineno(frame, 83);
+            $B.$call($B.$getattr_pep657(locals_exec_simuluj_zapas.udalosti, 'append', 83), 81)($B.fast_tuple([locals.m, $B.make_String('🟥 Červená karta pre ', [0]) + _b_.str.$factory(locals_exec_simuluj_zapas.tim2)]))
+          }
+          
+          $B.set_lineno(frame, 85);
+          $B.$call($B.$getattr_pep657(locals.udalosti, 'sort', 87), 85)()
+          $B.set_lineno(frame, 87);
+          $B.$call(_b_.print, 89)($B.make_String('\n🎮 Simulácia zápasu začína...\n', [1]))
+          frame.$lineno = 88
+          var no_break_756237 = true,
+              iterator_756237 = $B.$call(_b_.range, 91)(1, $B.rich_op('__add__', 91, locals.nadstaveny_cas, 93))
+          for(var next_756237 of $B.make_js_iterator(iterator_756237, frame, 88)){
+            locals_exec_simuluj_zapas.minuta = next_756237
+            if($B.set_lineno(frame, 89) && $B.$bool($B.rich_comp('__eq__', locals.minuta, 90))){
+              $B.set_lineno(frame, 90);
+              $B.$call(_b_.print, 95)($B.make_String('🔁 Nadstavený čas: ', [0]) + _b_.str.$factory(locals_exec_simuluj_zapas.nadstaveny_cas) + ' minút')
+            }
+            if($B.set_lineno(frame, 91) && $B.$bool($B.rich_comp('__gt__', locals.minuta, 90))){
+              $B.set_lineno(frame, 92);
+              $B.$call(_b_.print, 97)('⏱️| 90+' + _b_.str.$factory($B.rich_op('__sub__', locals_exec_simuluj_zapas.minuta, 90, 99)) + '. minúta')
+            }else{
+              $B.set_lineno(frame, 94);
+              $B.$call(_b_.print, 101)('⏱️| ' + _b_.str.$factory(locals_exec_simuluj_zapas.minuta) + '. minúta')
+            }
+            frame.$lineno = 95
+            var no_break_756239 = true,
+                iterator_756239 = locals_exec_simuluj_zapas.udalosti
+            for(var next_756239 of $B.make_js_iterator(iterator_756239, frame, 95)){
+              var v756240 = next_756239
+              var it_756241 = $B.unpacker(v756240, 2, false, 103)
+              locals_exec_simuluj_zapas.m = it_756241.read_one()
+              locals_exec_simuluj_zapas.udalost = it_756241.read_one()
+              if($B.set_lineno(frame, 96) && $B.$bool($B.rich_comp('__eq__', locals.m, locals_exec_simuluj_zapas.minuta))){
+                $B.set_lineno(frame, 97);
+                $B.$call(_b_.print, 105)($B.rich_op('__add__', '   ', locals_exec_simuluj_zapas.udalost, 107))
+              }
+            }
+            
+            $B.set_lineno(frame, 98);
+            $B.$call($B.$getattr_pep657(locals_exec.time, 'sleep', 111), 109)(locals_exec_simuluj_zapas.delay)
+          }
+          
+          if($B.set_lineno(frame, 101) && $B.$bool($B.rich_comp('__gt__', locals.goly1, locals.goly2))){
+            $B.set_lineno(frame, 102)
+            $B.$setitem((locals.$tg = locals_exec_simuluj_zapas.staty1), (locals.$key = 'win'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', 1))
+            $B.set_lineno(frame, 103)
+            $B.$setitem((locals.$tg = locals_exec_simuluj_zapas.staty2), (locals.$key = 'loss'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', 1))
+          }else if($B.set_lineno(frame, 104) && $B.$bool($B.rich_comp('__gt__', locals.goly2, locals.goly1))){
+            $B.set_lineno(frame, 105)
+            $B.$setitem((locals.$tg = locals_exec_simuluj_zapas.staty2), (locals.$key = 'win'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', 1))
+            $B.set_lineno(frame, 106)
+            $B.$setitem((locals.$tg = locals_exec_simuluj_zapas.staty1), (locals.$key = 'loss'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', 1))
+          }else{
+            $B.set_lineno(frame, 108)
+            $B.$setitem((locals.$tg = locals_exec_simuluj_zapas.staty1), (locals.$key = 'draw'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', 1))
+            $B.set_lineno(frame, 109)
+            $B.$setitem((locals.$tg = locals_exec_simuluj_zapas.staty2), (locals.$key = 'draw'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', 1))
+          }
+          $B.set_lineno(frame, 111)
+          $B.$setitem((locals.$tg = locals.staty1), (locals.$key = 'goals_scored'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', locals.goly1))
+          $B.set_lineno(frame, 112)
+          $B.$setitem((locals.$tg = locals.staty1), (locals.$key = 'goals_conceded'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', locals.goly2))
+          $B.set_lineno(frame, 113)
+          $B.$setitem((locals.$tg = locals.staty1), (locals.$key = 'yellow'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', locals.zlute1))
+          $B.set_lineno(frame, 114)
+          $B.$setitem((locals.$tg = locals.staty1), (locals.$key = 'red'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', locals.cervene1))
+          $B.set_lineno(frame, 116)
+          $B.$setitem((locals.$tg = locals.staty2), (locals.$key = 'goals_scored'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', locals.goly2))
+          $B.set_lineno(frame, 117)
+          $B.$setitem((locals.$tg = locals.staty2), (locals.$key = 'goals_conceded'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', locals.goly1))
+          $B.set_lineno(frame, 118)
+          $B.$setitem((locals.$tg = locals.staty2), (locals.$key = 'yellow'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', locals.zlute2))
+          $B.set_lineno(frame, 119)
+          $B.$setitem((locals.$tg = locals.staty2), (locals.$key = 'red'), $B.augm_assign($B.$getitem(locals.$tg, locals.$key), '+=', locals.cervene2))
+          $B.set_lineno(frame, 122)
+          locals_exec_simuluj_zapas.strely1 = $B.rich_op('__add__', $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 117), 115)(4, 8), $B.rich_op('__mul__', locals.goly1, $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 123), 121)(2, 4), 119), 113)
+          $B.set_lineno(frame, 123)
+          locals_exec_simuluj_zapas.strely2 = $B.rich_op('__add__', $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 129), 127)(4, 8), $B.rich_op('__mul__', locals.goly2, $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 135), 133)(2, 4), 131), 125)
+          $B.set_lineno(frame, 125)
+          locals_exec_simuluj_zapas.na_branu1 = $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 139), 137)(locals.goly1, $B.rich_op('__add__', locals.goly1, $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 145), 143)(1, 6), 141))
+          $B.set_lineno(frame, 126)
+          locals_exec_simuluj_zapas.na_branu2 = $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 149), 147)(locals.goly2, $B.rich_op('__add__', locals.goly2, $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 155), 153)(1, 4), 151))
+          $B.set_lineno(frame, 128)
+          locals_exec_simuluj_zapas.drzanie1 = ($B.$bool($B.rich_comp('__gt__', $B.$getitem(locals.staty1, 'elo', 157), $B.$getitem(locals.staty2, 'elo', 159))) ? $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 163), 161)(51, 75): $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 167), 165)(25, 49))
+          $B.set_lineno(frame, 129)
+          locals_exec_simuluj_zapas.drzanie2 = $B.rich_op('__sub__', 100, locals.drzanie1, 169)
+          $B.set_lineno(frame, 131)
+          locals_exec_simuluj_zapas.rohy1 = $B.rich_op('__add__', $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 175), 173)(1, 5), locals.goly1, 171)
+          $B.set_lineno(frame, 132)
+          locals_exec_simuluj_zapas.rohy2 = $B.rich_op('__add__', $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 181), 179)(1, 5), locals.goly2, 177)
+          $B.set_lineno(frame, 134)
+          locals_exec_simuluj_zapas.offsides1 = $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 185), 183)(0, 3)
+          $B.set_lineno(frame, 135)
+          locals_exec_simuluj_zapas.offsides2 = $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 189), 187)(0, 3)
+          $B.set_lineno(frame, 136)
+          locals_exec_simuluj_zapas.fauly1 = $B.rich_op('__add__', $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 195), 193)(5, 12), locals.zlute1, 191)
+          $B.set_lineno(frame, 137)
+          locals_exec_simuluj_zapas.fauly2 = $B.rich_op('__add__', $B.$call($B.$getattr_pep657(locals_exec.random, 'randint', 201), 199)(7, 14), locals.zlute2, 197)
+          $B.set_lineno(frame, 139);
+          $B.$call(_b_.print, 203)($B.make_String('\n🏁 Zápas skončil!\n', [1]))
+          $B.set_lineno(frame, 141)
+          return $B.trace_return_and_leave(frame, _b_.dict.$literal([['výsledok', _b_.str.$factory(locals.tim1) + ' ' + _b_.str.$factory(locals.goly1) + ' - ' + _b_.str.$factory(locals.goly2) + ' ' + _b_.str.$factory(locals.tim2), 5123688681822530],['skutocny_tip', ($B.$bool($B.rich_comp('__gt__', locals.goly1, locals.goly2)) ? '1': ($B.$bool($B.rich_comp('__gt__', locals.goly2, locals.goly1)) ? '2': 'X')), 162907757340418],['štatistiky', _b_.dict.$literal([[locals.tim1, _b_.dict.$literal([['goly', locals.goly1, 1005370829276477],['strely', locals.strely1, 3910375872373429],['strely na bránu', locals.na_branu1, 8104565161721712],['držanie lopty', locals.drzanie1, 4998882327639721],['rohy', locals.rohy1, 7984114679330940],['offsidy', locals.offsides1, 16665498683680],['fauly', locals.fauly1, 4840382045685424],['žlté', locals.zlute1, 3532270200280095],['červené', locals.cervene1, 4241048113960459]])],[locals.tim2, _b_.dict.$literal([['goly', locals.goly2, 1005370829276477],['strely', locals.strely2, 3910375872373429],['strely na bránu', locals.na_branu2, 8104565161721712],['držanie lopty', locals.drzanie2, 4998882327639721],['rohy', locals.rohy2, 7984114679330940],['offsidy', locals.offsides2, 16665498683680],['fauly', locals.fauly2, 4840382045685424],['žlté', locals.zlute2, 3532270200280095],['červené', locals.cervene2, 4241048113960459]])]]), 3740870946366878]]))
+        }catch(err){
+          $B.set_exc_and_leave(frame, err)
+        }
+      }
+      simuluj_zapas756226.$function_infos = ['exec', 'simuluj_zapas', 'simuluj_zapas', __file__, [({__class__: _b_.float, value: 0.25})], _b_.None, _b_.None, ['tim1','tim2','staty1','staty2','delay'], null, null,
+      5, 40, 3, [], 0, 0, ['tim1','tim2','staty1','staty2','delay','expected_goals','exp_g1','exp_g2','goly1','goly2','zlute1','zlute2','cervene1','cervene2','nadstaveny_cas','rozdel_minuty','udalosti','m','minuta','udalost','strely1','strely2','na_branu1','na_branu2','drzanie1','drzanie2','rohy1','rohy2','offsides1','offsides2','fauly1','fauly2'], [], []]
+      simuluj_zapas756226.$args_parser = $B.make_args_parser_and_parse
+      locals_exec.simuluj_zapas = simuluj_zapas756226
+      
+      if($B.set_lineno(frame, 170) && $B.$bool($B.rich_comp('__eq__', $B.resolve_in_scopes('__name__', [locals_exec,_b_], 5), '__main__'))){
+        $B.set_lineno(frame, 171)
+        locals_exec.konto = 10000
+        $B.set_lineno(frame, 172)
+        locals_exec.hry = $B.$call(_b_.int, 7)($B.$call(_b_.input, 9)('\n--------------------------\nKolko kôl chceš hrať?(1-20): '))
+        if($B.set_lineno(frame, 173) && $B.$bool($B.rich_comp('__lt__', 20, locals.$op = locals.hry) && $B.rich_comp('__lt__', locals.$op, 1))){
+          $B.set_lineno(frame, 174)
+          locals_exec.hry = 3
+        }
+        var no_break_756243 = true
+        while($B.set_lineno(frame, 175) && $B.$bool($B.rich_comp('__gt__', locals_exec.hry, 0))){
+          $B.set_lineno(frame, 176)
+          locals_exec.timy = $B.$call(locals_exec.nacitaj_timove_statistiky, 11)('Home/Spameak_kody/Simulation-Slovakia/timy-slovakia.txt')
+          $B.set_lineno(frame, 178)
+          locals_exec.timy_zoznam = $B.$call(_b_.list, 13)($B.$call($B.$getattr_pep657(locals.timy, 'keys', 17), 15)())
+          $B.set_lineno(frame, 179);
+          $B.$call(_b_.print, 19)('Dostupné tímy:')
+          frame.$lineno = 180
+          var no_break_756245 = true,
+              iterator_756245 = $B.$call(_b_.enumerate, 21)(locals.timy_zoznam)
+          for(var next_756245 of $B.make_js_iterator(iterator_756245, frame, 180)){
+            var v756246 = next_756245
+            var it_756247 = $B.unpacker(v756246, 2, false, 23)
+            locals_exec.idx = it_756247.read_one()
+            locals_exec.nazov = it_756247.read_one()
+            $B.set_lineno(frame, 181);
+            $B.$call(_b_.print, 25)(_b_.str.$factory($B.rich_op('__add__', locals.idx, 1, 27)) + '. ' + _b_.str.$factory(locals.nazov))
+          }
+          
+          $B.set_lineno(frame, 182);
+          $B.$call(_b_.print, 29)('\nTvoj zostatok na účte: ' + _b_.str.$factory(locals_exec.konto) + '€\nPočet zostávajúcich kôl: ' + _b_.str.$factory(locals_exec.hry) + '\n--------------------------------\n')
+          $B.set_lineno(frame, 184)
+          locals_exec.a = $B.rich_op('__sub__', $B.$call(_b_.int, 33)($B.$call(_b_.input, 35)('Vyber číslo domáceho tímu: ')), 1, 31)
+          $B.set_lineno(frame, 185)
+          locals_exec.b = $B.rich_op('__sub__', $B.$call(_b_.int, 39)($B.$call(_b_.input, 41)('Vyber číslo hosťovského tímu: ')), 1, 37)
+          $B.set_lineno(frame, 187)
+          var v756249 = $B.fast_tuple([$B.$getitem(locals.timy_zoznam, locals.a, 43), $B.$getitem(locals.timy_zoznam, locals.b, 45)])
+          var it_756250 = $B.unpacker(v756249, 2, false, 47)
+          locals_exec.tim1 = it_756250.read_one()
+          locals_exec.tim2 = it_756250.read_one()
+          $B.set_lineno(frame, 189)
+          var v756251 = $B.$call(locals_exec.vypocitaj_kurzy, 49)($B.$getitem(locals.timy, locals.tim1, 51), $B.$getitem(locals.timy, locals.tim2, 53))
+          var it_756252 = $B.unpacker(v756251, 3, false, 55)
+          locals_exec.kurz_1 = it_756252.read_one()
+          locals_exec.kurz_X = it_756252.read_one()
+          locals_exec.kurz_2 = it_756252.read_one()
+          $B.set_lineno(frame, 191);
+          $B.$call(_b_.print, 57)('\n\n\n\n--------------------------------------------------- \n')
+          $B.set_lineno(frame, 192);
+          $B.$call(_b_.print, 59)('Stav tvojho účtu je : ' + _b_.str.$factory(locals_exec.konto) + '€')
+          $B.set_lineno(frame, 193);
+          $B.$call(_b_.print, 61)('                                                     ')
+          $B.set_lineno(frame, 194);
+          $B.$call(_b_.print, 63)('\n---------------------------------------------------')
+          $B.set_lineno(frame, 195);
+          $B.$call(_b_.print, 65)(_b_.str.$factory(locals.tim1) + ' : ' + _b_.str.$factory(locals.tim2))
+          $B.set_lineno(frame, 196);
+          $B.$call(_b_.print, 67)('                                                     ')
+          $B.set_lineno(frame, 197);
+          $B.$call(_b_.print, 69)('1 (Vyhrá ' + _b_.str.$factory(locals.tim1) + ') = ' + _b_.str.$factory(locals.kurz_1))
+          $B.set_lineno(frame, 198);
+          $B.$call(_b_.print, 71)('X (Remíza) = ' + _b_.str.$factory(locals.kurz_X))
+          $B.set_lineno(frame, 199);
+          $B.$call(_b_.print, 73)('2 (Vyhrá ' + _b_.str.$factory(locals.tim2) + ') = ' + _b_.str.$factory(locals.kurz_2))
+          $B.set_lineno(frame, 200);
+          $B.$call(_b_.print, 75)('---------------------------------------------------')
+          var no_break_756253 = true
+          while($B.set_lineno(frame, 203) && $B.$bool(true)){
+            $B.set_lineno(frame, 204)
+            locals_exec.tip_vysledok = $B.$call(_b_.input, 77)('\nTipnite si víťaza (1, X alebo 2): ')
+            if($B.set_lineno(frame, 205) && $B.$bool($B.$is_member(locals.tip_vysledok, $B.$list(['1', 'X', 'x', '2'])))){
+              no_break_756253 = false
+              break
+            }else{
+              $B.set_lineno(frame, 208);
+              $B.$call(_b_.print, 79)('Zadaj prosím 1, X alebo 2.')
+            }
+          }
+          
+          var no_break_756255 = true
+          while($B.set_lineno(frame, 210) && $B.$bool(true)){
+            $B.set_lineno(frame, 211)
+            try{
+              var stack_length_756256 = $B.count_frames()
+              var save_frame_obj_756256 = $B.frame_obj
+              $B.set_lineno(frame, 212)
+              locals_exec.suma = $B.$call(_b_.float, 81)($B.$call(_b_.input, 83)('\nZadaj koľko € chceš vsadiť: '))
+              if($B.set_lineno(frame, 213) && ($B.$bool($B.rich_comp('__ge__', locals_exec.konto, locals.suma)) && $B.$bool($B.rich_comp('__le__', ({__class__: _b_.float, value: 0.5}), locals.$op = locals.suma) && $B.rich_comp('__le__', locals.$op, 10000)))){
+                no_break_756255 = false
+                break
+              }else{
+                $B.set_lineno(frame, 216);
+                $B.$call(_b_.print, 85)('---------------------------------------------------')
+                $B.set_lineno(frame, 217);
+                $B.$call(_b_.print, 87)('Nieje možné vytvoriť stávku.. Uisti sa či je suma aspoň 50 centov, či nepresahuje 10000€ a či máš na stávku peniaze!')
+                $B.set_lineno(frame, 218);
+                $B.$call(_b_.print, 89)('---------------------------------------------------')
+              }
+            }catch(err756256){
+              $B.set_exc_and_trace(frame, err756256)
+              if($B.set_lineno(frame, 219) && $B.is_exc(err756256, [_b_.ValueError])){
+                $B.set_lineno(frame, 220);
+                $B.$call(_b_.print, 91)('Prosím, zadaj platnú sumu (číslo).')
+                $B.del_exc(frame)
+                $B.frame_obj = save_frame_obj_756256
+              }else{
+                throw err756256
+              }
+            }
+          }
+          
+          $B.set_lineno(frame, 222)
+          locals_exec.vysledok = $B.$call(locals_exec.simuluj_zapas, 93)(locals.tim1, locals.tim2, $B.$getitem(locals.timy, locals.tim1, 95), $B.$getitem(locals.timy, locals.tim2, 97))
+          $B.set_lineno(frame, 225);
+          $B.$call(_b_.print, 99)('\n=== Výsledok zápasu ===')
+          $B.set_lineno(frame, 226);
+          $B.$call(_b_.print, 101)($B.$getitem(locals.vysledok, 'výsledok', 103))
+          $B.set_lineno(frame, 227);
+          $B.$call(_b_.print, 105)('\n=== Štatistiky ===')
+          frame.$lineno = 228
+          var no_break_756258 = true,
+              iterator_756258 = $B.$call($B.$getattr_pep657($B.$getitem(locals.vysledok, 'štatistiky', 111), 'items', 109), 107)()
+          for(var next_756258 of $B.make_js_iterator(iterator_756258, frame, 228)){
+            var v756259 = next_756258
+            var it_756260 = $B.unpacker(v756259, 2, false, 113)
+            locals_exec.tim = it_756260.read_one()
+            locals_exec.stats = it_756260.read_one()
+            $B.set_lineno(frame, 229);
+            $B.$call(_b_.print, 115)(_b_.str.$factory(locals.tim) + ':')
+            frame.$lineno = 230
+            var no_break_756261 = true,
+                iterator_756261 = $B.$call($B.$getattr_pep657(locals.stats, 'items', 119), 117)()
+            for(var next_756261 of $B.make_js_iterator(iterator_756261, frame, 230)){
+              var v756262 = next_756261
+              var it_756263 = $B.unpacker(v756262, 2, false, 121)
+              locals_exec.k = it_756263.read_one()
+              locals_exec.v = it_756263.read_one()
+              $B.set_lineno(frame, 231);
+              $B.$call(_b_.print, 123)('  ' + _b_.str.$factory(locals.k) + ': ' + _b_.str.$factory(locals.v))
+            }
+          }
+          
+          if($B.set_lineno(frame, 234) && $B.$bool($B.rich_comp('__eq__', $B.$call($B.$getattr_pep657($B.resolve_global('tip_vysledok', _frame_obj, 129), 'upper', 127), 125)(), $B.$getitem(locals.vysledok, 'skutocny_tip', 131)))){
+            $B.set_lineno(frame, 235)
+            locals_exec.vyhra = $B.$call(_b_.round, 133)($B.rich_op('__mul__', $B.resolve_global('suma', _frame_obj, 137), ($B.$bool($B.rich_comp('__eq__', $B.$getitem(locals_exec.vysledok, 'skutocny_tip', 139), '1')) ? locals_exec.kurz_1: ($B.$bool($B.rich_comp('__eq__', $B.$getitem(locals_exec.vysledok, 'skutocny_tip', 141), 'X')) ? locals_exec.kurz_X: locals_exec.kurz_2)), 135), 2)
+            $B.set_lineno(frame, 236)
+            locals_exec.konto = $B.augm_assign(locals_exec.konto, '+=', locals.vyhra)
+            $B.set_lineno(frame, 237)
+            locals_exec.konto = $B.$call(_b_.round, 143)(locals_exec.konto, 2)
+            $B.set_lineno(frame, 238);
+            $B.$call(_b_.print, 145)('----------------------------------------------------')
+            $B.set_lineno(frame, 239);
+            $B.$call(_b_.print, 147)('Gratulujem! Vyhral/-a si ' + _b_.str.$factory(locals.vyhra) + '€')
+            $B.set_lineno(frame, 240);
+            $B.$call(_b_.print, 149)('Aktuálny zostatok na konte: ' + _b_.str.$factory(locals.konto) + '€\n---------------------------------')
+          }else{
+            $B.set_lineno(frame, 242)
+            locals_exec.konto = $B.augm_assign(locals_exec.konto, '-=', $B.resolve_global('suma', _frame_obj, 151))
+            $B.set_lineno(frame, 243)
+            locals_exec.konto = $B.$call(_b_.round, 153)(locals_exec.konto, 2)
+            $B.set_lineno(frame, 244);
+            $B.$call(_b_.print, 155)('----------------------------------------------------')
+            $B.set_lineno(frame, 245);
+            $B.$call(_b_.print, 157)('Bohužiaľ, tvoja stávka nebola úspešná')
+            $B.set_lineno(frame, 246);
+            $B.$call(_b_.print, 159)('----------------------------------------------------')
+            $B.set_lineno(frame, 247);
+            $B.$call(_b_.print, 161)('Aktuálny zostatok na konte: ' + _b_.str.$factory(locals.konto) + '€\n---------------------------------')
+          }
+          $B.set_lineno(frame, 249);
+          $B.$call(locals_exec.zapis_timove_statistiky, 163)('Home/Spameak_kody/Simulation-Slovakia/timy-slovakia.txt', locals.timy)
+          $B.set_lineno(frame, 250)
+          locals_exec.hry = $B.augm_assign(locals_exec.hry, '-=', 1)
+        }
+      }
+      $B.leave_frame({locals, value: _b_.None})
+    }catch(err){
+      $B.set_exc_and_trace(frame, err)
+      $B.leave_frame({locals, value: _b_.None})
+      throw err
+    }
+    </script>
+</body>
+</html>

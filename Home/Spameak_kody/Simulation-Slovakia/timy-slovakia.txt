@@ -140,11 +140,11 @@ draw: 13
 
 Team: Horky
 elo: 470
-goals_scored: 65
+goals_scored: 57
 goals_conceded: 102
-yellow: 44
+yellow: 39
 red: 1
-win: 14
+win: 13
 loss: 9
 draw: 15
 
@@ -171,10 +171,19 @@ draw: 14
 Team: Nova Bana
 elo: 100
 goals_scored: 69
-goals_conceded: 166
-yellow: 66
+goals_conceded: 158
+yellow: 65
 red: 34
 win: 7
-loss: 12
+loss: 11
 draw: 13
 
+Team: ŠK Sásová
+elo: 60
+goals_scored: 12
+goals_conceded: 188
+yellow: 33
+red: 10
+win: 7
+loss: 11
+draw: 13
