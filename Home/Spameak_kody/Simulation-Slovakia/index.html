@@ -676,7 +676,7 @@ document.getElementById('placeBet').addEventListener('click', async ()=>{
       <div style="margin-top:6px">
         <div><em>Štatistiky</em></div>
         <table class="statstable">
-          <thead><tr><th>Tím</th><th>Góly</th><th>Strely</th><th>Na bránu</th><th>Držanie</th></tr></thead>
+          <thead><tr><th>Tím</th><th>Góly</th><th>Strely</th><th>Na bránu</th><th>Žlté karty</th><th>Červené karty</th><th>Držanie</th></tr></thead>
           <tbody>
             <tr><td>${Object.keys(res.statistiky)[0]}</td><td>${res.statistiky[Object.keys(res.statistiky)[0]].goly}</td><td>${res.statistiky[Object.keys(res.statistiky)[0]].strely}</td><td>${res.statistiky[Object.keys(res.statistiky)[0]]["strely na bránu"]}</td><td>${res.statistiky[Object.keys(res.statistiky)[0]]["držanie lopty"]}%</td></tr>
             <tr><td>${Object.keys(res.statistiky)[1]}</td><td>${res.statistiky[Object.keys(res.statistiky)[1]].goly}</td><td>${res.statistiky[Object.keys(res.statistiky)[1]].strely}</td><td>${res.statistiky[Object.keys(res.statistiky)[1]]["strely na bránu"]}</td><td>${res.statistiky[Object.keys(res.statistiky)[1]]["držanie lopty"]}%</td></tr>
